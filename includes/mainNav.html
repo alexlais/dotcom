@@ -1,0 +1,14 @@
+<div class="container-fluid no-padding">
+	<div class="row">
+		<div class="col-sm-12">
+			<nav>
+				<ul class="row justify-content-between align-items-center flat">
+					<li class="col-auto">
+						<h1 class="brand"><a href="home/%20"><span>{{siteInfo.name}}</span></a></h1>
+					</li>
+					<li class="col-auto" ng-repeat="each in food"><a ng-href="menu/{{ each.name }}">{{ each.name }}</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</div>

@@ -1,49 +1,110 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Example - example-$route-service-production</title>
-  <base href="/"></base>
+<!DOCTYPE html>
+<html
+    ng-app="ngRouteExample"
+    ng-controller="MainController"
+    lang="en"
+    itemscope itemtype="http://schema.org/WebPage"
+    itemref="">
 
-  <script src="//code.angularjs.org/snapshot/angular.min.js"></script>
-  <script src="//code.angularjs.org/snapshot/angular-route.js"></script>
-  <script src="script.js"></script>
+    <head>
+        <!-- Meta-Information -->
+        <meta charset="utf-8" />
+        <base href="/alexlais/"></base>
+        <meta name="ROBOTS" content="noindex,nofollow">
+        <meta name="fragment" content="!" />
+        <meta name="format-detection" content="telephone=no">
+        <meta name="google-translate-customization" content="" >
+
+        <!-- title ng-bind="'LEX International | ' + title"></title -->
+
+        <title>7DayEat.com | Welcome to {{$routeParams.itemID}}</title>
+        <meta name="description" content="{{description}}" />
+        <meta name="keywords" content="{{keywords}}" />
+        <link rel="canonical" href="{{canonical}}" />
+        <meta name="robots" content="{{robots}}" />
+
+        <!-- MDATA FOR THIS WEB PAGE -->
+        <meta itemprop="name" content="Lex International Law Firm" />
+        <meta itemprop="headline" content="We address complex transaction, business and investment matters nationally and internationally." />
+        <meta itemprop="alternativeHeadline" content="Focusing on the jurisdictions of Europe and North America, we offer expertise legal services to large or small enterprises, start-up businesses, investors and entrepreneurs engaged in international transactions, businesses and investments world-wide." />
+        <meta itemprop="specialty" content="An International Law Firm engaged in international transactions, businesses and investments world-wide." />
+        <meta itemprop="description" content="Focusing on the jurisdictions of Europe and North America, we offer expertise legal services to large or small enterprises, start-up businesses, investors and entrepreneurs engaged in international transactions, businesses and investments world-wide.">
+        <meta itemprop="breadcrumb" content="Home" />
+        <meta itemprop="primaryImageOfPage" content="assets/images/logo.png" />
+        <meta itemprop="mainContentOfPage" content="mainContentOfPage" />
+        <link itemprop="relatedLink" content="our_firm.html" />
+        <link itemprop="relatedLink" content="practices.html" />
+        <link itemprop="relatedLink" content="our_team.html" />
+        <meta itemprop="lastReviewed" content="2017-02-20" />
+        <meta itemprop="audience" content="Business Investors" />
+        <meta itemprop="keywords" content="" />
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
+
+        <!-- Vendor CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+        <!-- link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/OFFbootstrap.min.cssOFF" -->
 
 
 
-</head>
-<body ng-app="ngRouteExample">
-    <p>Version 4</p>
-    <div ng-controller="MainController">
-    Choose:
-    <a href="Book/Moby">Moby</a> |
-    <a href="Book/Moby/ch/1">Moby: Ch1</a> |
-    <a href="Book/Gatsby">Gatsby</a> |
-    <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
-    <a href="Book/Scarlet">Scarlet Letter</a><br/>
+        <!-- Vendor JS -->
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFN2xCmdzr52luyFP0QFROp0kldgCYgUk&callback=initMap"></script>
 
-    <div ng-view style="height: 100px;"></div>
+        <!-- House -->
+        <script src="alexlais.js"></script>
+        <link rel="stylesheet" href="alexlais.css">
+        <link rel="shortcut icon" href="favicon.ico">
 
-    <hr />
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+            <noscript>
+               <p><strong>Warning!</strong> Because your browser does not support HTML5, JavaScript is required for rendering some elements of this page but it is currently disabled in your browser.</p>
+               <p>Please enable JavaScript in order to display this page properly or to update your browser please visit <a href="http://browsehappy.com/">browsehappy.com</a>.</p>
+            </noscript>
+        <![endif]-->
+    </head>
+    <!-- === /HEAD ============================ -->
+    <!-- === /HEAD ============================ -->
+    <!-- === /HEAD ============================ -->
 
-    <pre>$location.path() = {{$location.path()}}</pre>
-    <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
-    <pre>$route.current.params = {{$route.current.params}}</pre>
-    <pre>$route.current.scope.name = {{$route.current.scope.name}}</pre>
-    <pre>$routeParams = {{$routeParams}}</pre>
 
-    <br>
-    <p>https://docs.angularjs.org/api/ngRoute/service/$route#example</p>
-    <p>https://docs.angularjs.org/tutorial/step_07</p>
-    <p>http://jsfiddle.net/alexlais/m9u1okr9/</p>
-    <p>https://docs.angularjs.org/guide/$location#html5-mode</p>
-    <p>http://codebeautify.org/yaml-validator</p>
-</div>
-</body>
+
+    <!-- === BODY ============================ -->
+    <!-- === BODY ============================ -->
+    <!-- === BODY ============================ -->
+    <body id="pageTop">
+        <main
+            id="mainContentOfPage"
+            ng-class="$route.current.templateUrl.split('.', 1)"
+            role="main">
+            <!-- === NG VIEW ============================ -->
+            <!-- === NG VIEW ============================ -->
+            <!-- === NG VIEW ============================ -->
+
+            <ng-view data-autoscroll="true"></ng-view>
+
+            <!-- === /NG VIEW ============================ -->
+            <!-- === /NG VIEW ============================ -->
+            <!-- === /NG VIEW ============================ -->
+        </main>
+        <div style="display: block;">
+            <pre>$route.current.scope.items = {{$route.current.scope.items}}</pre>
+            <pre>$location.path() = {{$location.path()}}</pre>
+            <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
+            <pre>$route.current.params = {{$route.current.params}}</pre>
+            <pre>$routeParams = {{$routeParams}}</pre>
+        </div>
+    </body>
 </html>
 
 <!--
 Copyright 2017 Google Inc. All Rights Reserved.
-Use of this source code is governed by an MIT-style license that
-can be found in the LICENSE file at http://angular.io/license
+Use of this source code is governed by an MIT-style license that can be found in the LICENSE file at http://angular.io/license
 -->
+
+

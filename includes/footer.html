@@ -1,0 +1,30 @@
+<aside class="col-sm-12 text-left copyright" role="contentinfo">
+    <!-- ng-animate -->
+    <div ng-app="ngAnimate">
+        <div class="popup text-left" ng-class="myVar">
+            <div class="header hidden-xs" ng-click="myVar=''">
+                <h3>Disclaimer and Credits <span>x</span></h3>
+            </div>
+            <div class="credits-content" ng-class="{ active: isActive('/') }">
+                <h4>Credits</h4>
+                <p><a href="http://www.alexlais.com" target="_blank">Webdesign by&hellip;</a></p>
+                <p><a href="http://www.pixabay.com" target="_blank">Free stock images by&hellip;</a></p>
+            </div>
+            <div class="popup-content">
+                <h4>Legal Disclaimer</h4>
+                <div>
+                    <p>The information you obtain at our site is as it legal advice nor solicitation. While we would like to hear from you.</p>
+                    <p>Lorem ipsum dolor sit amet, eos ad delectus adolescens dissentiet, meis quas eum eu. Et minim utroque quo, eum cu tacimates sensibus philosophia. Ea quando honestatis repudiandae pri, at modo essent theophrastus mel, recusabo repudiare sit id.</p>
+                    <p>Tale epicuri vel ne, no vim novum everti An invidunt expetendis vim, ei vim zril scaevola electram</p>
+                    <p>Nostrud verterem an quo, ex ridens iuvaret erroribus</p>
+                </div>
+            </div>
+        </div>
+    </div> 
+    <!-- /ng-animate -->
+	<div class="d-flex justify-content-between">
+	    <div>Copyright &copy; 2017 <c>7dayeat.com.</c> <c>All Rights Reserved.</div>
+	    <div>Flex item</div>
+	    <div ng-click="myVar='open'">Disclaimer &amp; Credits</div>
+	</div>
+</aside>

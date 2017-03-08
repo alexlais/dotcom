@@ -1,0 +1,980 @@
+ 
+ @import url('https://fonts.googleapis.com/css?family=Asap:500,700|Maven+Pro:400,500,700|Merriweather+Sans:400,700|Montserrat+Alternates:500,700|Roboto:500,700|Ubuntu:500,700|Work+Sans:500,700');
+
+
+body, button, input, optgroup, select, textarea {
+    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+}
+h1, h2, h3, h4, h6 {
+    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+    font-weight: 500;
+    margin: 0 0 0.75em;
+    line-height: 1.3;
+}
+strong {
+    font-weight: 700;
+}
+
+/* fix the :focus messing up from bootstrap */
+a:focus {
+    color: inherit;
+    background: inherit;
+    text-decoration: none;
+}
+
+/* --- _SECTIONS ---------------------------- */
+html, body {
+    height: 100%;
+}
+body {
+    padding-top: 0;
+    /*
+    font-smooth: never;
+    */
+    color: Black;
+    background: White;
+}
+header {
+}
+/*-- _LINKS ---------------------------------------------------- */
+
+a {
+    text-decoration: none;
+}
+footer a {
+    text-decoration: underline;
+}
+/*-- _COLORS ---------------------------------------------------- */
+a, .a, h1, h1 a, h2, h2 a, h3, .filter a:hover {
+    color: #ff0066;
+}
+footer a, .filter a {
+    color: Black;
+}
+a:hover, .a:hover {
+    color: #7e00e6;
+    text-decoration: none;
+    cursor: pointer;
+}
+section.promo, section.promo h3, .filter h2, .filter a {
+    color: white;
+}
+.keywords h2, .keywords a {
+    color: black;
+}
+.filter .container-fluid {
+    background: #ff0066;
+}
+.filter .keywords {
+    background: rgb(248, 189, 0);
+    background: rgb(255, 207, 0);
+    padding-right: 10px;
+}
+
+/*-- _HEADINGS and COPY -------------------------------------------- */
+
+h2 {
+    font-size: 2em;
+}
+.placard h2 {
+    margin-bottom: 0.5em;
+}
+main.menu h2 span {
+    display: block;
+    font-size: 0.6em;
+    line-height: 1;
+    font-weight: 400;
+}
+h3 {
+    font-size: 1.3em;
+}
+p {
+    line-height: 1.5;
+    margin: 0 0 1.5em;
+}
+ul.native {
+    padding-left: 20px; 
+    list-style: url("assets/images/thumbs/plus.svg");
+}
+ul.native p {
+    margin-bottom: 0.3em;
+}
+/* for menus or links lists - current use: .filter */
+ul.flat ,ul.flat li, ul.flat p, address {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.text-center ul.native {
+    text-align: left;
+    margin: 0 0 1.3em;
+}
+hr {
+    display: block;
+    margin: 1em auto;
+    border-style: inset;
+    border-width: 1px;
+    border: 1px dashed #f5f5f5;
+}
+c {
+    white-space: nowrap;
+}
+cc {
+    word-break: keep-all;
+    white-space: nowrap;
+}
+
+.img-responsive {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+/* _BOLD --------------------- */
+
+strong, .keywords a, 
+.keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
+    font-weight: 500;
+}
+
+/* _CTA ---------------------  
+
+#FFC3CE #D6E3B5 #6B824A #FFF7EF #636563
+#5C604D #FFBAD2 #F20056 #E5E7E1 #C8CFB4 #A3AE7E
+#9C1C6B #CA278C #E47297 #FFE9E8 #AA0114 #000000
+
+*/
+.cta {
+    display: block;
+    padding: 1em 0;
+    font-weight: 400;
+}
+.cta a {
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    line-height: 1.5;
+    font-weight: 500;
+    border-radius: 3px;
+    padding: 0.35em 20px; 
+
+    border: 1px solid rgba(255, 255, 255, 1);
+    color: white;    
+    transition-property: margin, color, padding;
+    transition-duration: 0.5s;
+    transition-timing-function: easy-out;
+}
+.cta a:after {
+    content: "\271A";
+    content: "\2794";
+    padding-left: 5px;
+    font-size: 17px;
+    font-family: arial;
+    line-height: 1.5em;
+    vertical-align: 0px;
+    display: inline-block;
+    transition-property: text-indent;
+    transition-duration: 0.5s;
+    transition-timing-function: easy-in;
+
+}
+.cta a:hover {
+    padding-right: 10px;
+    background: rgba(255, 255, 255, 1);
+    color: #ff0066; 
+}
+.text-center .cta a:hover {
+}
+.cta a:hover:after {
+    text-indent: 10px;
+}
+
+/* --------------  header ---------------  */ 
+
+header nav {
+    padding: 1em 0;
+}
+header ul li {
+}
+main.menu header ul li a {
+}
+/*
+section.mainlistItem header {
+    position: relative;
+}
+section.mainlistItem header a, .mainlistItem header h2 {
+    position: white;
+}
+section.mainlistItem header h2 {
+    bottom: 10px;
+}
+*/
+.menu .banner {
+    /*
+    height: 60vh;
+    min-height: 300px;
+    */
+    background-size: cover;
+    background-position: center;
+    padding-top: 5em;
+    padding-bottom: 5em;    
+}
+.menu .banner .placard {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 0 3px 3px 0;
+}
+
+/* === BRAND CSS-LOGO === */
+h1.brand {
+    margin: 0;
+}
+.brand a, .brand a:focus {
+    color: #fff;
+    background: #ff0066;
+    border: 3px solid #fff;
+    border-radius: 9% / 27%;  
+    font-size: 19px;
+    font-weight: 500;
+
+    float: left;
+    text-align: center;
+    overflow: hidden;
+
+    /*
+    box-shadow:  0 12px 20px -5px rgba(0,0,0,.5);
+    box-shadow: 
+        0 8px 15px -5px rgba(0,0,0,.5),
+        1px 1px 3px 1px rgba(0,0,0,.1) inset,
+        -1px 1px 3px 1px rgba(0,0,0,.1) inset;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.2);
+    */
+}
+    .brand a span {
+        padding: 8px 16px;
+        display: inline-block;
+    }
+    .brand a:before, .brand a:after {
+        border: 50px solid transparent;
+        margin: 0 15px;
+        border-radius: 10px;
+        display: block;
+        content: "";
+        height: 0;
+        /*
+        position: absolute;
+        left: 4px;
+        right: 4px;
+        top: 0;
+        */
+    }
+    .brand a:before {
+        border-top: 3px solid #fff;
+        border-bottom: 0;
+    }
+    .brand a:after {
+        border-bottom: 3px solid #fff;
+        border-top: 0;
+    }
+    .brand a:hover {
+        color: #ff0066;
+        background: #fff;
+        border-color: #ff0066;
+        text-shadow: none;
+    }
+    .brand a:hover span {
+        padding-top: 7px;
+        padding-bottom: 6px;
+    }
+    .brand a:hover:before {
+        border-top: 5px solid #ff0066;
+    }
+    .brand a:hover:after {
+        border-bottom: 5px solid #ff0066;
+    }
+/* --------------  filter ---------------  */ 
+
+.filter a {
+    margin: 0 15px 0 0;
+    white-space: nowrap;
+    font-size: 1.1em;
+}
+.filter ul li {
+    display: inline;
+}
+.filter ul a {
+    text-transform: capitalize;
+}
+.filter .search {
+    background: #ff0066;
+}
+.filter .search label {
+    display: block;
+}
+.filter .search input {
+    border: 1px solid #e6005c;
+    width: 100%;
+    height: 40px;
+    padding: 5%;
+}
+
+
+/* --------------  mainList ---------------  */ 
+.itemList li.header h2 a {
+    font-size: 0.8em;
+    display: block;
+    background-size: 100%;
+    background-position: center;
+    min-height: 6em;
+    position: relative;
+    border-radius: 5px 5px 5px 5px;
+    margin: 0 -14px;
+    overflow: visible;
+    padding: 0;
+    transition-property: background-size;
+    transition-duration: 3s;    
+    transition-timing-function: easy-in;
+}
+.itemList li.header h2 a:hover {
+    color: inherit;
+    transition-duration: .5s;
+    background-size: 175%;
+}
+.itemList li.header span {
+    transition-duration: .5s;
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, .8);
+    border-radius: 0 0 4px 4px;
+    padding: .25em 15px .35em;
+    margin: 0;
+}
+.itemList li.header h2 a:hover span {
+    background: rgba(255, 255, 255, .95);
+}
+.itemList p {
+    text-align: right;
+}
+.itemList .fee {
+    text-transform: capitalize;
+}
+/* --- .HOVERBOX ---------- */
+.hoverbox {
+    position: relative;
+}
+.hoverbox .overflow {
+    display: none;
+    position: absolute;
+    background: #ff0066;
+    color: White;
+    z-index: 1;
+    left: 0;
+    bottom: 1.5em;
+    padding: 1em;
+    border-radius: 3px;
+    border: 1px solid white;
+}
+.hoverbox .overflow.open {
+    display: block;
+}
+.hoverbox .overflow.open {
+    display: block;
+}
+
+/* --- .HOVERBOX ITEMLIST ---------- */
+main.menu .itemList .hoverbox {
+    float: left;
+    margin: 1em 1em 0 0;
+}
+main.menu .itemList .priceRange {
+    float: right;
+    margin: 1em 0 0 1em;
+}
+
+/* --- .HOVERBOX ITEMLIST HOURS ---------- */
+.itemList .hoverbox.hours .overflow {
+    width: 12em;
+}
+.itemList .hoverbox.hours .overflow p {
+    line-height: 1.3;
+    font-size: 0.9em;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* --- .HOVERBOX ITEMLIST ADDRESS ---------- */
+.itemList .hoverbox.address .overflow {
+    width: 15em;
+}
+.itemList .hoverbox.address .overflow p {
+    text-align: left;
+}
+
+/* CONTENT SNIPPET STRUCTURE */
+
+/* Snippet item - for example: images, the floating elements or min-width titles */
+.fieldName {
+    text-align: left;
+    float: left;
+    min-width: 40%;
+}
+/* the content container that doent wrap around the item */
+.overflow {
+    overflow: auto;
+    display: block;
+}
+/* make siblings not visibly nest, and brakes line instead */
+
+
+
+/* --------------  promo ---------------  */ 
+section.promo {
+    background: #2eb873; /* green */
+    background: #2e95b8; /* blue */
+    background: #b82e65; /* red */
+    background: #b54853; /* brown */
+    background: #FF1493; /* pink */
+    background: #ff0066; /* DEFAULT */
+    color: rgba(255,255,255,0.95);
+}
+section.promo.menu {
+    background: #2eb873; /* green */
+    background: #2e95b8; /* blue */
+    background: #b54853; /* brown */
+    border-bottom: 100px solid #000;
+}
+section.promo .row > div:first-child {
+    background: rgba(0,0,0, 0.2);
+}
+section.promo .row > div:nth-child(2) {
+    background: rgba(0,0,0,0.4);
+}
+section.promo .row > div:nth-child(3){
+    background: rgba(0,0,0, 0);
+}
+section.promo .row > div:nth-child(4){
+    background: rgba(0,0,0,0.6);
+}
+
+/*
+DIF PINK            LH - FF69B4 / DK - FF1493 / FADED - DB7093
+*/
+
+
+
+
+form {
+}
+.btn-primary {
+    font-size: 16px;
+    padding: 5px 30px;
+    border-radius: 3px;
+    color: #444;
+    background: white;
+    border: 1px solid #999;
+    margin-top: 20px;
+    font-weight: 300;
+}
+.btn-primary:hover {
+    background: #009999;
+    border: 1px solid #009999;
+}
+textarea.form-control, .form-control {
+    border-radius: 3px;
+    border-color: #999;
+}
+.form-control:focus {
+    border-color: #009999;
+}
+.form-control {
+    height: 40px;
+}
+.form-group label {
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+/* === _STRUCTURE PADDING ==== 1 ===================================== */
+
+/*
+BOOTSTRAP GRID MEASURES
+Extra small <576px | Max container width: none (auto) | class: .col-
+Small ≥576px | Max container width: 540px | class: .col-sm-*
+Medium ≥768px | Max container width: 720px | class: .col-md-*
+Large ≥992px | Max container width: 960px | class: .col-lg-*
+Extra large ≥1200px | Max container width: 1140px | class: .col-xl-*
+*/
+
+
+/* --- VERTICAL ------------------------------------- VERTICAL ---- */
+
+/* --- VERTICAL GUTTER --------------------- ROW --- */
+
+.row.padding {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.row .row {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* --- VERTICAL GUTTER --------------------- COLUMN --- */
+
+.row > div, .row > ng-include > div {
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+.row .row > div, .row .row > ng-include > div {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* --- OVERWRITES ------------------------------------------------- */
+
+/* -- cancel just half the padding --- [col-no-padding] --- */
+
+.row > div.col-no-padding, .no-padding .row div {
+    padding-bottom: 0;
+}   .no-padding .row div {
+        padding-top: 0;
+    }
+
+/* -- cancel margin only */
+footer .row, footer .row div {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* -- CANCEL ALL the padding and margin, fix side effects */
+.clearfix {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* --- BORDER TOP and BOTTOM ------------------------------------- */
+.border-top {
+    border-top: 3px solid rgba(0,0,0,0.031);
+    margin-top: 4rem;
+    padding-top: 2rem;
+}
+.border-bottom {
+    border-bottom: 3px solid rgba(0,0,0,0.031);
+    margin-bottom: 2rem;
+    padding-bottom: 4rem;
+}
+
+
+
+
+
+/* --- DONE ------ DONE ------ DONE -------- DONE ------- DONE -------- DONE -------*/
+
+
+                                        /* === _MOBILE and TABLETS ====== SMALL ================= */
+                                        @media only screen and (max-width : 768px) {
+
+                                            /* --- MOBILE and TABLETS --- */
+                                            .banner video, nav.profile-menu li.profile-menu:hover .dropdown-menu {
+                                                display: none;
+                                                margin: 0;
+                                                padding: 0;
+                                                height: 0;
+                                                border: 0;
+                                                overflow: hidden;
+                                            }
+                                             section div[class*='col-'] img {
+                                                display: none;
+                                                margin: 0;
+                                                padding: 0;
+                                             }
+                                             /* --- _THEFIRM --------- */
+                                             section.thefirm img.visible-mobile {
+                                                display: block;
+                                                margin: 30px auto;
+                                                width: 60px;
+                                                height: 60px;
+                                             }
+                                             /* --- MOBILE and TABLETS --- */
+                                            body {
+                                                color: black;
+                                                font-weight: 300;
+                                                -webkit-font-smoothing: subpixel-antialiased;
+                                            }
+                                            .row {
+                                                margin-top: 0;
+                                                margin-bottom: 0;
+                                            }
+                                            .row > div[class*='col-'], ng-include > div[class*='col-'] {
+                                                padding-top: 2rem;
+                                                padding-bottom: 2rem;
+                                            }
+                                            .row .row > div {
+                                                padding-top: 0;
+                                                padding-bottom: 0;
+                                            }
+                                            /* --- CANCEL padding --- */
+                                            .clearfix {
+                                                padding: 0 !important;
+                                                margin: 0 !important;
+                                            }
+
+                                        }
+                                        
+                                        /* === col-xs-6 braking point ========================================
+                                        @media only screen and (max-width : 585px) {
+                                            div[class*='col-'] {
+                                                width: auto;
+                                                float: none;
+                                            }
+                                            section.promo .row {
+                                              display: block;
+                                            }            
+                                            section.promo ul {
+                                                text-align: left;
+                                                margin: 0 10%;
+                                            }
+                                        }
+                                        */
+
+                                        /* === MOBILE ONLY ============ XSMALL ================ */
+                                        @media only screen and (max-width : 480px) {}
+
+                                        /* === Retina ========================================= */
+                                        @media only screen and (max-width : 320px) {
+                                           cc {
+                                                word-brake: normal;
+                                            }
+                                            body {
+                                            }
+                                            .text-center {
+                                                text-align: left;
+                                            }
+                                        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== _MEDIUM or larger = ALL Desktops ============= */
+@media only screen and (min-width: 769px) {
+
+    /* === _STRUCTURE PADDING ==== 2 ===================================== */
+
+    /* --- HORIZONTAL ----------------------------------- HORIZONTAL ---- */
+
+    /* --- HORIZONTAL GUTTER - ALL COLUMNS! --- */
+    div[class*='col-'] {
+        padding-left: 30px;
+        padding-right: 30px;
+
+    }
+    /* --- OVERWRITES FOR HORIZONTAL GUTTER --- */
+    main.home .mainlist div[class*='col-'] {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* === /STRUCTURE PADDING ==== */
+
+
+
+
+
+
+    /* --------------  mainList ---------------  */ 
+    main.home .mainlist {
+        margin: 4em 30px;
+    }
+
+
+    .itemList {
+        padding: 0 10px;
+    }
+
+   
+
+
+
+    /* --- UL or DIV is being used --- --- */
+    .half-width {
+        -webkit-column-count: 2;
+        -moz-column-count: 2;
+        column-count: 2;
+        column-gap: 0;
+    }
+    ul.third-width {
+        -webkit-column-count: 3;
+        -moz-column-count: 3;
+        column-count: 3;
+    }
+
+    /* _popup --------------------- MEDIUM or larger --- */
+    .popup {
+        display: none;
+        position: fixed;
+        top: 20%;
+        left: 10%;
+        /*
+        transform: translate(-50%, -50%);
+        */
+        margin: 0;
+        width: 80%;
+        max-height: 80%;
+        margin: auto;
+        background: #f8f8f8;
+        box-shadow:  0 0 0 2000px rgba(0,0,0,0.4);
+        border-radius: 8px 8px 6px 6px;
+        border: 1px solid #555;
+    }
+    .popup .header {
+        background: #2eb873;
+        padding: 0 2%;
+        cursor: pointer;
+        border-radius: 6px 6px 0 0;
+    }
+    .popup-content {
+        overflow: auto;
+        background: white;
+        padding: 15px 2%;
+        border-radius: 0 0 0 6px;
+
+    }
+    .credits-content {
+        float: right;
+        width: 230px;
+        padding: 15px 2%;
+    }
+    .popup p {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    .popup h3 {
+        padding: 0.75em 0;
+        margin: 0;
+        color: white;
+        font-size: 15px;
+        text-transform: uppercase;
+    }
+    .popup h3 span {
+        float: right;
+        cursor: pointer;
+        font-size: 1.3em;
+        margin-top: -0.3em;
+        text-transform: none;
+        font-weight: bold;
+    }
+    .popup.open {
+        display: block;
+    }
+}
+
+
+
+        /* MEDIUM to LARGE */
+        @media only screen and (min-width: 769px) and (max-width : 1199px) {
+        }
+
+        /* MEDIUM only  */
+        @media only screen and (min-width: 769px) and (max-width : 992px) {
+            section.promo ul {
+                text-align: left;
+                margin: 0 10%;
+            }
+        }
+
+        /* === _LAST LARGE or larger =================================== */
+        @media only screen and (min-width : 993px) {
+            body {
+            }
+        }
+
+        /* === X-LARGE or larger =================================== */
+        @media only screen and (min-width : 1201px) {
+
+        }
+
+
+/* 
+
+#FFC3CE #D6E3B5 #6B824A #FFF7EF #636563
+#5C604D #FFBAD2 #F20056 #E5E7E1 #C8CFB4 #A3AE7E
+#9C1C6B #CA278C #E47297 #FFE9E8 #AA0114 #000000
+
+
+YELLOW BACKGROUND: FFCF00
+PINK LINK: ff0066;
+
+DIF PINK            LH - FF69B4 / DK - FF1493 / FADED - DB7093
+
+UGLY GREEN:         2F4F4F
+WHITE BACKGROUND:   FFF8DC;
+DK WHITE BACKGROUND:FFE4E1;
+CARD TABLE GREEN:   2E8B57;
+BLUE METAL          483D8B
+VERDE MUSGO         556B2F
+FLATTENED MED-DK PINK     BC8F8F
+DK ORANGE PINK      CD5C5C
+FADED dk musgo green 2F4F4F
+;
+;
+eat
+food
+menu
+fresh
+-------------
+.eat
+.now
+.click
+.me
+.online
+.sale
+.discount
+.fun
+food.garden
+food.gallery
+.guide
+.help
+.land
+.life
+link
+live
+.menu
+.mom
+.one
+.online
+.organic
+.pro
+.promo
+.party
+.reviews
+.review
+.sale
+.shop
+.supply
+.express
+.directory
+.cheap
+
+.business
+=======================
+
+florida
+miami
+properties
+
+----------------------
+
+.properties
+.PROPERTY
+.investments
+ .FINANCE 
+ .miami
+ .FINANCIAL 
+.ventures
+.forsale
+.estate - Pioneering the art of the .estate sale.
+
+------------
+
+
+
+
+COLORS
+    ff0066
+    bfff00
+
+green (main color)
+    009999   rgba(0, 153, 153, 0.5)
+    00cccc
+    d9ff66
+    ff8000 - orange
+    99cc00
+
+ace600 - real lime
+94c20a - link hover | logo background
+009973 - nav color
+
+739900 - logo hover background
+
+00b386 - blue green used for default heading color
+
+1f473d - dark green highlight background
+66ffff - blue text
+ffff66 - yellow text
+ffd966 - orange text
+
+ff8000 - beutifull text color
+
+daffb3; - light green backgrounds
+d9f0c1;
+dcf8d3;
+f2ffe6
+e6ffcc
+eef7f4 - two nice light blue backgrounds
+daf1eb
+
+    background: #daffb3;
+    background: #d9f0c1;
+    background: #dcf8d3;
+    background: #dcf8d3;
+
+    background: #e5ffeb;
+    background: #b8d65c;
+    background: #ccff99;
+    background: #d9f4be;
+
+        background: rgba(198, 210, 210, 0.9);
+
+nice background rgba(0, 77, 77, 1);
+
+#example1 {
+    background-image: url(img_flwr.gif), url(paper.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding: 15px;
+}
+
+#00e6ac rgb(0, 230, 172)
+#00cc99 rgb(0, 204, 153)
+#00b386 rgb(0, 179, 134)
+#009973 rgb(0, 153, 115)
+
+
+Triangle bullet code: \2023
+Buller code:          \2022
+
+    blue
+    background: #8000ff;
+    background: #7e00e6;
+
+    background: #6f2a6f;
+    background: #ff4da6;
+
+*/
+
+
+
+
+
+

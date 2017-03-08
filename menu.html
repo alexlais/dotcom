@@ -1,0 +1,453 @@
+<div ng-repeat="each in food | filter: currentItem">
+    <header>
+        <div ng-include='"includes/mainNav.html"'></div>
+        <div class="container-fluid banner" style="background-image: url('assets/{{each.imageLG}}');">
+            <div class="row">
+                <div class="col-5 placard">
+                    <div class="row">
+                        <div class="col-9 offset-sm-3">
+                            <h2><span>Welcome to</span> {{each.name}}</h2>
+                            <ul class="itemList flat">
+                                <li class="details">
+                                    <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                                    <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                                    <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                                </li>
+                                <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
+                                    <span class="a">Hours</span>
+                                    <div ng-app="ngAnimate">
+                                        <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
+                                            <p class="sun"><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
+                                            <p class="mon"><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
+                                            <p class="tue"><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
+                                            <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
+                                            <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
+                                            <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
+                                            <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="hoverbox address" ng-mouseover="addressToggle='open'" ng-mouseleave="addressToggle=''">
+                                    <span class="a">Address</span>
+                                    <div ng-app="ngAnimate">
+                                        <div ng-class="addressToggle" class="overflow">
+                                            <address>{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</address>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="priceRange">{{ each.priceRance }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- h2>Welcome to <span ng-bind='currentItem'></span></h2 -->
+                <div ng-repeat="each in food | filter: currentItem">
+                    <ul class="itemList flat">
+                        <li class="details">
+                            <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                            <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                            <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                        </li>
+                        <li class="address">
+                            <p>
+                                <span class="fieldName">Address:</span>
+                                <span class="overflow">{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</span>
+                            </p>
+                        </li>
+                        <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
+                            <span class="a">Hours:</span>
+                            <div ng-app="ngAnimate">
+                                <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
+                                    <p class="sun"><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
+                                    <p class="mon"><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
+                                    <p class="tue"><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
+                                    <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
+                                    <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
+                                    <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
+                                    <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo menu">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Did you Know?</h3>
+                    <p>A baked sweet potato contains over 400% of your daily requirement for vitamin A?</p>
+                    <span class="cta"><a href="home">Tell Me More</a></span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Better CTA Options</h3>
+                    <ul class="native">
+                        <li><p>Get My... Why My...?</p></li>
+                        <li><p>Give Me More, Show Me More, Tell Me More, I Want This</p></li>
+                        <li><p>Find Out More, Explore, Discover, Get it</p></li>
+                        <li><p>The Advantages, The Benefits</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Explore CTAs</a></span>
+               </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <ul class="native">
+                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
+                        <li><p>Are high in protein and fiber</p></li>
+                        <li><p>Are low in fat</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Eat It</a></span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>The New York Times</h3>
+                    <p>Find food and wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants andmore.</p>
+                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span></p>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/homePromo.html"'></div>
+<div ng-include='"includes/footer.html"'></div>
+
+
+
+
+
+
+
+
+<!-- ============================================================ -->
+
+
+
+
+
+
+
+<section class="code">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4">
+                <h3>ng-class use</h3>
+                <p><code><ANY ng-class="expression"> ... </ANY></code></p>
+                <p>or <code><ANY class="ng-class: expression;"> ... </ANY></code></p>
+                <p>or <code><p ng-class="{strike: deleted, bold: important, 'has-error': error}">Some example</p></code></p>
+
+                <h3>TODAY</h3>
+                <p><a href="https://docs.angularjs.org/api/ng/filter/date">Date Filters Doc</a></p>
+                <p>dd/MM/yyyy format</u><br /><span>{{CurrentDate | date:'dd/MM/yyyy'}}</span></p>
+                <p>dd, MMMM yyyy format</u><br /><span>{{CurrentDate | date:'dd, MMMM yyyy'}}</span></p>
+                <p>Week / WK</u><br /><span>{{CurrentDate | date:'EEEE'}}</span></p>
+                <p>Week / WK</u><br /><span>{{CurrentDate | date:'EEE'}}</span></p>
+                <p>24 Hour time</u><br /><span>{{CurrentDate | date:'HH:mm:ss'}}</span></p>
+                <p>12 Hour time</u><br /><span>{{CurrentDate | date:'hh:mm:ss a'}}</span></p>
+
+                <span ng-non-bindable>{{1288323623006 | date:'medium'}}</span>:
+                <span>{{1288323623006 | date:'medium'}}</span>
+                <br>
+                <span ng-non-bindable>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span>:
+                <span>{{1288323623006 | date:'yyyy-MM-dd HH:mm:ss Z'}}</span>
+                <br>
+                <span ng-non-bindable>{{1288323623006 | date:'MM/dd/yyyy @ h:mma'}}</span>:
+                <span>{{'1288323623006' | date:'MM/dd/yyyy @ h:mma'}}</span>
+                <br>
+                <span ng-non-bindable>{{1288323623006 | date:"MM/dd/yyyy 'at' h:mma"}}</span>:
+                <span>{{'1288323623006' | date:"MM/dd/yyyy 'at' h:mma"}}</span>
+            </div>
+            <div class="col-xs-4">
+                <h3>Samur alit amet</h3>
+                <ul>
+                    <li><p><a href="http://stackoverflow.com/questions/29055605/how-do-i-bind-this-scope-variable-to-a-ng-class-attribute">example</a></p></li>
+                    <li><p>class={{$route.current.templateUrl.split('.', 1)}}</p></li>
+                    <li><a href="http://www.foodrepublic.com/2015/02/24/5-new-york-city-services-that-are-changing-the-food-delivery-game/">services</a>
+                | <a href="https://www.delivery.com/cities/queens/categories/restaurant/bel-aire-diner-restaurant?address=&orderTime=ASAP&orderType=delivery">delivery.com belair</a>
+                | <a href="https://iwantmyname.com/blog/how-to-pick-the-right-domain-extension">Is it ok to use a new gTLD?</a>
+                | <a href="https://www.dinospizzaandpastaastoriany.com/">dinos</a></li>
+                | <a href="https://postmates.com/nyc/burger-club-astoria">burger club</a></li>
+                | <a href="https://www.ubereats.com/stores/992c6347-7569-44d8-91d9-272bc10781c6/">K of Falafel</a></li>
+
+                </ul>
+            </div>
+            <div class="col-xs-4">
+                <h3>Route to Class</h3>
+                <p>test: {{$route.current.templateUrl}}</p>
+                <p>test: {{$route.current.templateUrl.split('.', 1)}}</p>
+                <p>class={{$route.current.templateUrl.split('.', 1)}}</p>
+            </div>
+        </div>
+        <div class="row" my-directive style="min-height: {{promoHeight}}px">
+            <div class="col-xs-12 left" style="min-height: {{promoHeight}}px">
+                <h3>promoHeight = {{promoHeight}}</h3>
+                <p>CAlculates the height of a html element (this element)</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<div ng-include='"_includes/footer.html"'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div style="display: none;">
+
+    <div class="row">
+        <div class="col-sm-12">
+            <h2>Welcome to <span ng-bind='currentItem'></span></h2>
+
+            <label>Search: <input ng-model="currentItem"></label>
+
+            <!-- barely explained https://plnkr.co/edit/?p=preview -->
+            <ul class="mainList" ng-repeat="each in food | filter: currentItem">
+                <li>
+                    <h3>{{ each.name }}</h3>
+                </li>
+                <li class="details">
+                    <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                    <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                    <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                </li>
+                <li class="address">
+                    <p>
+                        <span class="fieldName">Address:</span>
+                        <span class="overflow">{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</span>
+                    </p>
+                </li>
+                <li class="hours">
+                    <p>
+                        <span class="fieldName">Hours:</span>
+                        <div class="overflow">
+                            <p><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
+                            <p><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
+                            <p><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
+                            <p><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
+                            <p><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
+                            <p><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
+                            <p><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
+                        </div>
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="display:none">
+
+
+
+
+
+
+<h2>HG-BIND</h2>
+1 <p ng-bind='[currentItem] [0]'></p>
+2 <p ng-bind='currentItem'></p>
+2 <p ng-bind='[currentItem]'></p>
+
+
+
+
+
+
+<label>Search: <input ng-model="searchText"></label>
+<table id="searchTextResults">
+  <tr><th>Name</th><th>Phone</th></tr>
+  <tr ng-repeat="friend in friends | filter:searchText">
+    <td>{{friend.name}}</td>
+    <td>{{friend.phone}}</td>
+  </tr>
+</table>
+
+
+
+
+
+
+<h2><u>OLD NG-REPEAT</u></h2>
+
+<p><label>Search: <input ng-model="itemFilter"></label></p>
+
+<ul ng-repeat="each in items">
+    <li>
+        <p>{{each.name}}</p>
+        <ul>
+            <li>
+                <p>Description: {{each.description}}</p>
+                <p>Address:     {{each.address}}</p>
+                <p>Index:       {{ $index }}</p>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+<h2>DINAMIC NAME</h2>
+
+<p>Name!!!          {{params}}</p>
+<p>currentItem:     {{currentItem}}</p>
+<p>currentItemName: {{currentItemName}}</p>
+
+<h2>HG-BIND</h2>
+1 <p ng-bind='[currentItem]'></p>
+2 <p ng-bind='[currentItem] [0]'></p>
+2 <p ng-bind='[currentItem]'></p>
+
+
+
+
+<hr>
+
+<input type="text" ng-model="message" />
+
+<select ng-model="message">
+  <option value="option 1">Option 1</option>
+  <option value="option 2">Option 2</option>
+</select>
+
+<textarea ng-model="message" rows="4" cols="50"></textarea>
+
+
+<h2>INDEX</h2>
+<p>[items.item2][0]: {{ [items.item2][0] }}</p>
+<p>{{ {name: 'David', age: '33'}.name }}</p>
+<p>[0] = {{ ['David', 'Pam', 'Sara'][0] }}</p>
+<p>[1] = {{ ['David', 'Pam', 'Sara'][1] }}</p>
+<p>[2] = {{ ['David', 'Pam', 'Sara'][2] }}</p>
+
+<hr>
+
+<H2>ITEM1</H2>
+<p>Name:            {{items.item1.name}}</p>
+<p>Descrition:      {{items.item1.description}}</p>
+<p>Address:         {{items.item1.address}}</p>
+
+
+<H2>ITEM2</H2>
+<p>Name:            {{items.item2.name}}</p>
+<p>Descrition:      {{items.item2.description}}</p>
+<p>Address:         {{items.item2.address}}</p>
+
+
+<h2>FULL ROUTE</h2>
+<p>item1 name =     {{$route.current.scope.items.item1.name}}</p>
+<p>item1 =          {{$route.current.scope.items.item1}}</p>
+<p>item2 =          {{$route.current.scope.items.item2}}</p>
+<p>items =          {{$route.current.scope.items}}</p>
+
+<p>URL =            {{$location.path()}}</p>
+<p>templateUrl =    {{$route.current.templateUrl}}</p>
+<p>PARAMS =         {{params}}</p>
+<p>PARAMS =         {{$route.current.params}}</p>
+<p>currentItemVar = {{currentItemVar}}</p>
+<p>$routeParams =   {{$routeParams}}</p>
+
+
+<hr>
+
+<p>CURRENT =        {{$route.current}}</p>
+
+<!--
+controller: {{name}}<br />
+item ID: {{params.itemID}}<br />
+-->
+</section>
