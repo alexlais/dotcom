@@ -22,9 +22,7 @@ darker blue     00b0eb
 red:            fa0053 fa0053
 body back:              f0f5f5
 dark body back:         d1e0e0 
-light beige bg          f3fae1
 */
-
 
 
 /* _BOLD --------------------- */
@@ -34,7 +32,7 @@ strong, .a, span.a, .priceRange {
 }
 
 /* INHERIT ---------------------------------- */
-/* fix the :focus messing up from bootstrap so that it wont have to be overwritten over and over evry time link styles change */
+/* fix the :focus so that it wont have to be overwritten over and over evry time link styles change */
 a:focus {
     color: inherit;
     background: inherit;
@@ -59,6 +57,7 @@ body {
 .filter .row, header nav ul ul.row {
     display: block;
 }
+
 /* col-xs couple not working as supposed. 
 Obs: 
 1 - this bug fix makes it work for 2 boxes, not 3 or more. 
@@ -67,6 +66,7 @@ Obs:
 .col-xs-bugfix {
     width: 50%;
 }
+
 /*-- _LINKS ---------------------------------------------------- */
 
 a, a:focus, header nav a:hover, .promo h2 a:hover, .promo h4 a:hover, .promo p a:hover, .keywords a:hover, .placard .technologies a:hover {
@@ -102,11 +102,8 @@ footer a, .promo h2 a, .promo h4 a, .promo p a {
     transition-timing-function: easy-out;
 } 
 
-
-        
-
 /*-- _COLORS ---------------------------------------------------- */
-a, .a, h1, h1 a, header nav li.navItem a:hover, .filter a:hover, header nav a:hover, main.menu .itemList .priceRange, .placard .technologies a:hover {
+a, .a, h1, h1 a, header nav li.navItem a:hover, .filter a:hover, header nav a:hover, main.menu .itemList .priceRange, .placard .technologies a:hover, .promo .row > div:first-child p a {
     color: DeepSkyBlue;
 }
 h2, h2 a, h3, h3 a {
@@ -155,11 +152,6 @@ h4 {
     line-height: 1.2;
     font-size: 1.5em;
 }
-/*
-h4 span {
-    font-size: 0.8em;
-}
-*/
 .placard h4 {
     font-size: 1.5em;
 }
@@ -167,11 +159,6 @@ p {
     line-height: 1.35;
     margin: 0 0 1em;
 }
-/*
-.summary > div > div p:last-child {
-    margin-bottom: 0.5em
-}
-*/
 ul.native {
     padding-left: 20px;
     list-style: url("assets/images/thumbs/plus.svg");
@@ -209,7 +196,6 @@ cc {
     word-break: keep-all;
     white-space: nowrap;
 }
-
 .img-responsive {
     width: 100%;
     height: auto;
@@ -229,7 +215,6 @@ cc {
     border-top: 3px solid #ff144f;
     border-bottom: 3px solid #ff144f;
     padding-top: 1.5em;
-    padding-bottom: 2em;
 }
 
 /* --- screenshots --- --- --- */
@@ -240,7 +225,6 @@ cc {
     border-radius: 4px;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
-
 }
 .row .placard.screenshots img {
     float: right;
@@ -260,15 +244,6 @@ cc {
     color: white;
     font-size: 1.8em;
 }
-/*
-.placard.screenshots span {
-    border: 3px dashed DeepSkyBlue;
-    display: block;
-    margin-top: 2em;
-    margin-bottom: 3em;
-    border-radius: 4px;
-}
-*/
 main.home .placard h2 {
     color: white;
 }
@@ -307,6 +282,21 @@ main.home .placard h2 {
     background: #ff144f;
     color: White;
 }
+
+/* KEYWORD SIZES */
+.technologies .AngularJS, .keywords .AngularJS {
+    font-size: 1.7em;
+}
+.technologies .Bootstrap, .keywords .Bootstrap, .technologies .Media, .keywords .Media {
+    font-size: 1.2em;
+}
+.technologies .No.jQuery, .keywords .No.jQuery, .technologies .GitHub, .keywords .GitHub {
+    font-size: 1.5em;
+}
+.technologies .Responsive, .keywords .Responsive {
+    font-size: 1.2em;
+}
+
 /* === _banner === */
 
 .banner {
@@ -320,6 +310,7 @@ main.home .banner {
     background-position: center 30%;
     background-attachment: fixed;
     padding-bottom: 10Vw;
+    border-bottom: 3px solid #00bbff;
 }
 
 /* _CTA --------------------- */
@@ -334,9 +325,9 @@ main.home .banner {
     line-height: 1.5;
     border-radius: 3px;
     padding: 0.25em 20px;
-    border: 1px solid rgba(0,0,0,.25);
-    color: Black;
-    transition-property: margin, color, padding, border, box-shadow;
+    border: 1px solid #00bbff;
+    color: #00bbff;
+    transition-property: background, margin, color, padding, border, box-shadow;
     transition-duration: 0.5s;
     transition-timing-function: easy-in;
 }
@@ -356,10 +347,11 @@ main.home .banner {
 }
 .cta a:hover {
     padding-right: 10px;
-    color: inherit;
+    color: white;
     text-decoration: none;
-    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
-    border: 1px solid Black;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .25);
+    border: 1px solid #00bbff;
+    background: #00bbff;
 }
 .text-center .cta a:hover {
 }
@@ -371,6 +363,7 @@ header nav.col-sm {
     padding-top: .75em;
     padding-bottom: .5em;
     background: black;
+    border-bottom: 1px solid #00bbff;
 }
 header nav li.navItem {
     text-align: left
@@ -432,7 +425,7 @@ h1.brand {
     color: #fff;
     margin: 0 20px 0 0;
     padding: 0;
-    border: 2px solid #fff;
+    border: 3px solid #fff;
     border-radius: 60% / 40%;
     font-size: 19px;
     float: left;
@@ -446,8 +439,8 @@ h1.brand {
         display: inline-block;
         font-weight: 600;
         transition-property: padding-top;
-        transition-duration: .25s;
-        transition-timing-function: cubic-bezier(0,0,1,1);
+        transition-duration: .5s;
+        transition-timing-function: easy-in;
         transition-delay: .25s;
         letter-spacing: 1px
     }
@@ -459,20 +452,22 @@ h1.brand {
         height: 0;
         width: 130px;
         position: absolute;
-        transition-property: border;
-        transition-duration: .25s;
-        transition-timing-function: cubic-bezier(0,0,1,1);
+        transition-property: border, position, left;
+        transition-duration: .5s;
+        transition-timing-function: easy-in;
         transition-delay: .25s;
     }
     .brand a:before {
-        border-top: 2px solid #fff;
+        border-top: 3px solid #fff;
         border-bottom: 0;
         top: 0;
+        left: 0;
     }
     .brand a:after {
-        border-bottom: 2px solid #fff;
+        border-bottom: 3px solid #fff;
         border-top: 0;
         bottom: 0;
+        left: 0;
     }
     .brand a:hover {
         background: transparent;
@@ -482,10 +477,13 @@ h1.brand {
     .brand a:hover span {
     }
     .brand a:hover:before {
-        border-top: 5px solid #fff;
+        border-width: 150px;
+        border-top: 7px solid #fff;
     }
     .brand a:hover:after {
-        border-bottom: 5px solid #fff;
+        border-width: 150px;
+        left: -200px;
+        border-bottom: 8px solid #fff;
     }
 
 /* --------------  filter ---------------  */
@@ -532,7 +530,7 @@ h1.brand {
     background: DeepSkyBlue;
     border-radius: 3px;
     padding: .75em 1em;
-    margin: 0 0 1em 0;
+    margin: 0 0 1em 2em;
 }
 .filter .search h3 {
     color: white;    
@@ -563,7 +561,7 @@ main.home .mainlist {
     line-height: 1;
     font-size: 0.8em;
     display: block;
-    background-size: 200%;
+    background-size: 220%;
     background-position: left top;
     position: relative;
     overflow: visible;
@@ -589,85 +587,8 @@ main.home .itemList.flat {
     overflow: auto;
     background: white
 }
-
-/* --- .HOVERBOX ---------- */
-.hoverbox {
-    position: relative;
+.details span {
 }
-.hoverbox .overflow {
-    position: absolute;
-    border-radius: 3px;
-    display: none;
-    background: white;
-    box-shadow: 0 0 40px -5px rgba(0,0,0,0.5);
-    z-index: 1;
-    left: 0;
-    font-size: 0.85em;
-    line-height: 1.3;
-    bottom: 1.5em;
-    padding: .5em 1em;
-}
-.hoverbox .overflow.open {
-    display: block;
-}
-
-/* --- .HOVERBOX ITEMLIST ---------- */
-.itemList .hoverbox {
-    float: left;
-    margin: 0.5em 1em 0 0;
-}
-main.menu .itemList .hoverbox {
-    margin-top: 1em;
-}
-main.menu .itemList .priceRange {
-    text-align: right;
-    margin: 1em 0 0 1em;
-}
-
-/* --- .HOVERBOX OVERFLOW ---------- */
-.itemList .hoverbox .overflow {
-    width: 15em;
-}
-
-/* --- .HOVERBOX P ---------- */
-.itemList .hoverbox .overflow p {
-    padding: .1em .2em;
-}
-.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
-    font-weight: 700;
-    color: #555;
-}
-
-.itemList .hoverbox.address .overflow {
-    padding: 1em 2em;
-}
-.itemList .hoverbox.address .overflow p {
-    text-align: left;
-}
-.overflow p.odd {
-    background: rgba(0,0,0, 0.045);
-    border-top: 1px solid rgba(0,0,0, 0.008);
-    border-bottom: 1px solid rgba(0,0,0, 0.008);
-}
-
-/* CONTENT SNIPPET STRUCTURE */
-
-/* Snippet item - for example: images, the floating elements or min-width titles */
-.fieldName {
-    text-align: left;
-    float: left;
-    min-width: 40%;
-}
-.hours .fieldName {
-    min-width: 30%;
-}
-/* the content container that doent wrap around the item */
-.overflow {
-    overflow: auto;
-    display: block;
-}
-/* make siblings not visibly nest, and brakes line instead */
-
 
 
 /* --------------  _promo ---------------  */
@@ -680,17 +601,12 @@ main.menu .itemList .priceRange {
 .promo.site .gutter {
     padding: 1.25em 5% 1em;
 }
-.promo .row {
-    padding-right: 20px;
-    padding-left: 20px;
-}
 .promo .row > div {
     /* PROMO BORDER */
-    border: 4px solid #f0f5f5; /* body background color */
+    border: 15px solid #f0f5f5;
     padding-left: 15px;
     padding-right: 15px;
 }
-
 
 /* Home Site Promo */
 main.home .promo.site {
@@ -722,14 +638,9 @@ main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:
 /* Promo Colors */
 .promo .row > div:first-child, .promo .row > div:nth-child(4) {
     background: white;
-    border-color: DeepSkyBlue;
-}
+`}
 .promo .row > div:nth-child(2), .promo .row > div:nth-child(3) {
-    background-color: DeepSkyBlue;
-    border-color: white;
-}
-main.menu .promo.site .row > div:nth-child(2) {
-    background: #f3fae1;
+    background-color: #00b0eb;
 }
 .promo .row > div:nth-child(2) .cta a, .promo .row > div:nth-child(3) .cta a {
     border: 1px solid rgba(255, 255, 255, 0.5);
@@ -742,12 +653,23 @@ main.menu .promo.site .row > div:nth-child(2) {
 }
 
 /* .promo text color inversion for darker background */
-.promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3, .promo .row > div:first-child .cta a,
-main.menu .promo.site .row > div:nth-child(2), main.menu .promo.site .row > div:nth-child(2) p, main.menu .promo.site .row > div:nth-child(2) h3, main.menu .promo.site .row > div:nth-child(2) .cta a,
-.promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a
+.promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3,
+main.menu .promo.site .row > div:nth-child(2), main.menu .promo.site .row > div:nth-child(2) p, main.menu .promo.site .row > div:nth-child(2) h3, main.menu .promo.site .row > div:nth-child(2) .cta a, main.menu .promo.site .row > div:nth-child(2) a,
+.promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a, .promo .row > div:nth-child(4) a
 {
-    color: black;
+    color: #777;
 }
+
+
+/* Site Promo  (keyword ***) */
+main.menu .promo.site .row > div {
+    border-radius: 3px;
+    border-width: 3px 0 0;
+}
+.promo .row {
+    margin-bottom: 4em;
+}
+
 
 
 form {
@@ -781,21 +703,6 @@ textarea.form-control, .form-control {
     font-size: 0.8em;
 }
 
-/* --- BORDER TOP and BOTTOM ------------------------------------- */
-.border-top {
-    border-top: 3px solid rgba(0,0,0,0.031);
-    margin-top: 4rem;
-    padding-top: 2rem;
-}
-.border-bottom {
-    border-bottom: 3px solid rgba(0,0,0,0.031);
-    margin-bottom: 2rem;
-    padding-bottom: 4rem;
-}
-
-
-
-
 
 /* --- DONE ------ DONE ------ DONE -------- DONE ------- DONE -------- DONE -------*/
 
@@ -806,12 +713,12 @@ textarea.form-control, .form-control {
                                         @media only screen and (max-width : 992px) {
                                             .promo h3 {
                                                 font-size: 2em;
-                                                line-height: 1;
                                                 margin-left: 10%;
                                                 margin-right: 10%;
                                             }
                                             .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
-                                                font-size: 2.5em;
+                                                font-size: 2.5em;    
+                                                color: #00bbff;
                                             }
                                            
                                             .placard .summary {
@@ -859,6 +766,8 @@ textarea.form-control, .form-control {
                                             .filter .search {
                                                 float: none;
                                                 overflow: auto;
+                                                width: auto;
+                                                margin-left: 0;
                                             }
 
 
@@ -917,7 +826,7 @@ textarea.form-control, .form-control {
                                             .itemList .hoverbox .overflow {
                                                 width: 12em;
                                                 font-size: 0.8em
-                                            }
+                                            } 
                                             /* _placard and _banner --------------------- */
 
                                             .banner > .row .placard:first-child {
@@ -1127,12 +1036,12 @@ textarea.form-control, .form-control {
     /* -----  mainList ------------ MEDIUM or larger ---  */
     .promo h3 {
         font-size: 2.4em;
-        line-height: 1;
         margin-left: 10%;
         margin-right: 10%;
     }
     .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
         font-size: 3em;
+        color: #00bbff;
     }
 
     .itemList {
@@ -1140,10 +1049,6 @@ textarea.form-control, .form-control {
     }
     section.menu.couple {
         margin-bottom: 3em;
-    }
-    /* Site Promo  (keyword ***) */
-    main.menu .promo.site .row > div:first-child, main.menu .promo.site .row > div:nth-child(2) {
-        border-radius: 80px 80px 0 0;
     }
 
     /* --- UL or DIV is being used --- --- */
@@ -1224,8 +1129,6 @@ textarea.form-control, .form-control {
     }
 }
 
-
-
         /* MEDIUM to LARGE */
         @media only screen and (min-width: 769px) and (max-width : 1199px) {
             .keywpords a {
@@ -1261,13 +1164,14 @@ textarea.form-control, .form-control {
             .itemList li.header h3 a {
                 min-height: 230px;
             }
-
+            /*
             main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:nth-child(3) {
                 border-radius: 0 80px 0 80px;
             }
             main.home .promo.site .row > div:nth-child(4) {
                 border-radius: 80px 0 80px 0;
             }
+            */
         }
 
 

@@ -48,7 +48,7 @@
                                 <h4 class="border">Technologies</h4>
                                 <p class="technologies">
                                     <span>The following total of {{each.technologies.length}} technologies were used in this project:</span>
-                                    <span ng-repeat="each in each.technologies"><a ng-class="{{each}}" ng-href="home/{{each}}">{{each}}</a> </span>
+                                    <span ng-repeat="each in each.technologies"><a class="{{each}}" ng-href="home/{{each}}">{{each}}</a> </span>
                                 </p>
                             </div>
                         </div>
@@ -61,17 +61,14 @@
                 <span class="large" ng-repeat="each in each.imageL"><img ng-src="assets/-images/{{each}}"></span>
             </div>
 
-            <div class="col-xs col-sm-12 item promo">
+            <!-- div class="col-xs col-sm-12 item promo">
                 <div class="row">
-                    <!-- item promo I - - - - - - - - - - - - - -->
                     <div class="col-md-3 col-6">
                         <div class="gutter text-center">
                             <h3>20% <br>OFF</h3>
                             <p>A baked sweet potato contains over 400% of your daily</p>
                         </div>
                     </div>
-
-                    <!-- item promo II - - - - - - - - - - - - - -->
                     <div class="col-md-3 col-6">
                         <div class="gutter text-center">
                             <h3>Best Sellers!</h3>
@@ -80,8 +77,6 @@
                             <p><a href="home">Dollor sit Amet consectetur</a></p>
                        </div>
                     </div>
-
-                    <!-- item promo III - - - - - - - - - - - - - -->
                     <div class="col-md-3 col-6">
                         <div class="gutter text-center">
                             <h3>Black Eyed Peas</h3>
@@ -89,8 +84,6 @@
                             <span class="cta"><a href="home">Eat It</a></span>
                         </div>
                     </div>
-
-                    <!-- item promo IV - - - - - - - - - - - - - -->
                     <div class="col-md-3 col-6">
                         <div class="gutter text-center">
                             <h3>Pasta Di Casa</h3>
@@ -98,7 +91,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div -->
         </div>
     </div>
 </div>
@@ -107,24 +100,13 @@
 <section class="site promo">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-6 col-12">
+            <div class="col-md-10 offset-md-1">
                 <div class="gutter text-center">
-                    <h3>Did you Know?</h3>
-                    <p>Lorem ipsum dolor sit amet, eos ad delectus adolescens dissentiet, meis quas eum eu. </p>
-                    <p>Eos ad delectus adolescens dissentiet, meis quas eum eu. Et minim utroque quo, eum cu tacimates sensibus philosophia.</p>
-                    <span class="cta"><a href="home">Tell Me More</a></span>
+                    <h3>About This Website</h3>
+                    <p>Alexlais.com is an AngularJS single page application using ngRoute with HTML5 Mode enabled and loads data thru a ng-Repeat with a routeParams filter based on current URL.</p>
+                    <p><strong>Hosted by GitHub:</strong> <br>The production repository url is <br><a href="https://github.com/alexlais/dotcom">github.com/alexlais/dotcom</a>.</p>
+                    <span class="cta"><a target="_blank" href="https://github.com/alexlais/dotcom">GitHub Repository</a></span>
                 </div>
-            </div>
-            <div class="col-sm-6 col-12">
-                <div class="gutter text-center">
-                    <h3>Black Eyed Peas</h3>
-                    <ul class="native">
-                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
-                        <li><p>Are high in protein and fiber</p></li>
-                        <li><p>Are low in fat</p></li>
-                    </ul>
-                    <span class="cta"><a href="home">Eat It</a></span>
-               </div>
             </div>
         </div>
     </div>

@@ -23,7 +23,7 @@
             </div>
             <h3>Filter by keyword:</h3>
             <ul class="flat">
-                <li ng-repeat="each in keywords.split(',')"><a ng-href="home/{{each}}" ng-class="{{each}}">{{each}}</a> </li>
+                <li ng-repeat="each in keywords.split(',')"><a ng-href="home/{{each}}" class="{{each}}">{{each}}</a> </li>
             </ul>
         </div>
     </div>
@@ -34,7 +34,7 @@
         <div class="row" monitor-style="height" update-variable="height">
             <!-- barely explained https://plnkr.co/edit/?p=preview -->
             <div
-                class="col-12 col-sm-6 col-md-4 col-lg-3"
+                class="col-12 col-sm-6 col-md-4 col-xl-3"
                 ng-repeat="each in food | filter: currentItem"
                 ng-class="{ 'even': $even, 'odd': $odd }" >
 
@@ -48,7 +48,7 @@
                         </h3>
                     </li>
                     <li class="details">
-                        <p><span ng-repeat="each in each.technologies">{{ each }}, </span></p>
+                        <p><span ng-repeat="each in each.technologies">{{ each }}, </span> </p>
                     </li>
                 </ul>
             </div>
@@ -57,28 +57,32 @@
 </section>
 
 <section class="site promo">
-    <div class="container-fluid">
+    <div class="container">
         <div class="row">
-            <div class="col-xl-3 col-sm-6 col-12">
+            <div class="col-sm-6 col-12">
                 <div class="gutter text-center">
                     <h3>About This Website</h3>
-                    <p>Alexlais.com is an AngularJS single page application using ngRoute with HTML5 MODE enabled and loads data thru a ng-Repeat with a routeParams filter based on current URL.</p>
-                    <p>It is hosted by GitHub, the repository url is: <a href="https://github.com/alexlais/dotcom">github.com/alexlais/dotcom</a>.</p>
+                    <p>Alexlais.com is an AngularJS single page application using ngRoute with HTML5 Mode enabled and loads data thru a ng-Repeat with a routeParams filter based on current URL.</p>
+                    <p><strong>Hosted by GitHub:</strong> <br>The production repository url is <br><a href="https://github.com/alexlais/dotcom">github.com/alexlais/dotcom</a></p>
                     <span class="cta"><a target="_blank" href="https://github.com/alexlais/dotcom">GitHub Repository</a></span>
                 </div>
             </div>
-            <div class="col-xl-3 col-sm-6 col-12">
+            <div class="col-sm-6 col-12">
                 <div class="gutter text-center">
-                    <h3>Black Eyed Peas</h3>
-                    <ul class="native">
-                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
-                        <li><p>Are high in protein and fiber</p></li>
-                        <li><p>Are low in fat</p></li>
-                    </ul>
-                    <span class="cta"><a href="home">Eat It</a></span>
+                    <h3>AngularJS Route Template</h3>
+                    <p>The template used for the development of this website can be found at the AngularJS API $route page</p>
+                    <span class="cta"><a target="_blank" href="https://docs.angularjs.org/api/ngRoute/service/$route">AngularJS API $route</a></span>
                </div>
             </div>
-            <div class="col-xl-3 col-sm-6 col-12">
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Utilities Migration to BS4</h3>
+                    <p>The .hidden and .show classes have been removed</p>
+                    <p>replaced by .hidden-xs-up .hidden-xs-down .hidden-sm-up .hidden-sm-down .hidden-md-up .hidden-md-down .hidden-lg-up .hidden-lg-down.</p>
+                    <span class="cta"><a target="_blank" href="https://v4-alpha.getbootstrap.com/migration/">Getbootstrap Migration</a></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
                 <div class="gutter text-center">
                     <h3>Better CTA Options</h3>
                     <ul class="native">
@@ -87,16 +91,7 @@
                         <li><p>Find Out More, Explore, Discover, Get it</p></li>
                         <li><p>The Advantages, The Benefits</p></li>
                     </ul>
-                    <span class="cta"><a href="home">Explore CTAs</a></span>
                 </div>
-            </div>
-            <div class="col-xl-3 col-sm-6 col-12">
-                <div class="gutter text-center">
-                    <h3>Utilities Migration to BS4</h3>
-                    <p>The .hidden and .show classes have been removed</p>
-                    <p>replaced by .hidden-xs-up .hidden-xs-down .hidden-sm-up .hidden-sm-down .hidden-md-up .hidden-md-down .hidden-lg-up .hidden-lg-down.</p>
-                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span>
-               </div>
             </div>
         </div>
     </div>

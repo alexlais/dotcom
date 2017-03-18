@@ -16,20 +16,6 @@
 
     .controller('firstCtrl', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location) {
 
-        // items
-        $scope.items = {
-            item1: {
-                name: 'Brazil Nuts',
-                description: 'Edible nut from Amazon region',
-                address: '123 4th Street'
-            },
-            item2: {
-                name: 'Wallnuts',
-                description: 'The best nut',
-                address: '234 Walnut Street'
-            }
-        };
-
         // alexlais.com CONTENT
         $scope.siteInfo = {
             name: 'portfolio'
@@ -40,7 +26,7 @@
         // mediterranean turkish greek asian chineese thai indian japanese soups subs
         // seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert
         // healthy vegetarian vegan gluten free
-        $scope.keywords = 'AngularJS,HTML5,CSS3,Bootstrap 4,HTML5 MODE,HTML5 Storage,GitHub hosted,Boottrap 3';
+        $scope.keywords = 'AngularJS,No jQuery,jQuery,HTML5,CSS3,Bootstrap 4,Media Queries,HTML5 Mode,HTML5 Storage,AJAX & JSON,GitHub hosted,Bootstrap 3,Responsive';
 
         $scope.food = [
         {
@@ -51,7 +37,7 @@
             imageL: ['7DayEat2.png'],
             icon: '7DayEat1.png',
             technologies: [
-                'AngularJS', 'No jQuery', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript', 'HTML5 MODE', 'GitHub hosted', 'Responsive Design', 'Media Queries', 'AJAX & JSON', 'Photoshop'],
+                'AngularJS', 'No jQuery', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript', 'HTML5 Mode', 'GitHub hosted', 'Responsive Design', 'Media Queries', 'AJAX & JSON', 'Photoshop'],
             address: {
                 street: '',
                 cityState: 'New York, NY'},
@@ -71,7 +57,7 @@
                 'CSS3, HTML5, Bootstrap 3, Google Maps'],
             image: ['lex1.png','lex2.png','lex4.png'],
             icon: 'lex1.png',
-            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
+            technologies: ['AngularJS', 'jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'HTML5 Mode', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
                 street: '',
                 cityState: 'Miami, Fl'},
@@ -105,6 +91,7 @@
                 "Constantly working with designers to arrange requirements for mobile versions of table contents and other issues that can occur with sensitive content in a narrow layout",
                 "Working with editors making meticulous content changes and updates",
                 "Creating and testing a template to be used for all future projects and improve development time and QA"],
+            icon: 'medscape.png',
             image: {
                 image: 'notApply'},            
             technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
@@ -279,23 +266,27 @@
                 date: 'notApply'}
         },
         {
-            name:'StylishWindows.com',
-            image: 'Juliette_Breakfast.jpg',
-            image2: 'Juliette_Breakfast.jpg',
-            technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop'],
+            name: 'StylishWindows',
+            url: 'http://www.StylishWindows.com',
+            employer: 'Freelance',
+            description: [
+                "<p>This is a 12 year old web design and development that is still up without changes.</p>"],
+            descriptionList: [
+                "PHP codebase for structure includes and emailer form",
+                "Front-end development using HTML 1.0 Strict, CSS2, SEO and JavaScript libraries like lightbox"],            
+            imageL: ['stylishwindows.png'],
+            icon: 'stylishwindowsS.png',
+            technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop', 'Flash'],
             address: {
-                street: '825 8th Ave',
                 cityState: 'New York, NY'},            
-            duration: {
-                from: 'April 2014',
-                to: 'April 2015',
-                date: 'notApply'}
+            duration: { 
+                applicable: "notApply",
+                date: "2004"}
         },
         {
             name:'Terry Lyons',
             employer: 'Freelance Project',
             description: 'Food delivery service. Currently with placeholder content',
-
             name:'TerryLyons.com',
             image: 'Juliette_Breakfast.jpg',
             image2: 'Juliette_Breakfast.jpg',
