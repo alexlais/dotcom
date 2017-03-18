@@ -1,0 +1,231 @@
+<header>
+    <div ng-include='"includes/mainNav.html"'></div>
+</header>
+
+<section class="filter">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 col-md-9 keywords pb">
+                <h2>Filter by keyword:</h2>
+                <ul class="flat">
+                    <li ng-repeat="each in keywords.split(',')"><a href="home/{{each}}">{{each}}</a> </li>
+                </ul>
+            </div>
+            <div class="col-sm-12 col-md-3 search pb">
+                <label><h2>Search:</h2> <input ng-model="currentItem"></label>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="mainlist">
+    <div class="container-fluid">
+        <div class="row" monitor-style="height" update-variable="height">
+            <!-- barely explained https://plnkr.co/edit/?p=preview -->
+            <div
+                class="col-12 col-sm-6 col-md-4 col-lg-3"
+                ng-repeat="each in food | filter: currentItem"
+                ng-class="{ 'even': $even, 'odd': $odd }" >
+
+                <ul class="itemList flat">
+                    <li class="header">
+                        <h2><a href="menu/{{ each.name }}" style="background-image: url('assets/{{each.imageSM}}');"><span>{{ each.name }}</span></a></h2>
+                    </li>
+                    <li class="details">
+                        <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                        <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                        <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                    </li>
+                    <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
+                        <span class="a">Hours:</span>
+                        <div ng-app="ngAnimate">
+                            <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
+                                <div ng-repeat="each in each.hours">
+                                    <p class="{{ each.day }}" ng-class="{ 'even': $even, 'odd': $odd }"><span class="fieldName">{{ each.day}}:</span> {{ each.dayHours }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/homePromo.html"'></div>
+<div ng-include='"includes/footer.html"'></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<section style="display:none">
+
+
+
+
+
+
+<h2>HG-BIND</h2>
+1 <p ng-bind='[currentItem] [0]'></p>
+2 <p ng-bind='currentItem'></p>
+2 <p ng-bind='[currentItem]'></p>
+
+
+
+
+
+
+<label>Search: <input ng-model="searchText"></label>
+<table id="searchTextResults">
+  <tr><th>Name</th><th>Phone</th></tr>
+  <tr ng-repeat="friend in friends | filter:searchText">
+    <td>{{friend.name}}</td>
+    <td>{{friend.phone}}</td>
+  </tr>
+</table>
+
+
+
+
+
+
+<h2><u>OLD NG-REPEAT</u></h2>
+
+<p><label>Search: <input ng-model="itemFilter"></label></p>
+
+<ul ng-repeat="each in items">
+    <li>
+        <p>{{each.name}}</p>
+        <ul>
+            <li>
+                <p>Description: {{each.description}}</p>
+                <p>Address:     {{each.address}}</p>
+                <p>Index:       {{ $index }}</p>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+
+
+
+
+
+
+
+<h2>DINAMIC NAME</h2>
+
+<p>Name!!!          {{params}}</p>
+<p>currentItem:     {{currentItem}}</p>
+<p>currentItemName: {{currentItemName}}</p>
+
+<h2>HG-BIND</h2>
+1 <p ng-bind='[currentItem]'></p>
+2 <p ng-bind='[currentItem] [0]'></p>
+2 <p ng-bind='[currentItem]'></p>
+
+
+
+
+<hr>
+
+<input type="text" ng-model="message" />
+
+<select ng-model="message">
+  <option value="option 1">Option 1</option>
+  <option value="option 2">Option 2</option>
+</select>
+
+<textarea ng-model="message" rows="4" cols="50"></textarea>
+
+
+<h2>INDEX</h2>
+<p>[items.item2][0]: {{ [items.item2][0] }}</p>
+<p>{{ {name: 'David', age: '33'}.name }}</p>
+<p>[0] = {{ ['David', 'Pam', 'Sara'][0] }}</p>
+<p>[1] = {{ ['David', 'Pam', 'Sara'][1] }}</p>
+<p>[2] = {{ ['David', 'Pam', 'Sara'][2] }}</p>
+
+<hr>
+
+<H2>ITEM1</H2>
+<p>Name:            {{items.item1.name}}</p>
+<p>Descrition:      {{items.item1.description}}</p>
+<p>Address:         {{items.item1.address}}</p>
+
+
+<H2>ITEM2</H2>
+<p>Name:            {{items.item2.name}}</p>
+<p>Descrition:      {{items.item2.description}}</p>
+<p>Address:         {{items.item2.address}}</p>
+
+
+<h2>FULL ROUTE</h2>
+<p>item1 name =     {{$route.current.scope.items.item1.name}}</p>
+<p>item1 =          {{$route.current.scope.items.item1}}</p>
+<p>item2 =          {{$route.current.scope.items.item2}}</p>
+<p>items =          {{$route.current.scope.items}}</p>
+
+<p>URL =            {{$location.path()}}</p>
+<p>templateUrl =    {{$route.current.templateUrl}}</p>
+<p>PARAMS =         {{params}}</p>
+<p>PARAMS =         {{$route.current.params}}</p>
+<p>currentItemVar = {{currentItemVar}}</p>
+<p>$routeParams =   {{$routeParams}}</p>
+
+
+<hr>
+
+<p>CURRENT =        {{$route.current}}</p>
+
+<!--
+controller: {{name}}<br />
+item ID: {{params.itemID}}<br />
+-->
+</section>

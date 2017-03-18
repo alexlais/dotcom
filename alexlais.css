@@ -1,26 +1,43 @@
- 
- @import url('https://fonts.googleapis.com/css?family=Asap:500,700|Maven+Pro:400,500,700|Merriweather+Sans:400,700|Montserrat+Alternates:500,700|Roboto:500,700|Ubuntu:500,700|Work+Sans:500,700');
-
+@import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|PT+Sans:400,700|Maven+Pro:400,500,600,700|Work+Sans:200,400,700');
 
 body, button, input, optgroup, select, textarea {
-    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+    font-family: 'asap',b Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
-h1, h2, h3, h4, h6 {
-    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
-    font-weight: 500;
-    margin: 0 0 0.75em;
-    line-height: 1.3;
+.promo h3 {
+    font-family: 'Work Sans', Helvetica, Arial, sans-serif;
+    font-weight: 200;
 }
-strong {
-    font-weight: 700;
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Maven Pro', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    margin: 0 0 0.5em;
+    color: black;
 }
 
-/* fix the :focus messing up from bootstrap */
+/* _colors
+accent          00ffff 00ffff
+blue:           00bbff 00bbff 
+darker blue     00b0eb
+red:            fa0053 fa0053
+body back:              f0f5f5
+dark body back:         d1e0e0 
+light beige bg          f3fae1
+*/
+
+
+
+/* _BOLD --------------------- */
+
+strong, .a, span.a, .priceRange {
+    font-weight: 500;
+}
+
+/* INHERIT ---------------------------------- */
+/* fix the :focus messing up from bootstrap so that it wont have to be overwritten over and over evry time link styles change */
 a:focus {
     color: inherit;
     background: inherit;
-    text-decoration: none;
 }
 
 /* --- _SECTIONS ---------------------------- */
@@ -28,77 +45,142 @@ html, body {
     height: 100%;
 }
 body {
-    padding-top: 0;
     /*
     font-smooth: never;
     */
-    color: Black;
-    background: White;
+    color: #999;
+    background: #f0f5f5;
+    font-size: 1.1rem;
+    line-height: 1.4;
 }
-header {
+.notApply {
+    display: none;
+}
+.filter .row, header nav ul ul.row {
+    display: block;
+}
+/* col-xs couple not working as supposed. 
+Obs: 
+1 - this bug fix makes it work for 2 boxes, not 3 or more. 
+2 - col-xs and others work) 
+*/
+.col-xs-bugfix {
+    width: 50%;
 }
 /*-- _LINKS ---------------------------------------------------- */
 
-a {
+a, a:focus, header nav a:hover, .promo h2 a:hover, .promo h4 a:hover, .promo p a:hover, .keywords a:hover, .placard .technologies a:hover {
     text-decoration: none;
 }
-footer a {
+footer a, .promo h2 a, .promo h4 a, .promo p a {
     text-decoration: underline;
 }
+.external {
+    transition-property: background, color, opacity;
+    transition-duration: .5s;
+    transition-timing-function: easy-in;
+}
+.external span {
+    background: url('assets/-images/external-link-icon.png') center no-repeat;
+    background-size: 19px;
+    padding: 0;
+    border-radius: 6px;
+    font-size: 0;
+    line-height: 0;
+    background-color: #00b0eb;
+    display: inline-block;
+    transition-property: width, height;
+    transition-duration: .5s;
+    transition-timing-function: easy-in;
+    vertical-align: middle;
+    margin-top: -7px;
+}
+.external:hover span { 
+    padding: 15px 17px;
+    transition-property: padding;
+    transition-duration: .5s;
+    transition-timing-function: easy-out;
+} 
+
+
+        
+
 /*-- _COLORS ---------------------------------------------------- */
-a, .a, h1, h1 a, h2, h2 a, h3, .filter a:hover {
-    color: #ff0066;
+a, .a, h1, h1 a, header nav li.navItem a:hover, .filter a:hover, header nav a:hover, main.menu .itemList .priceRange, .placard .technologies a:hover {
+    color: DeepSkyBlue;
 }
-footer a, .filter a {
-    color: Black;
+h2, h2 a, h3, h3 a {
 }
+/*
+DIF PINK         ff6699   LH - FF69B4 / DK - FF1493 / FADED - DB7093
+*/
+
 a:hover, .a:hover {
-    color: #7e00e6;
-    text-decoration: none;
+    color: Black;
+    text-decoration: underline;
     cursor: pointer;
 }
-section.promo, section.promo h3, .filter h2, .filter a {
-    color: white;
-}
-.keywords h2, .keywords a {
-    color: black;
-}
-.filter .container-fluid {
-    background: #ff0066;
-}
-.filter .keywords {
-    background: rgb(248, 189, 0);
-    background: rgb(255, 207, 0);
-    padding-right: 10px;
+.promo, .promo h3, .promo h2 a, .promo h4 a, .promo p a {
+    color: White;
 }
 
 /*-- _HEADINGS and COPY -------------------------------------------- */
 
 h2 {
-    font-size: 2em;
+    line-height: 1;
+    font-size: 2.5em;
 }
 .placard h2 {
-    margin-bottom: 0.5em;
-}
-main.menu h2 span {
-    display: block;
-    font-size: 0.6em;
-    line-height: 1;
-    font-weight: 400;
+    font-weight: 200;
+    font-size: 3em;
 }
 h3 {
-    font-size: 1.3em;
+    line-height: 1.25;
+    font-size: 1.5em;
+}
+main.menu .placard h3 { 
+    font-size: 2.3em;
+    margin: .5em 0 .75em;
+}   main.menu .placard h3 a, .itemList li.header h3 a { 
+        color: DeepSkyBlue;
+        text-decoration: none;
+    }   main.menu .placard h3 a:hover, .itemList li.header h3 a:hover {
+            color: #00b0eb;
+        } 
+
+.promo h3 {
+    margin-bottom: 2.5rem;
+}
+h4 {
+    line-height: 1.2;
+    font-size: 1.5em;
+}
+/*
+h4 span {
+    font-size: 0.8em;
+}
+*/
+.placard h4 {
+    font-size: 1.5em;
 }
 p {
-    line-height: 1.5;
-    margin: 0 0 1.5em;
+    line-height: 1.35;
+    margin: 0 0 1em;
 }
+/*
+.summary > div > div p:last-child {
+    margin-bottom: 0.5em
+}
+*/
 ul.native {
-    padding-left: 20px; 
+    padding-left: 20px;
     list-style: url("assets/images/thumbs/plus.svg");
 }
-ul.native p {
-    margin-bottom: 0.3em;
+ul.native p, ul.native li {
+    margin-bottom: .8em;
+}
+ul.native.flat p {
+    margin-bottom: 1em;
 }
 /* for menus or links lists - current use: .filter */
 ul.flat ,ul.flat li, ul.flat p, address {
@@ -106,7 +188,7 @@ ul.flat ,ul.flat li, ul.flat p, address {
     padding: 0;
     margin: 0;
 }
-.text-center ul.native {
+.text-center ul.native:not(.flat) {
     text-align: left;
     margin: 0 0 1.3em;
 }
@@ -120,6 +202,9 @@ hr {
 c {
     white-space: nowrap;
 }
+c.block {
+    display: block;
+}
 cc {
     word-break: keep-all;
     white-space: nowrap;
@@ -132,38 +217,128 @@ cc {
 }
 
 
-/* _BOLD --------------------- */
+/* _placard and _banner --------------------- */
 
-strong, .keywords a, 
-.keywords a.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
-    font-weight: 500;
+/*              !!!! 
+    .banner is .container-fluid 
+                !!!!                */
+
+.row .placard.info {
+    background: white;
+    border-radius: 3px;
+    border-top: 3px solid #ff144f;
+    border-bottom: 3px solid #ff144f;
+    padding-top: 1.5em;
+    padding-bottom: 2em;
 }
 
-/* _CTA ---------------------  
+/* --- screenshots --- --- --- */
+.row .placard.screenshots {
+    background: DeepSkyBlue;
+    padding-top:2.5em;
+    margin-top:4em;
+    border-radius: 4px;
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
 
-#FFC3CE #D6E3B5 #6B824A #FFF7EF #636563
-#5C604D #FFBAD2 #F20056 #E5E7E1 #C8CFB4 #A3AE7E
-#9C1C6B #CA278C #E47297 #FFE9E8 #AA0114 #000000
-
+}
+.row .placard.screenshots img {
+    float: right;
+    width: 48%;
+    margin: 2% 0;
+}
+.row .placard.screenshots span:nth-child(2n+2) img {
+    float: left;
+}
+.row .placard.screenshots span.large img {
+    width: 100%;
+    height: auto;
+    margin: 0 0 2em;
+    max-width:1000px;
+}
+.row .placard.screenshots h4 {
+    color: white;
+    font-size: 1.8em;
+}
+/*
+.placard.screenshots span {
+    border: 3px dashed DeepSkyBlue;
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 3em;
+    border-radius: 4px;
+}
 */
+main.home .placard h2 {
+    color: white;
+}
+.placard h4.border {
+    margin-top: 1em;
+    padding-top: 1.5em;
+    border-top: 4px solid #f0f5f5;
+}
+.placard .summary > div {
+    padding-right: 30px;
+}
+.placard .duration strong {
+    min-width: 30%;
+    display: inline-block;
+    padding-right: 2%;
+}
+.placard .technologies span:first-child {
+    display: block;
+    margin-left: 0;
+    padding-bottom: 0.5em;
+}
+.placard .technologies span {
+    margin-left: -.5em;
+}
+.placard .technologies, .keywords {
+    text-align: justify;
+}
+.placard .technologies a, .keywords a {
+    display: inline-block;
+    padding: .25em .5em;
+    border-radius: 4px;
+    line-height: 1.25;
+    text-align: justify;
+}
+.placard .technologies a:hover, .keywords a:hover {
+    background: #ff144f;
+    color: White;
+}
+/* === _banner === */
+
+.banner {
+    background-color: #f0f5f5;
+    padding-top: 5Vw;
+    padding-bottom: 6Vw;
+}
+main.home .banner {
+    background-image: url('assets/-images/internet.png');
+    background-size: 80% auto;
+    background-position: center 30%;
+    background-attachment: fixed;
+    padding-bottom: 10Vw;
+}
+
+/* _CTA --------------------- */
+
 .cta {
     display: block;
     padding: 1em 0;
-    font-weight: 400;
 }
 .cta a {
-    font-size: 1.1em;
+    background: transparent;
     letter-spacing: 1px;
     line-height: 1.5;
-    font-weight: 500;
     border-radius: 3px;
-    padding: 0.35em 20px; 
-
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: white;    
-    transition-property: margin, color, padding;
+    padding: 0.25em 20px;
+    border: 1px solid rgba(0,0,0,.25);
+    color: Black;
+    transition-property: margin, color, padding, border, box-shadow;
     transition-duration: 0.5s;
-    transition-timing-function: easy-out;
+    transition-timing-function: easy-in;
 }
 .cta a:after {
     content: "\271A";
@@ -181,234 +356,298 @@ strong, .keywords a,
 }
 .cta a:hover {
     padding-right: 10px;
-    background: rgba(255, 255, 255, 1);
-    color: #ff0066; 
+    color: inherit;
+    text-decoration: none;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .5);
+    border: 1px solid Black;
 }
 .text-center .cta a:hover {
 }
 .cta a:hover:after {
     text-indent: 10px;
 }
+/* --------------  _header _nav ---------------  */
+header nav.col-sm {
+    padding-top: .75em;
+    padding-bottom: .5em;
+    background: black;
+}
+header nav li.navItem {
+    text-align: left
+}
+header nav li.navItem a {
+    font-weight: 200px;
+    color: white;
+    line-height: 1;
+    font-size: 14px;
+    padding: 0 1em .25em;
+    display: inline-block;
+}
+header nav ul ul.row {
+    height: 50px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+header nav ul ul.row li, header nav ul ul.row li a {
+    display: inline;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+header nav > ul > li:last-child {
 
-/* --------------  header ---------------  */ 
+}
 
-header nav {
+/* === _footer === */
+
+footer {
+    background: #000;
+    font-size: 0.8em;
+}
+footer .copyright {
+    font-size: 0.7em;
+    font-size: 12px;
     padding: 1em 0;
 }
-header ul li {
+footer, footer a, footer a:hover, footer p, footer div {
+    color: #fff;
 }
-main.menu header ul li a {
+footer .popup {
+    color: black;
 }
-/*
-section.mainlistItem header {
-    position: relative;
+footer .copyright div:last-child {
+    cursor: pointer;
+    text-decoration: underline;
 }
-section.mainlistItem header a, .mainlistItem header h2 {
-    position: white;
-}
-section.mainlistItem header h2 {
-    bottom: 10px;
-}
-*/
-.menu .banner {
-    /*
-    height: 60vh;
-    min-height: 300px;
-    */
-    background-size: cover;
-    background-position: center;
-    padding-top: 5em;
-    padding-bottom: 5em;    
-}
-.menu .banner .placard {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 0 3px 3px 0;
+footer .copyright div:last-child:hover {
+    color: white;
+    text-decoration: none;
 }
 
 /* === BRAND CSS-LOGO === */
 h1.brand {
     margin: 0;
+    line-height: 1;
 }
-.brand a, .brand a:focus {
+.brand a {
     color: #fff;
-    background: #ff0066;
-    border: 3px solid #fff;
-    border-radius: 9% / 27%;  
+    margin: 0 20px 0 0;
+    padding: 0;
+    border: 2px solid #fff;
+    border-radius: 60% / 40%;
     font-size: 19px;
-    font-weight: 500;
-
     float: left;
     text-align: center;
     overflow: hidden;
-
-    /*
-    box-shadow:  0 12px 20px -5px rgba(0,0,0,.5);
-    box-shadow: 
-        0 8px 15px -5px rgba(0,0,0,.5),
-        1px 1px 3px 1px rgba(0,0,0,.1) inset,
-        -1px 1px 3px 1px rgba(0,0,0,.1) inset;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.2);
-    */
+    position: relative; 
+    background: DeepSkyBlue;       
 }
     .brand a span {
-        padding: 8px 16px;
+        padding: 10px 20px 12px;
         display: inline-block;
+        font-weight: 600;
+        transition-property: padding-top;
+        transition-duration: .25s;
+        transition-timing-function: cubic-bezier(0,0,1,1);
+        transition-delay: .25s;
+        letter-spacing: 1px
     }
     .brand a:before, .brand a:after {
-        border: 50px solid transparent;
-        margin: 0 15px;
-        border-radius: 10px;
+        border: 55px solid transparent;
+        border-radius: 0px;
         display: block;
         content: "";
         height: 0;
-        /*
+        width: 130px;
         position: absolute;
-        left: 4px;
-        right: 4px;
-        top: 0;
-        */
+        transition-property: border;
+        transition-duration: .25s;
+        transition-timing-function: cubic-bezier(0,0,1,1);
+        transition-delay: .25s;
     }
     .brand a:before {
-        border-top: 3px solid #fff;
+        border-top: 2px solid #fff;
         border-bottom: 0;
+        top: 0;
     }
     .brand a:after {
-        border-bottom: 3px solid #fff;
+        border-bottom: 2px solid #fff;
         border-top: 0;
+        bottom: 0;
     }
     .brand a:hover {
-        color: #ff0066;
-        background: #fff;
-        border-color: #ff0066;
-        text-shadow: none;
+        background: transparent;
+        color: white;
+        background: DeepSkyBlue;
     }
     .brand a:hover span {
-        padding-top: 7px;
-        padding-bottom: 6px;
     }
     .brand a:hover:before {
-        border-top: 5px solid #ff0066;
+        border-top: 5px solid #fff;
     }
     .brand a:hover:after {
-        border-bottom: 5px solid #ff0066;
+        border-bottom: 5px solid #fff;
     }
-/* --------------  filter ---------------  */ 
 
-.filter a {
-    margin: 0 15px 0 0;
-    white-space: nowrap;
-    font-size: 1.1em;
+/* --------------  filter ---------------  */
+.filter {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: white;
+    overflow: auto;
 }
-.filter ul li {
+.filter .row > div, .placard .row > div {
+    float: left;
+}
+.filter h3 {
+    font-weight: 500;
+}
+.filter .row > div {
+    float: left;
+} 
+/* - _KEYWORDS ----------------- */
+.filter .keywords {
+}
+.keywords ul {
+    margin-left: -.9em;
+    margin-left: -.9Vw;
+}
+.keywords ul li {
     display: inline;
 }
-.filter ul a {
+.keywords a {
+    margin-right: 1em;
+    margin: 0 .9Vw 0 0;
+    white-space: nowrap;
+    font-size: 1.1em;
+    line-height: 1;
+    display: inline-block;
     text-transform: capitalize;
 }
+
+/* --- SERCH --- --- --- */
+
 .filter .search {
-    background: #ff0066;
+    width: 40%;
+    float: right;
+    background: DeepSkyBlue;
+    border-radius: 3px;
+    padding: .75em 1em;
+    margin: 0 0 1em 0;
 }
-.filter .search label {
-    display: block;
+.filter .search h3 {
+    color: white;    
 }
 .filter .search input {
-    border: 1px solid #e6005c;
+    display: block;
     width: 100%;
     height: 40px;
-    padding: 5%;
+    padding: 0 0.5em;
+    border: 0;
+    background: white;
+    color: black;
+}
+.filter .search label {
+    margin: 0;
+    display: block;
 }
 
-
-/* --------------  mainList ---------------  */ 
-.itemList li.header h2 a {
+/* --------------  mainList ---------------  */
+main.home .mainlist {
+    margin: 2em 15px 1.75em;
+}
+.itemList li.header h3 {
+    margin: 0 0 0.125em 0;
+}
+.itemList li.header h3 a span {
+    min-height: 200px;
+    line-height: 1;
     font-size: 0.8em;
     display: block;
-    background-size: 100%;
-    background-position: center;
-    min-height: 6em;
+    background-size: 200%;
+    background-position: left top;
     position: relative;
-    border-radius: 5px 5px 5px 5px;
-    margin: 0 -14px;
     overflow: visible;
     padding: 0;
+    margin: 0 -15px;
     transition-property: background-size;
-    transition-duration: 3s;    
+    transition-duration: 5s;
+    transition-timing-function: easy-in;    
+    border-bottom: 3px solid #fa0053;
+}
+.itemList li.header h3 a:hover span {
+    background-size: 100%;
+    transition-property: background;
+    transition-duration: .5s;
     transition-timing-function: easy-in;
 }
-.itemList li.header h2 a:hover {
-    color: inherit;
-    transition-duration: .5s;
-    background-size: 175%;
-}
-.itemList li.header span {
-    transition-duration: .5s;
+.itemList li.header h3 a strong {
     display: block;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: rgba(255, 255, 255, .8);
-    border-radius: 0 0 4px 4px;
-    padding: .25em 15px .35em;
-    margin: 0;
+    padding-top: .25em;
 }
-.itemList li.header h2 a:hover span {
-    background: rgba(255, 255, 255, .95);
+main.home .itemList.flat {
+    padding: 0 15px .5em;
+    overflow: auto;
+    background: white
 }
-.itemList p {
-    text-align: right;
-}
-.itemList .fee {
-    text-transform: capitalize;
-}
+
 /* --- .HOVERBOX ---------- */
 .hoverbox {
     position: relative;
 }
 .hoverbox .overflow {
-    display: none;
     position: absolute;
-    background: #ff0066;
-    color: White;
+    border-radius: 3px;
+    display: none;
+    background: white;
+    box-shadow: 0 0 40px -5px rgba(0,0,0,0.5);
     z-index: 1;
     left: 0;
+    font-size: 0.85em;
+    line-height: 1.3;
     bottom: 1.5em;
-    padding: 1em;
-    border-radius: 3px;
-    border: 1px solid white;
-}
-.hoverbox .overflow.open {
-    display: block;
+    padding: .5em 1em;
 }
 .hoverbox .overflow.open {
     display: block;
 }
 
 /* --- .HOVERBOX ITEMLIST ---------- */
-main.menu .itemList .hoverbox {
+.itemList .hoverbox {
     float: left;
-    margin: 1em 1em 0 0;
+    margin: 0.5em 1em 0 0;
+}
+main.menu .itemList .hoverbox {
+    margin-top: 1em;
 }
 main.menu .itemList .priceRange {
-    float: right;
+    text-align: right;
     margin: 1em 0 0 1em;
 }
 
-/* --- .HOVERBOX ITEMLIST HOURS ---------- */
-.itemList .hoverbox.hours .overflow {
-    width: 12em;
-}
-.itemList .hoverbox.hours .overflow p {
-    line-height: 1.3;
-    font-size: 0.9em;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+/* --- .HOVERBOX OVERFLOW ---------- */
+.itemList .hoverbox .overflow {
+    width: 15em;
 }
 
-/* --- .HOVERBOX ITEMLIST ADDRESS ---------- */
+/* --- .HOVERBOX P ---------- */
+.itemList .hoverbox .overflow p {
+    padding: .1em .2em;
+}
+.sun .sun, .mon .mon, .tue .tue, .wed .wed, .thu .thu, .fri .fri, .sat .sat {
+    font-weight: 700;
+    color: #555;
+}
+
 .itemList .hoverbox.address .overflow {
-    width: 15em;
+    padding: 1em 2em;
 }
 .itemList .hoverbox.address .overflow p {
     text-align: left;
+}
+.overflow p.odd {
+    background: rgba(0,0,0, 0.045);
+    border-top: 1px solid rgba(0,0,0, 0.008);
+    border-bottom: 1px solid rgba(0,0,0, 0.008);
 }
 
 /* CONTENT SNIPPET STRUCTURE */
@@ -419,6 +658,9 @@ main.menu .itemList .priceRange {
     float: left;
     min-width: 40%;
 }
+.hours .fieldName {
+    min-width: 30%;
+}
 /* the content container that doent wrap around the item */
 .overflow {
     overflow: auto;
@@ -428,40 +670,84 @@ main.menu .itemList .priceRange {
 
 
 
-/* --------------  promo ---------------  */ 
-section.promo {
-    background: #2eb873; /* green */
-    background: #2e95b8; /* blue */
-    background: #b82e65; /* red */
-    background: #b54853; /* brown */
-    background: #FF1493; /* pink */
-    background: #ff0066; /* DEFAULT */
+/* --------------  _promo ---------------  */
+.promo {
     color: rgba(255,255,255,0.95);
 }
-section.promo.menu {
-    background: #2eb873; /* green */
-    background: #2e95b8; /* blue */
-    background: #b54853; /* brown */
-    border-bottom: 100px solid #000;
+.promo .gutter {
+    padding: 1.25em 0 1em;
 }
-section.promo .row > div:first-child {
-    background: rgba(0,0,0, 0.2);
+.promo.site .gutter {
+    padding: 1.25em 5% 1em;
 }
-section.promo .row > div:nth-child(2) {
-    background: rgba(0,0,0,0.4);
+.promo .row {
+    padding-right: 20px;
+    padding-left: 20px;
 }
-section.promo .row > div:nth-child(3){
-    background: rgba(0,0,0, 0);
-}
-section.promo .row > div:nth-child(4){
-    background: rgba(0,0,0,0.6);
+.promo .row > div {
+    /* PROMO BORDER */
+    border: 4px solid #f0f5f5; /* body background color */
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
-/*
-DIF PINK            LH - FF69B4 / DK - FF1493 / FADED - DB7093
-*/
+
+/* Home Site Promo */
+main.home .promo.site {
+    padding-top: 2em;
+}
+.promo.site {
+    padding-bottom: 2em;
+}
+main.home .promo.site .row > div {
+    border-radius: 80px 0 80px 0;
+}
+main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:nth-child(4) {
+    border-radius: 0 80px 0 80px;
+}
 
 
+/* Item Promo */
+.promo.item {
+    margin-top: 3em;
+}
+.promo.item .row > div {
+    border-radius: 0 50px 0 50px;
+}
+.promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(4) {
+    border-radius: 50px 0 50px 0;
+}
+
+
+/* Promo Colors */
+.promo .row > div:first-child, .promo .row > div:nth-child(4) {
+    background: white;
+    border-color: DeepSkyBlue;
+}
+.promo .row > div:nth-child(2), .promo .row > div:nth-child(3) {
+    background-color: DeepSkyBlue;
+    border-color: white;
+}
+main.menu .promo.site .row > div:nth-child(2) {
+    background: #f3fae1;
+}
+.promo .row > div:nth-child(2) .cta a, .promo .row > div:nth-child(3) .cta a {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: white;
+}
+.promo .row > div:nth-child(2) .cta a:hover, .promo .row > div:nth-child(3) .cta a:hover {
+    border: 1px solid White;
+    color: white;
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 1);
+}
+
+/* .promo text color inversion for darker background */
+.promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3, .promo .row > div:first-child .cta a,
+main.menu .promo.site .row > div:nth-child(2), main.menu .promo.site .row > div:nth-child(2) p, main.menu .promo.site .row > div:nth-child(2) h3, main.menu .promo.site .row > div:nth-child(2) .cta a,
+.promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a
+{
+    color: black;
+}
 
 
 form {
@@ -495,64 +781,6 @@ textarea.form-control, .form-control {
     font-size: 0.8em;
 }
 
-/* === _STRUCTURE PADDING ==== 1 ===================================== */
-
-/*
-BOOTSTRAP GRID MEASURES
-Extra small <576px | Max container width: none (auto) | class: .col-
-Small ≥576px | Max container width: 540px | class: .col-sm-*
-Medium ≥768px | Max container width: 720px | class: .col-md-*
-Large ≥992px | Max container width: 960px | class: .col-lg-*
-Extra large ≥1200px | Max container width: 1140px | class: .col-xl-*
-*/
-
-
-/* --- VERTICAL ------------------------------------- VERTICAL ---- */
-
-/* --- VERTICAL GUTTER --------------------- ROW --- */
-
-.row.padding {
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-.row .row {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* --- VERTICAL GUTTER --------------------- COLUMN --- */
-
-.row > div, .row > ng-include > div {
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-}
-.row .row > div, .row .row > ng-include > div {
-    padding-top: 0;
-    padding-bottom: 0;
-}
-
-/* --- OVERWRITES ------------------------------------------------- */
-
-/* -- cancel just half the padding --- [col-no-padding] --- */
-
-.row > div.col-no-padding, .no-padding .row div {
-    padding-bottom: 0;
-}   .no-padding .row div {
-        padding-top: 0;
-    }
-
-/* -- cancel margin only */
-footer .row, footer .row div {
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-/* -- CANCEL ALL the padding and margin, fix side effects */
-.clearfix {
-    padding: 0 !important;
-    margin: 0 !important;
-}
-
 /* --- BORDER TOP and BOTTOM ------------------------------------- */
 .border-top {
     border-top: 3px solid rgba(0,0,0,0.031);
@@ -572,43 +800,46 @@ footer .row, footer .row div {
 /* --- DONE ------ DONE ------ DONE -------- DONE ------- DONE -------- DONE -------*/
 
 
-                                        /* === _MOBILE and TABLETS ====== SMALL ================= */
-                                        @media only screen and (max-width : 768px) {
 
-                                            /* --- MOBILE and TABLETS --- */
-                                            .banner video, nav.profile-menu li.profile-menu:hover .dropdown-menu {
-                                                display: none;
-                                                margin: 0;
-                                                padding: 0;
-                                                height: 0;
-                                                border: 0;
-                                                overflow: hidden;
+
+                                        /* Up to _MEDIUM  */
+                                        @media only screen and (max-width : 992px) {
+                                            .promo h3 {
+                                                font-size: 2em;
+                                                line-height: 1;
+                                                margin-left: 10%;
+                                                margin-right: 10%;
                                             }
-                                             section div[class*='col-'] img {
-                                                display: none;
-                                                margin: 0;
-                                                padding: 0;
-                                             }
-                                             /* --- _THEFIRM --------- */
-                                             section.thefirm img.visible-mobile {
-                                                display: block;
-                                                margin: 30px auto;
-                                                width: 60px;
-                                                height: 60px;
-                                             }
-                                             /* --- MOBILE and TABLETS --- */
-                                            body {
-                                                color: black;
-                                                font-weight: 300;
-                                                -webkit-font-smoothing: subpixel-antialiased;
+                                            .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
+                                                font-size: 2.5em;
+                                            }
+                                           
+                                            .placard .summary {
+                                                padding-right: 0;
+                                            }
+                                            .placard .summary ul {
+                                                margin-bottom: 1.5em;
+                                                padding-bottom: 1.5em;
+                                                border-bottom: 3px solid #eee;
+                                            }
+                                        }
+
+
+
+
+  /* === _MOBILE and TABLETS ====== SMALL =====================_MOBILE and TABLETS ====== SMALL======================================= */
+                                        @media only screen and (max-width : 767px) {
+
+                                            h3 {
+                                                font-size: 1.4em;
                                             }
                                             .row {
                                                 margin-top: 0;
                                                 margin-bottom: 0;
                                             }
                                             .row > div[class*='col-'], ng-include > div[class*='col-'] {
-                                                padding-top: 2rem;
-                                                padding-bottom: 2rem;
+                                                padding-top: 1rem;
+                                                padding-bottom: 1rem;
                                             }
                                             .row .row > div {
                                                 padding-top: 0;
@@ -620,36 +851,174 @@ footer .row, footer .row div {
                                                 margin: 0 !important;
                                             }
 
-                                        }
-                                        
-                                        /* === col-xs-6 braking point ========================================
-                                        @media only screen and (max-width : 585px) {
-                                            div[class*='col-'] {
-                                                width: auto;
-                                                float: none;
+                                            main.home .mainlist {
+                                                margin-left: 0;
+                                                margin-right: 0;
                                             }
-                                            section.promo .row {
-                                              display: block;
-                                            }            
-                                            section.promo ul {
+
+                                            .filter .search {
+                                                float: none;
+                                                overflow: auto;
+                                            }
+
+
+
+
+                                            footer {
+                                                background: #f8f8f8;
+                                            }
+                                            footer .d-flex {
+                                                display: block !important;
+                                                text-align: center;
+                                                border-top: 1px solid #ccc;
+                                            }
+                                            footer .copyright div:last-child {
+                                                display: none;
+                                            }
+                                            .popup .header {
+                                                display: none;
+                                            }
+                                            .popup .credits-content {
+                                                padding: 1em 0 1.5em;
+                                                margin-bottom: 1em;
+                                                border-bottom: 1px solid #ccc;
+                                            }
+                                            .promo .row, .couple .row {
+                                                padding-right: 10px;
+                                                padding-left: 10px;
+                                            }
+                                            .promo .row > div, .couple .row > div {
+                                                border-width: 5px;
+                                                border-radius: 0;
+                                            }
+                                            .promo.item .row > div:nth-child(2), .promo.item .row > div:nth-child(3) {
+                                                border-radius: 80px 0 80px 0;
+                                            }
+                                            .promo.item .row > div:nth-child(4) {
+                                                border-radius: 0 80px 0 80px;
+                                            }
+                                        }
+
+
+
+
+
+
+
+                                        /* === col-xs-6 braking point ======================================== */
+                                        @media only screen and (max-width : 575px) {
+
+                                            nav > ul > li {
+                                                clear: left;
+                                            }
+                                            nav li a {
+                                                word-spacing: 2px;
+                                            }
+                                            .itemList .hoverbox .overflow {
+                                                width: 12em;
+                                                font-size: 0.8em
+                                            }
+                                            /* _placard and _banner --------------------- */
+
+                                            .banner > .row .placard:first-child {
+                                                background: rgba(255, 255, 255, 0.5);
+                                                border-radius: 3px;
+                                            }
+                                            .banner > .row .placard:last-child {
+                                                background: white;
+                                                border-radius: 0;
+                                            }
+                                            .banner .row .placard {
+                                                padding-top: .5rem;
+                                                padding-bottom: .5rem;
+                                            }
+                                            .placard .col-xs-6 {
+                                                width: 50%;
+                                            }
+
+                                            .placard h2 {
+                                                color: Black;
+                                                text-shadow: none;
+                                                font-weight: 500;
+                                                line-height: 1;
+                                            }
+                                            /*
+                                            .menu .banner {
+                                                background-size: auto 100%;
+                                                background-position: center top;
+                                                background-repeat: no-repeat;
+                                                padding-top: 10em;
+                                                padding-bottom: 0;
+                                            }
+                                            */
+                                            .promo ul {
                                                 text-align: left;
                                                 margin: 0 10%;
                                             }
+                                            h1.brand a {
+                                                margin-bottom: .5em;
+                                                margin-left: -3px;
+                                            }
+                                            /* Home Site Promo */
+                                            main.home .promo.site .row > div {
+                                                border-radius: 0 100px 0 100px;
+                                            }
+                                            main.home .promo.site .row > div:nth-child(2), main.home .promo.site .row > div:nth-child(4) {
+                                                border-radius: 100px 0 100px 0;
+                                            }
+                                            main.menu .promo.site .row > div:nth-child(3), main.menu .promo.site .row > div:nth-child(4) {
+                                                display: none;
+                                            }
                                         }
-                                        */
+
+
+
+
+
+
+
 
                                         /* === MOBILE ONLY ============ XSMALL ================ */
-                                        @media only screen and (max-width : 480px) {}
+                                        @media only screen and (max-width : 480px) {
+                                         }
 
                                         /* === Retina ========================================= */
                                         @media only screen and (max-width : 320px) {
-                                           cc {
+                                            c, cc {
                                                 word-brake: normal;
                                             }
-                                            body {
+                                            .row {
+                                            }
+                                            header nav li.navItem {
+                                                margin-top: 0.5em;
+                                            }
+                                            h1.brand a {
+                                                margin-bottom: 0.75em;
                                             }
                                             .text-center {
                                                 text-align: left;
+                                            }
+                                            /* row block */
+                                            .promo .row {
+                                                display: block;
+                                            }
+                                            div[class*='col-'] {
+                                                max-width: auto;
+                                                max-width: none;
+                                                float: none;
+                                            }
+                                            .cta a:after, .cta a:hover:after {
+                                                display: none;
+                                            }
+                                            .promo .cta a, .promo .cta a:hover {
+                                                padding: 0.125em 0.5em;
+                                                margin: 0;
+                                                text-indent: 0;
+                                                border: 1px solid white;
+                                            }
+                                            .promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a,
+                                            .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover {
+                                                border: 1px solid black;
                                             }
                                         }
 
@@ -679,18 +1048,65 @@ footer .row, footer .row div {
 /* ========== _MEDIUM or larger = ALL Desktops ============= */
 @media only screen and (min-width: 769px) {
 
+    /* === _STRUCTURE PADDING ==== 1 ===================================== */
+
+    /*
+    BOOTSTRAP GRID MEASURES
+    Extra small <576px | Max container width: none (auto) | class: .col-
+    Small ≥576px | Max container width: 540px | class: .col-sm-*
+    Medium ≥768px | Max container width: 720px | class: .col-md-*
+    Large ≥992px | Max container width: 960px | class: .col-lg-*
+    Extra large ≥1200px | Max container width: 1140px | class: .col-xl-*
+    */
+
+
+    /* --- VERTICAL ------------------------------------- VERTICAL ---- */
+
+    /* --- VERTICAL GUTTER --------------------- COLUMN --- */
+
+    .row > div[class*='col-'], .row > ng-include > div[class*='col-'], .row > nav[class*='col-'] {
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .row .row > div, .row .row > ng-include > div, div[class*='col-'].no-gutter {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    /*
+    div[class*='col-'] p:last-child {
+        margin-bottom: 0.5em
+    }
+    */
+    /* --- OVERWRITES ------------------------------------------------- */
+
+    /* -- cancel just half the padding --- [col-no-padding] --- */
+
+    .row > div.col-no-padding, .no-padding .row div {
+        padding-bottom: 0;
+    }   .no-padding .row div {
+            padding-top: 0;
+        }
+
+    /* -- CANCEL ALL the padding and margin, fix side effects */
+    .clearfix {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
     /* === _STRUCTURE PADDING ==== 2 ===================================== */
 
     /* --- HORIZONTAL ----------------------------------- HORIZONTAL ---- */
 
     /* --- HORIZONTAL GUTTER - ALL COLUMNS! --- */
-    div[class*='col-'] {
+    div[class*='col-'], nav[class*='col-'], aside[class*='col-'] {
         padding-left: 30px;
         padding-right: 30px;
-
     }
+
     /* --- OVERWRITES FOR HORIZONTAL GUTTER --- */
-    main.home .mainlist div[class*='col-'] {
+    main.home .mainlist div[class*='col-'],
+    div[class*='col-'] div[class*='col-']  {
         padding-left: 15px;
         padding-right: 15px;
     }
@@ -698,23 +1114,37 @@ footer .row, footer .row div {
     /* === /STRUCTURE PADDING ==== */
 
 
-
-
-
-
-    /* --------------  mainList ---------------  */ 
-    main.home .mainlist {
-        margin: 4em 30px;
+    
+    body {
+        padding-top: 85px;
+    }
+    header nav.col-sm {
+        position: fixed;
+        top: 0;
+        z-index: 5;
     }
 
+    /* -----  mainList ------------ MEDIUM or larger ---  */
+    .promo h3 {
+        font-size: 2.4em;
+        line-height: 1;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
+        font-size: 3em;
+    }
 
     .itemList {
         padding: 0 10px;
     }
-
-   
-
-
+    section.menu.couple {
+        margin-bottom: 3em;
+    }
+    /* Site Promo  (keyword ***) */
+    main.menu .promo.site .row > div:first-child, main.menu .promo.site .row > div:nth-child(2) {
+        border-radius: 80px 80px 0 0;
+    }
 
     /* --- UL or DIV is being used --- --- */
     .half-width {
@@ -742,22 +1172,42 @@ footer .row, footer .row div {
         width: 80%;
         max-height: 80%;
         margin: auto;
-        background: #f8f8f8;
+        background: #fafafa;
         box-shadow:  0 0 0 2000px rgba(0,0,0,0.4);
-        border-radius: 8px 8px 6px 6px;
+        border-radius: 4px 4px 3px 3px;
         border: 1px solid #555;
     }
     .popup .header {
-        background: #2eb873;
-        padding: 0 2%;
+        background: #f3fae1;
+        background: #cc0052;
+        background: white;
+        background: #f3fae1;
+        padding: 1em 2%;
         cursor: pointer;
-        border-radius: 6px 6px 0 0;
-    }
+        border-radius: 3px 3px 0 0;
+        }
+        .popup h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: 400;
+            color: #444;
+            text-transform: uppercase;
+        }
+        .popup h4 {
+            color: #444;
+        }
+        .popup h3 span {
+            float: right;
+            cursor: pointer;
+            font-size: 1.3em;
+            margin-top: -0.3em;
+            text-transform: none;
+        }
     .popup-content {
         overflow: auto;
-        background: white;
+        background: #fff;
         padding: 15px 2%;
-        border-radius: 0 0 0 6px;
+        border-radius: 0 0 0 3px;
 
     }
     .credits-content {
@@ -769,21 +1219,6 @@ footer .row, footer .row div {
         font-size: 16px;
         margin-bottom: 10px;
     }
-    .popup h3 {
-        padding: 0.75em 0;
-        margin: 0;
-        color: white;
-        font-size: 15px;
-        text-transform: uppercase;
-    }
-    .popup h3 span {
-        float: right;
-        cursor: pointer;
-        font-size: 1.3em;
-        margin-top: -0.3em;
-        text-transform: none;
-        font-weight: bold;
-    }
     .popup.open {
         display: block;
     }
@@ -793,188 +1228,68 @@ footer .row, footer .row div {
 
         /* MEDIUM to LARGE */
         @media only screen and (min-width: 769px) and (max-width : 1199px) {
+            .keywpords a {
+                font-size: 0.9em;
+                line-height: 0.75;
+            }
+
         }
 
-        /* MEDIUM only  */
+        /* _MEDIUM only  */
         @media only screen and (min-width: 769px) and (max-width : 992px) {
-            section.promo ul {
+            .promo ul {
                 text-align: left;
                 margin: 0 10%;
             }
-        }
-
-        /* === _LAST LARGE or larger =================================== */
-        @media only screen and (min-width : 993px) {
-            body {
+            h3 {
+                font-size: 1.4em;
             }
         }
 
-        /* === X-LARGE or larger =================================== */
-        @media only screen and (min-width : 1201px) {
+        /* === LAST _LARGE or larger =================================== */
+        @media only screen and (min-width : 993px) {
+            body {
+            }
+            .itemList li.header h3 a {
+                min-height: 200px;
+            }
 
         }
 
+        /* === _LAST X-LARGE or larger =================================== */
+        @media only screen and (min-width : 1201px) {
+            .itemList li.header h3 a {
+                min-height: 230px;
+            }
 
-/* 
-
-#FFC3CE #D6E3B5 #6B824A #FFF7EF #636563
-#5C604D #FFBAD2 #F20056 #E5E7E1 #C8CFB4 #A3AE7E
-#9C1C6B #CA278C #E47297 #FFE9E8 #AA0114 #000000
-
-
-YELLOW BACKGROUND: FFCF00
-PINK LINK: ff0066;
-
-DIF PINK            LH - FF69B4 / DK - FF1493 / FADED - DB7093
-
-UGLY GREEN:         2F4F4F
-WHITE BACKGROUND:   FFF8DC;
-DK WHITE BACKGROUND:FFE4E1;
-CARD TABLE GREEN:   2E8B57;
-BLUE METAL          483D8B
-VERDE MUSGO         556B2F
-FLATTENED MED-DK PINK     BC8F8F
-DK ORANGE PINK      CD5C5C
-FADED dk musgo green 2F4F4F
-;
-;
-eat
-food
-menu
-fresh
--------------
-.eat
-.now
-.click
-.me
-.online
-.sale
-.discount
-.fun
-food.garden
-food.gallery
-.guide
-.help
-.land
-.life
-link
-live
-.menu
-.mom
-.one
-.online
-.organic
-.pro
-.promo
-.party
-.reviews
-.review
-.sale
-.shop
-.supply
-.express
-.directory
-.cheap
-
-.business
-=======================
-
-florida
-miami
-properties
-
-----------------------
-
-.properties
-.PROPERTY
-.investments
- .FINANCE 
- .miami
- .FINANCIAL 
-.ventures
-.forsale
-.estate - Pioneering the art of the .estate sale.
-
-------------
+            main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:nth-child(3) {
+                border-radius: 0 80px 0 80px;
+            }
+            main.home .promo.site .row > div:nth-child(4) {
+                border-radius: 80px 0 80px 0;
+            }
+        }
 
 
 
 
-COLORS
-    ff0066
-    bfff00
+/*
 
-green (main color)
-    009999   rgba(0, 153, 153, 0.5)
-    00cccc
-    d9ff66
-    ff8000 - orange
-    99cc00
 
-ace600 - real lime
-94c20a - link hover | logo background
-009973 - nav color
+element {
 
-739900 - logo hover background
-
-00b386 - blue green used for default heading color
-
-1f473d - dark green highlight background
-66ffff - blue text
-ffff66 - yellow text
-ffd966 - orange text
-
-ff8000 - beutifull text color
-
-daffb3; - light green backgrounds
-d9f0c1;
-dcf8d3;
-f2ffe6
-e6ffcc
-eef7f4 - two nice light blue backgrounds
-daf1eb
-
-    background: #daffb3;
-    background: #d9f0c1;
-    background: #dcf8d3;
-    background: #dcf8d3;
-
-    background: #e5ffeb;
-    background: #b8d65c;
-    background: #ccff99;
-    background: #d9f4be;
-
-        background: rgba(198, 210, 210, 0.9);
-
-nice background rgba(0, 77, 77, 1);
-
-#example1 {
-    background-image: url(img_flwr.gif), url(paper.gif);
-    background-position: right bottom, left top;
-    background-repeat: no-repeat, repeat;
-    padding: 15px;
 }
-
-#00e6ac rgb(0, 230, 172)
-#00cc99 rgb(0, 204, 153)
-#00b386 rgb(0, 179, 134)
-#009973 rgb(0, 153, 115)
-
-
-Triangle bullet code: \2023
-Buller code:          \2022
-
-    blue
-    background: #8000ff;
-    background: #7e00e6;
-
-    background: #6f2a6f;
-    background: #ff4da6;
-
+popup wrapper {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: scroll;
+}
+popup {
+    position: fixed;
+    z-index: 1;
+}
 */
-
-
-
-
-
 

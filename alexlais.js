@@ -3,7 +3,7 @@
 (function(angular) {
     'use strict';
 
-    angular.module('ngRouteExample', ['ngRoute'])
+    angular.module('ngRouteExample', ['ngRoute', 'ngSanitize'])
 
     .controller('MainController', function($scope, $route, $routeParams, $location) {
         $scope.$route = $route;
@@ -11,13 +11,12 @@
         $scope.$routeParams = $routeParams;
     })
 
-
-    // First level 
+    // First level
     // .controller('MainCtrl', ['$scope', '$route', '$location', function($scope, $route, $location) {
 
     .controller('firstCtrl', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location) {
 
-        // items      
+        // items
         $scope.items = {
             item1: {
                 name: 'Brazil Nuts',
@@ -29,194 +28,295 @@
                 description: 'The best nut',
                 address: '234 Walnut Street'
             }
-        }; 
+        };
 
-        // 7DayEat.com CONTENT
+        // alexlais.com CONTENT
         $scope.siteInfo = {
-            name: '7dayEat.com'
-        }; 
-
-        // $scope.names = ["Emil", "Tobias", "Linus"];
+            name: 'portfolio'
+        };
 
         // KEYWORDS
-        // lunch special hamburgers pizza salads sushi american italian pasta mexican 
-        // mediterranean turkish greek asian chineese thai indian japanese soups subs  
-        // seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert 
-        // healthy vegetarian vegan gluten free 
-        $scope.keywords = 'lunch special,hamburgers,pizza,salads,sushi,american,italian,pasta,mexican,mediterranean,turkish,greek,asian,chineese,thai,indian,japanese,soups,subs,seafood,grill,diner,breakfast,deli,bagels,coffee,tea,smoothies,juices,dessert,healthy,vegetarian,vegan,gluten-free';
+        // lunch special hamburgers pizza salads sushi american italian pasta mexican
+        // mediterranean turkish greek asian chineese thai indian japanese soups subs
+        // seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert
+        // healthy vegetarian vegan gluten free
+        $scope.keywords = 'AngularJS,HTML5,CSS3,Bootstrap 4,HTML5 MODE,HTML5 Storage,GitHub hosted,Boottrap 3';
 
-        $scope.food = [{
-            name: 'Pizza Pazza',
-            imageSM: 'pizza_pazza.png',
-            imageLG: 'pizza_pazza.png',
-            phone:'718-555-1276',
-            minimum: '$10.00',
-            fee: '$2.00',
-            priceRance: '$$$',
+        $scope.food = [
+        {
+            name:'7DayEat.com',
+            url: 'http://7DayEat.com',
+            employer: 'Freelance Project',
+            description: 'Food delivery service. Currently with placeholder content',
+            imageL: ['7DayEat2.png'],
+            icon: '7DayEat1.png',
+            technologies: [
+                'AngularJS', 'No jQuery', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript', 'HTML5 MODE', 'GitHub hosted', 'Responsive Design', 'Media Queries', 'AJAX & JSON', 'Photoshop'],
             address: {
-                address1: '30-30 30 Street',
-                address2: '',
-                city: 'Astoria', 
-                zipcode: '11106'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all dessert soups coffee tea gluten-free salads pasta',
-            menu: {}
+                street: '',
+                cityState: 'New York, NY'},
+            duration: { 
+                applicable: "notApply",
+                date: "2017"}
         },
         {
-            name: 'Pizza Selvagem',
-            imageSM: 'pizza_selvagem.jpg',
-            imageLG: 'pizza_selvagem.jpg',
-            phone:'718-555-5643',
-            minimum: '$15.00',
-            fee: 'free',
-            priceRance: '$',
+            name: 'LEX International',
+            url: 'https://alexlais.github.io/LEX/',
+            employer: 'Freelance Project',
+            description: [
+                '<p>Website design and development for an international law firm.</p>'],
+            descriptionList: [
+                'AngularJS 1.6 Single Page Application (Ng-route, ng-repeat, ng-include and own directives)',
+                'Github Hosting using HTML5Mode',
+                'CSS3, HTML5, Bootstrap 3, Google Maps'],
+            image: ['lex1.png','lex2.png','lex4.png'],
+            icon: 'lex1.png',
+            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
-                address1: '1234 55 Street',
-                address2:', Queens Mall',
-                city: 'Flushing', 
-                zipcode: '13375'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all dessert soups coffee tea salads pasta'
+                street: '',
+                cityState: 'Miami, Fl'},
+            duration: { 
+                applicable: "notApply",
+                date: "2017"}
         },
         {
-            name:'Cabrera Salad', 
-            imageSM: 'Salad_Cabrera.jpg',
-            imageLG: 'Salad_Cabrera.jpg',
-            phone:'800-CABRERA',
-            minimum: '$10.00',
-            fee: 'free',
-            priceRance: '$$$',
+            name: 'Gurian Law',
+            url: 'https//GurianLaw.com',
+            employer: 'Freelance Project',
+            description: 'Is a South Florida law firm specialized in a wide range of investment issues and property protection matters',
+            image: ['gurian2.png', 'gurian3.png'],
+            icon: 'gurian1.png',
+            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop', 'SEO', 'Microdata Schema.org'],
             address: {
-                address1: '110-30 48 Street',
-                address2: '',
-                city: 'Woodside', 
-                zipcode: '11309'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all salad'
+                street: '',
+                cityState: 'Miami, Fl'},
+            duration: { 
+                applicable: "notApply",
+                date: "2016"}
         },
         {
-            name:'Mike Burger', 
-            imageSM: 'Mike_Burger.jpg',
-            imageLG: 'Mike_Burger.jpg',
-            phone:'718-555-4321',
-            minimum: '$8.00',
-            fee: 'free',
-            priceRance: '$$$',
+            name: 'Medscape.com',
+            url: 'http://Medscape.com',
+            employer: 'WebMD',
+            description: [
+                "<p><em>Medscape.com</em> is the top medical resource and reference for physicians today.</p>"],
+            descriptionList: [
+                "Development of informational and advertisement microsites and popups featured on <em>Medscape.com</em> mobile and desktop versions",
+                "Constantly working with designers to arrange requirements for mobile versions of table contents and other issues that can occur with sensitive content in a narrow layout",
+                "Working with editors making meticulous content changes and updates",
+                "Creating and testing a template to be used for all future projects and improve development time and QA"],
+            image: {
+                image: 'notApply'},            
+            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
-                address1: '110-30 48 Street',
-                address2: '',
-                city: 'Woodside', 
-                zipcode: '11309'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all hamburgers lunch special smoothies juices dessert soups'
+                street: '825 8th Ave',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2014',
+                to: '2015',
+                date: 'notApply'}
         },
         {
-            name:'Adam Soups', 
-            imageSM: 'Adam_Soups.jpg',
-            imageLG: 'Adam_Soups.jpg',
-            phone:'718-555-5678',
-            minimum: '$10.00',
-            fee: 'free',
-            priceRance: '$$',
+            name: 'Daytrana',
+            url: 'http://Daytrana.com',
+            employer: 'Evoke Health',
+            descriptionList: [
+                "<p>Evoke Health is a full-service health and wellness digital agency with a heritage of innovation.</p>"],
+            descriptionList: [
+                "Implementing front-end code CSS3 and HTML5 on .NET MVC framework",
+                "Using JQuery.validation for forms and creating highly stylized and mobile ready UI",
+                "Making sure legal content updates are done meticulously correct and accessibility is perfect in all required browsers",
+                "Converting video files to use HTML5 technology"],
+            imageL: ['daytrana.png'],
+            icon: 'daytrana.png',
+            technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop'],
             address: {
-                address1: '110-30 48 Street',
-                address2: '',
-                city: 'Woodside', 
-                zipcode: '11309'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all soups bagels coffee tea vegetarian vegan'
+                street: '101 Avenue of the Americas',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2013',
+                to: '2013',
+                date: 'notApply'}
         },
         {
-            name:'Julie Deli', 
-            imageSM: 'Julie_Deli.jpg',
-            imageLG: 'Julie_Deli.jpg',
-            phone:'718-555-8765',
-            minimum: '$10.00',
-            fee: '$2.00',
-            priceRance: '$$$',
+            name: 'Botox Medical',
+            url: 'http://BotoxMedical.com',
+            employer: 'Evoke Health',
+            descriptionList: [
+                "<p>Evoke Health is a full-service health and wellness digital agency with a heritage of innovation.</p>"],
+            descriptionList: [
+                "Implementing front-end code CSS3 and HTML5 on .NET MVC framework",
+                "Using JQuery.validation for forms and creating highly stylized and mobile ready UI",
+                "Making sure legal content updates are done meticulously correct and accessibility is perfect in all required browsers",
+                "Converting video files to use HTML5 technology"],
+            imageL: ['botox.png'],
+            icon: 'botox.png',
+            technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop'],
             address: {
-                address1: '110-30 48 Street',
-                address2: '1C',
-                city: 'Flushing', 
-                zipcode: '11300'},
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all deli soups subs pizza juices dessert coffee tea bagels'
+                street: '101 Avenue of the Americas',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2013',
+                to: '2013',
+                date: 'notApply'}
         },
         {
-            name:'Juliette Breakfast and Dinner', 
-            imageSM: 'Juliette_Breakfast.jpg',
-            imageLG: 'Juliette_Breakfast.jpg',
-            phone:'718-555-5678',
-            minimum: '$10.00',
-            fee: 'free',
-            priceRance: '$$$$',
+            name: 'McKinsey & Company',
+            url: 'http://www.mckinsey.com/',
+            employer: 'McKinsey & Company',
+            descriptionList: [
+                "<p>Re-factoring codebase of entire domain McKinsey.com</p>"],
+            descriptionList: [
+                "Re-factoring HTML5, CSS3, JavaScript and JQuery codebase of entire domain (1k + pages)",
+                "Created a “CSS & markup style guide” website with live representation of all UI elements used. This also provided excellent support to dev and art teams, ensuring code is kept consistent thruought development. It is a fundamental tool to coordinate testing of mega websites from a development and design stand point",
+                "Also launched the microsites for the office locations of <a target='_blank' href='http://www.mckinsey.com/global-locations/asia/japan/en'>Japan</a>, <a target='_blank' href='http://www.mckinsey.com/global-locations/europe-and-middleeast/russia/en'>Russia</a>, <a target='_blank' href='www.mckinsey.com/south-africa/overview'>South Africa</a>, Angola, <a target='_blank' href='http://www.mckinsey.com/nigeria/overview'>Nigeria</a>, Switzerland, <a target='_blank' href='http://www.mckinsey.com/global-locations/europe-and-middleeast/france/en'>France</a> and Spain, and implemented a global solution for foreign languages requirements"],
+            image: ['mckinsey2.png','mckinsey1.png'],
+            icon: 'mckinsey1.png',
+            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
-                address1: '15-30 48 Street',
-                address2: '5th Fl',
-                city: 'Jamaica', 
-                zipcode: '13076'
-            },
-            hours: {
-                mon: '11am to 12pm',
-                tue: '11am to 12pm',
-                wed: '11am to 12pm',
-                thu: '11am to 12pm',
-                fri: '11am to 12pm',
-                sat: '11am to 12pm',
-                sun: '11am to 12pm'},
-            keywords: 'all lunch special hamburgers salads american italian pasta mexican mediterranean turkish greek asian chineese thai soups subs seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert healthy vegetarian vegan gluten-free'
+                street: '825 8th Ave',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2012',
+                to: '2013',
+                date: 'notApply'}
+        },
+        {
+            name:'jobs.Boeing.com',
+            url: 'https://jobs.boeing.com/',
+            employer: 'TMP Worldwide',
+            description: [
+                "<p>TMP Worldwide is the largest independent firm with focus on recruitment advertising and communications.</p>",
+                "<ul class='native'><li><p><stgrong>More Work Samples:</strong> <br><a target='_blank' href='https://jobs.nike.com/'>jobs.nike.com</a> <br><a target='_blank' href='https://jobs.citi.com/'>jobs.citi.com</a> <br><a target='_blank' href='https://jobs.scotiabank.com/'>jobs.scotiabank.com</a></p></li> <li><p>At TMP I worked with an integrated product suite called <a target='_blank' href='https://www.tmp.com/talentbrew/'>TalentBrew</a>, a platform that has effectively positioned TMP as pioneers where recruitment strategies and digital media converge.</p></li> <li><p>Semantic and search engine optimized UI development for large corporate clients. I programmed approx. 100 job listing web sites per year.</p>"],
+            image: ['tmp1.jpg','tmp2.jpg','tmp3.jpg'],
+            icon: 'tmp1.jpg',
+            technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop', 'SEO', 'AJAX & JSON'],
+            address: {
+                street: '125 Broad St',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2009',
+                to: '2012',
+                date: 'notApply'}
+        },
+        {
+            name:'Walgreen Careers',
+            url: 'https://web.archive.org/web/20100207010911/http://careers.walgreens.com/',
+            employer: 'TMP Worldwide',
+            description: [
+                "<p>TMP Worldwide is the largest independent firm with focus on recruitment advertising and communications.</p>"],
+            descriptionList: [
+                "Semantic and search engine optimized careers website for Walgreens",
+                "Implementation of markup and styles (HTML/CSS) on an .NET Backend MVC environment",
+                "Using jQuery for implementation of all dinamic functionality"],            
+            imageL: ['walgreens.jpg'],
+            icon: 'walgreensS.jpg',
+            technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop', 'SEO'],
+            address: {
+                street: '125 Broad St',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2009',
+                to: '2012',
+                date: 'notApply'}
+        },
+        {
+            name:'SciMed',
+            employer: 'Visual Alchemy / SciMed',
+            descriptionList: [
+                "Front-end implementation for a pharmaceutical agency, worked in the development of informational applications for Boehringer Ingelheim, MEI and Genentech"],
+            imageL: ['BreatheX2.jpg'],
+            icon: 'BreatheX1.jpg',
+            technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'AJAX & JSON', 'Photoshop'],
+            address: {
+                street: '825 8th Ave',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2009',
+                to: '2009',
+                date: 'notApply'}
+        },
+        {
+            name:'Golden Living',
+            url: 'http://www.goldenliving.com',
+            employer: 'Ruder Finn',
+            description: [
+                "<p><a href='http://www.ruderfinn.com/'>Ruder Finn</a> is a 40 years old privately held public relations agency with a wide range of PR practices and services and offices around the world.</p>"],
+            descriptionList: [
+                "Worked at the Interactive 3 team with a Project Manager, Art Director, a back-end Developer and Editors/Legal department",
+                "Front-end development for the new generation of Golden Living web sites: GoldenLiving.com, GoldenLivingCenters.com, AegisTherapies.com, 360HealthCareStaffing.com and AseraCare.com",
+                "Front-end development for the CMS .NET environment"],            
+            image: ['gl.jpg', 'glcms.jpg'],
+            icon: 'glS.jpg',
+            technologies: ['jQuery', 'HTML', 'CSS3', 'JavaScript', 'Photoshop'],
+            address: {
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2008',
+                to: '2009',
+                date: 'notApply'}
+        },
+        {
+            name:'BravoTV',
+            url: 'http://www.BravoTV.com',
+            employer: 'NBC Network',
+            description: [
+                "<p>As a Front-end developer at <a href='http://www.BravoTV.com/'>Bravo TV</a>, I was responsible for everything under BravoTV.com domain and worked with a team of a senior back-end Developer (PHP), a Project Manager, the Art Director and 4 Editors.</p>"],
+            descriptionList: [
+                "HTML and CSS re-factoring and implementation of a global style sheet for all sites under BravoTV.com which improved development and consistency",
+                "Fix of several Internet Explorer rendering bugs in production",
+                "Used PHP and XML for dart tags, photo galleries and many other applications",            
+                "Development of over 15 micro-sites: Project Runway Season 5, Flipping Out Season 2, Shear Genius Season 2, Kathy Griffin Season 4, Top Design Season 2, The Rachel Zoe Project Season 1, Inside the Actors Studio Season 2, Date My Ex Season 1, Tabatha’s Salon Takeover Season 1, Million Dollar Listing Season 2, Tim Gunn, and other promotional micro sites like Bravo For Foodies, Mamma Mia – The Movie, Olympics, Back to School, and Influential’s"],
+            image: ['bravo1.jpg', 'bravo2.jpg'],
+            icon: 'bravoS.jpg',
+            technologies: ['jQuery', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop'],
+            address: {
+                street: '30 Rockefeller Plaza',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: '2008',
+                to: '2008',
+                date: 'notApply'}
+        },
+        {
+            name:'StylishWindows.com',
+            image: 'Juliette_Breakfast.jpg',
+            image2: 'Juliette_Breakfast.jpg',
+            technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop'],
+            address: {
+                street: '825 8th Ave',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: 'April 2014',
+                to: 'April 2015',
+                date: 'notApply'}
+        },
+        {
+            name:'Terry Lyons',
+            employer: 'Freelance Project',
+            description: 'Food delivery service. Currently with placeholder content',
+
+            name:'TerryLyons.com',
+            image: 'Juliette_Breakfast.jpg',
+            image2: 'Juliette_Breakfast.jpg',
+            technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop'],
+            address: {
+                street: '825 8th Ave',
+                cityState: 'New York, NY'},            
+            duration: {
+                from: 'April 2014',
+                to: 'April 2015',
+                date: 'notApply'}
         }];
 
-        // TODAY 
+        // TODAY
         $scope.CurrentDate = new Date();
 
         $scope.params = $routeParams;
         $scope.currentItem = $routeParams.itemID;
     }])
 
-        // URL Related Classes  
+        // URL Related Classes
 
         // $scope.mainClass = function () {
         //      var active = $route.current.templateUrl;
@@ -237,7 +337,7 @@
 
 
         // $scope.test = $routeParams.test;
-        // console.log(currentItem);  
+        // console.log(currentItem);
 
         // $scope.slug = $routeParams.slug;
 
@@ -263,10 +363,10 @@
     //         restrict: 'A',
     //         link: console.log("weekDay");
     //             var d = new Date();
-    //             var n = d.getDay();        
+    //             var n = d.getDay();
     //                 // if (x == 0){
-    //                 //    return "mark"; 
-    //                 // } 
+    //                 //    return "mark";
+    //                 // }
     //     };
     // })
 
@@ -293,7 +393,7 @@
     // ROUTER CONFIG
     .config(function($routeProvider, $locationProvider) {
         $routeProvider
-        .when('/home', {
+        .when('/', {
             templateUrl: 'home.html',
             controller: 'firstCtrl'
         })

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html
     ng-app="ngRouteExample"
     ng-controller="MainController"
@@ -9,36 +9,34 @@
     <head>
         <!-- Meta-Information -->
         <meta charset="utf-8" />
-        <base href="/"></base>
-        <!-- base href="/alexlais/" -->
-        <meta name="ROBOTS" content="noindex,nofollow">
+        <base href="/alexlais/"></base>
+        <!-- for localhost: base href="/alexlais/"></base -->
+        <meta name="ROBOTS" content="noindex, nofollow">
         <meta name="fragment" content="!" />
         <meta name="format-detection" content="telephone=no">
         <meta name="google-translate-customization" content="" >
 
-        <!-- title ng-bind="'LEX International | ' + title"></title -->
+        <!-- title ng-bind="' | ' + title"></title -->
 
-        <title>7DayEat.com | Welcome to {{$routeParams.itemID}}</title>
+        <title>alexlais.com | Web Development | {{$routeParams.itemID}}</title>
         <meta name="description" content="{{description}}" />
         <meta name="keywords" content="{{keywords}}" />
         <link rel="canonical" href="{{canonical}}" />
         <meta name="robots" content="{{robots}}" />
 
         <!-- MDATA FOR THIS WEB PAGE -->
-        <meta itemprop="name" content="Lex International Law Firm" />
-        <meta itemprop="headline" content="We address complex transaction, business and investment matters nationally and internationally." />
-        <meta itemprop="alternativeHeadline" content="Focusing on the jurisdictions of Europe and North America, we offer expertise legal services to large or small enterprises, start-up businesses, investors and entrepreneurs engaged in international transactions, businesses and investments world-wide." />
-        <meta itemprop="specialty" content="An International Law Firm engaged in international transactions, businesses and investments world-wide." />
-        <meta itemprop="description" content="Focusing on the jurisdictions of Europe and North America, we offer expertise legal services to large or small enterprises, start-up businesses, investors and entrepreneurs engaged in international transactions, businesses and investments world-wide.">
+        <meta itemprop="name" content="7dayEat.com" />
+        <meta itemprop="headline" content="7dayEat.com Food delivery" />
+        <meta itemprop="alternativeHeadline" content="" />
+        <meta itemprop="specialty" content="Food delivery" />
+        <meta itemprop="description" content="Food delivery" />
         <meta itemprop="breadcrumb" content="Home" />
-        <meta itemprop="primaryImageOfPage" content="assets/images/logo.png" />
+        <meta itemprop="primaryImageOfPage" content="" />
         <meta itemprop="mainContentOfPage" content="mainContentOfPage" />
-        <link itemprop="relatedLink" content="our_firm.html" />
-        <link itemprop="relatedLink" content="practices.html" />
-        <link itemprop="relatedLink" content="our_team.html" />
+        <link itemprop="relatedLink" content="Pizza Pazza.html" />
         <meta itemprop="lastReviewed" content="2017-02-20" />
-        <meta itemprop="audience" content="Business Investors" />
-        <meta itemprop="keywords" content="" />
+        <meta itemprop="audience" content="food delivery consumer" />
+        <meta itemprop="keywords" content="food delivery" />
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=no">
@@ -47,11 +45,10 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
         <!-- link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/OFFbootstrap.min.cssOFF" -->
 
-
-
         <!-- Vendor JS -->
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-route.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-sanitize.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.2/angular-animate.min.js"></script>
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAFN2xCmdzr52luyFP0QFROp0kldgCYgUk&callback=initMap"></script>
 
@@ -74,7 +71,6 @@
     <!-- === /HEAD ============================ -->
 
 
-
     <!-- === BODY ============================ -->
     <!-- === BODY ============================ -->
     <!-- === BODY ============================ -->
@@ -93,13 +89,6 @@
             <!-- === /NG VIEW ============================ -->
             <!-- === /NG VIEW ============================ -->
         </main>
-        <div style="display: block;">
-            <pre>$route.current.scope.items = {{$route.current.scope.items}}</pre>
-            <pre>$location.path() = {{$location.path()}}</pre>
-            <pre>$route.current.templateUrl = {{$route.current.templateUrl}}</pre>
-            <pre>$route.current.params = {{$route.current.params}}</pre>
-            <pre>$routeParams = {{$routeParams}}</pre>
-        </div>
     </body>
 </html>
 

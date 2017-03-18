@@ -1,0 +1,152 @@
+<div ng-repeat="each in food | filter: currentItem">
+    <header>
+        <ng-include src="'includes/mainNav.html'"></ng-include>
+        <div class="container-fluid banner" style="background-image: url('assets/{{each.imageLG}}');">
+            <div class="row">
+                <div class="col-xs-12 col-sm-10 placard">
+                    <div class="row">
+                        <div class="col-sm-11 offset-sm-1">
+                            <h2><span>Welcome to</span> {{each.name}}</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-5 placard">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-10 offset-sm-2 pb">
+                            <ul class="itemList flat">
+                                <li class="details">
+                                    <p><span class="fieldName">Phone:</span> <span class="phone">{{ each.phone }}</span></p>
+                                    <p><span class="fieldName">Minimum:</span> <span class="minimum">{{ each.minimum }}</span></p>
+                                    <p><span class="fieldName">Devilery Fee:</span> <span class="fee">{{ each.fee }}</span></p>
+                                </li>`
+                                <li class="hoverbox hours" ng-mouseover="hoursToggle='open'" ng-mouseleave="hoursToggle=''">
+                                    <span class="a">Hours</span>
+                                    <div ng-app="ngAnimate">
+                                        <div ng-class="hoursToggle" class="overflow {{CurrentDate | date:'EEE' | lowercase }}">
+                                            <div ng-repeat="each in each.hours">
+                                                <p class="{{ each.day }}" ng-class="{ 'even': $even, 'odd': $odd }"><span class="fieldName">{{ each.day}}:</span> {{ each.dayHours }}</p>
+                                            </div>
+                                            <!--
+                                            <p class="sun"><span class="fieldName">Sun:</span> {{ each.hours.sun}}</p>
+                                            <p class="mon"><span class="fieldName">Mon:</span> {{ each.hours.mon}}</p>
+                                            <p class="tue"><span class="fieldName">Tue:</span> {{ each.hours.tue}}</p>
+                                            <p class="wed"><span class="fieldName">Wed:</span> {{ each.hours.wed}}</p>
+                                            <p class="thu"><span class="fieldName">Thu:</span> {{ each.hours.thu}}</p>
+                                            <p class="fri"><span class="fieldName">Fri:</span> {{ each.hours.fri}}</p>
+                                            <p class="sat"><span class="fieldName">Sat:</span> {{ each.hours.sat}}</p>
+                                            -->
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="hoverbox address" ng-mouseover="addressToggle='open'" ng-mouseleave="addressToggle=''">
+                                    <span class="a">Address</span>
+                                    <div ng-app="ngAnimate">
+                                        <div ng-class="addressToggle" class="overflow">
+                                            <address>{{ each.address.address1}}{{each.address.address2 }} </br>{{ each.address.city}}, NY &ndash; {{ each.address.zipcode }}</address>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="priceRange">{{ each.priceRance }}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <!-- h2>Welcome to <span ng-bind='currentItem'></span></h2 -->
+                <div ng-repeat="each in food | filter: currentItem">
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    [MENU REPEAT PLACEHOLDER]
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="promo menu">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                <div class="gutter text-center">
+                    <h3>20% OFF</h3>
+                    <p>A baked sweet potato contains over 400% of your daily</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="gutter text-center">
+                    <h3>Best Sellers</h3>
+                    <ul class="native">
+                        <li><p>Rice Noodles</p></li>
+                        <li><p>lorem Ipsun</p></li>
+                        <li><p>Dollor sit Amet</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Explore CTAs</a></span>
+               </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <ul class="native">
+                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
+                        <li><p>Are high in protein and fiber</p></li>
+                        <li><p>Are low in fat</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Eat It</a></span>
+                </div>
+            </div>
+            <div class="col-lg-3 col-6">
+                <div class="gutter text-center">
+                    <h3>The New York Times</h3>
+                    <p>Find food and wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants andmore.</p>
+                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span></p>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- larger size promote -->
+<section class="promo menu couple">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>Black Eyed Peas</h3>
+                    <ul class="native">
+                        <li><p>Said to bring luck when eaten on New Year's Day</p></li>
+                        <li><p>Are high in protein and fiber</p></li>
+                        <li><p>Are low in fat</p></li>
+                    </ul>
+                    <span class="cta"><a href="home">Eat It</a></span>
+                </div>
+            </div>
+            <div class="col-sm-6 col-12">
+                <div class="gutter text-center">
+                    <h3>The New York Times</h3>
+                    <p>Find food and wine news and reviews on restaurants, recipes, cooking, desserts, chefs, fine dining, cuisine, New York restaurants, four-star restaurants andmore.</p>
+                    <span class="cta"><a href="http://www.nytimes.com/pages/dining/index.html">Explore Food</a></span></p>
+               </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div ng-include='"includes/homePromo.html"'></div>
+<div ng-include='"includes/footer.html"'></div>

@@ -1,4 +1,6 @@
 *.zip
 .htaccess
+.htaccess*
 protractor.js
 _config.yml
+.DS_Store
