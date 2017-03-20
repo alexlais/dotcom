@@ -396,7 +396,7 @@ footer .copyright {
 footer, footer a, footer a:hover, footer p, footer div {
     color: #fff;
 }
-footer .popup {
+footer .popup, footer .popup p, footer .popup h4, footer .popup a {
     color: black;
 }
 footer .copyright div:last-child {
