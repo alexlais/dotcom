@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Asap:400,500,700|PT+Sans:400,700|Maven+Pro:400,500,600,700|Work+Sans:200,400,700');
 
 body, button, input, optgroup, select, textarea {
-    font-family: 'asap',b Helvetica, Arial, sans-serif;
+    font-family: 'asap', Helvetica, Arial, sans-serif;
     font-weight: 400;
 }
 .promo h3 {
@@ -43,11 +43,11 @@ html, body {
     height: 100%;
 }
 body {
+    background-color: #f0f5f5;
     /*
     font-smooth: never;
     */
     color: #999;
-    background: #f0f5f5;
     font-size: 1.1rem;
     line-height: 1.4;
 }
@@ -56,15 +56,6 @@ body {
 }
 .filter .row, header nav ul ul.row {
     display: block;
-}
-
-/* col-xs couple not working as supposed. 
-Obs: 
-1 - this bug fix makes it work for 2 boxes, not 3 or more. 
-2 - col-xs and others work) 
-*/
-.col-xs-bugfix {
-    width: 50%;
 }
 
 /*-- _LINKS ---------------------------------------------------- */
@@ -103,7 +94,7 @@ footer a, .promo h2 a, .promo h4 a, .promo p a {
 } 
 
 /*-- _COLORS ---------------------------------------------------- */
-a, .a, h1, h1 a, header nav li.navItem a:hover, .filter a:hover, header nav a:hover, main.menu .itemList .priceRange, .placard .technologies a:hover, .promo .row > div:first-child p a {
+a, .a, h1, h1 a, header nav li.navItem a:hover, .filter a:hover, header nav a:hover, main.menu .itemList .priceRange, .placard .technologies a:hover, .promo .row.first > div:first-child p a {
     color: DeepSkyBlue;
 }
 h2, h2 a, h3, h3 a {
@@ -201,7 +192,12 @@ cc {
     height: auto;
     display: block;
 }
-
+img.icon {
+    width: 50px;
+    height: auto;
+    display: block;
+    margin: 3em auto 1em auto;
+}
 
 /* _placard and _banner --------------------- */
 
@@ -221,7 +217,7 @@ cc {
 .row .placard.screenshots {
     background: DeepSkyBlue;
     padding-top:2.5em;
-    margin-top:4em;
+    margin-top: 5Vw;
     border-radius: 4px;
     border-top: 3px solid white;
     border-bottom: 3px solid white;
@@ -251,11 +247,7 @@ main.home .placard h2 {
     margin-top: 1em;
     padding-top: 1.5em;
     border-top: 4px solid #f0f5f5;
-}
-.placard .summary > div {
-    padding-right: 30px;
-}
-.placard .duration strong {
+}.placard .duration strong {
     min-width: 30%;
     display: inline-block;
     padding-right: 2%;
@@ -268,7 +260,7 @@ main.home .placard h2 {
 .placard .technologies span {
     margin-left: -.5em;
 }
-.placard .technologies, .keywords {
+.placard .technologies, .keywords ul {
     text-align: justify;
 }
 .placard .technologies a, .keywords a {
@@ -276,7 +268,9 @@ main.home .placard h2 {
     padding: .25em .5em;
     border-radius: 4px;
     line-height: 1.25;
-    text-align: justify;
+    white-space: nowrap;
+    line-height: 1;
+    text-transform: capitalize;
 }
 .placard .technologies a:hover, .keywords a:hover {
     background: #ff144f;
@@ -300,16 +294,14 @@ main.home .placard h2 {
 /* === _banner === */
 
 .banner {
-    background-color: #f0f5f5;
     padding-top: 5Vw;
-    padding-bottom: 6Vw;
+    padding-bottom: 10Vw;
 }
 main.home .banner {
     background-image: url('assets/-images/internet.png');
     background-size: 80% auto;
     background-position: center 30%;
     background-attachment: fixed;
-    padding-bottom: 10Vw;
     border-bottom: 3px solid #00bbff;
 }
 
@@ -425,14 +417,15 @@ h1.brand {
     color: #fff;
     margin: 0 20px 0 0;
     padding: 0;
-    border: 3px solid #fff;
+    border: 2px solid #fff;
     border-radius: 60% / 40%;
     font-size: 19px;
     float: left;
     text-align: center;
     overflow: hidden;
     position: relative; 
-    background: DeepSkyBlue;       
+    background: DeepSkyBlue; 
+    box-shadow: 2px 2px 2px rgba(0,0,0,0.052) inset, -1px -1px 1px rgba(255, 255, 255, .8) inset;      
 }
     .brand a span {
         padding: 10px 20px 12px;
@@ -441,8 +434,8 @@ h1.brand {
         transition-property: padding-top;
         transition-duration: .5s;
         transition-timing-function: easy-in;
-        transition-delay: .25s;
-        letter-spacing: 1px
+        letter-spacing: 1px;
+        text-shadow: 1px 1px rgba(0,0,0,0.052);
     }
     .brand a:before, .brand a:after {
         border: 55px solid transparent;
@@ -455,16 +448,15 @@ h1.brand {
         transition-property: border, position, left;
         transition-duration: .5s;
         transition-timing-function: easy-in;
-        transition-delay: .25s;
     }
     .brand a:before {
-        border-top: 3px solid #fff;
+        border-top: 2px solid #fff;
         border-bottom: 0;
         top: 0;
         left: 0;
     }
     .brand a:after {
-        border-bottom: 3px solid #fff;
+        border-bottom: 2px solid #fff;
         border-top: 0;
         bottom: 0;
         left: 0;
@@ -477,13 +469,12 @@ h1.brand {
     .brand a:hover span {
     }
     .brand a:hover:before {
-        border-width: 150px;
-        border-top: 7px solid #fff;
+        left: 80px;
+        border-top: 12px solid #fff;
     }
     .brand a:hover:after {
-        border-width: 150px;
-        left: -200px;
-        border-bottom: 8px solid #fff;
+        left: -90px;
+        border-bottom: 17px solid #fff;
     }
 
 /* --------------  filter ---------------  */
@@ -515,11 +506,6 @@ h1.brand {
 .keywords a {
     margin-right: 1em;
     margin: 0 .9Vw 0 0;
-    white-space: nowrap;
-    font-size: 1.1em;
-    line-height: 1;
-    display: inline-block;
-    text-transform: capitalize;
 }
 
 /* --- SERCH --- --- --- */
@@ -553,11 +539,17 @@ h1.brand {
 main.home .mainlist {
     margin: 2em 15px 1.75em;
 }
+.details p {
+font-size: .9em;
+}
 .itemList li.header h3 {
     margin: 0 0 0.125em 0;
 }
+.itemList li.header h3 a {
+}
 .itemList li.header h3 a span {
     min-height: 200px;
+    min-height: 14em;
     line-height: 1;
     font-size: 0.8em;
     display: block;
@@ -570,7 +562,8 @@ main.home .mainlist {
     transition-property: background-size;
     transition-duration: 5s;
     transition-timing-function: easy-in;    
-    border-bottom: 3px solid #fa0053;
+    border: 3px dashed #fa0053; 
+    border-radius: 6px;
 }
 .itemList li.header h3 a:hover span {
     background-size: 100%;
@@ -580,50 +573,45 @@ main.home .mainlist {
 }
 .itemList li.header h3 a strong {
     display: block;
-    padding-top: .25em;
+    padding: .25em 0;
 }
 main.home .itemList.flat {
     padding: 0 15px .5em;
     overflow: auto;
-    background: white
+    background: white;
+    border-radius: 3px 3px 0 0;
 }
-.details span {
-}
-
 
 /* --------------  _promo ---------------  */
 .promo {
     color: rgba(255,255,255,0.95);
 }
 .promo .gutter {
-    padding: 1.25em 0 1em;
-}
-.promo.site .gutter {
-    padding: 1.25em 5% 1em;
-}
-.promo .row > div {
+    padding-top: 3em;
+    padding-bottom: 3em;
+} 
+.promo .col-lg-6 .gutter > p {
+    padding-left: 20%;
+    padding-right: 20%;
+} 
+.promo .row.first > div {
     /* PROMO BORDER */
     border: 15px solid #f0f5f5;
-    padding-left: 15px;
-    padding-right: 15px;
 }
 
 /* Home Site Promo */
-main.home .promo.site {
+main.home .promo {
     padding-top: 2em;
 }
-.promo.site {
-    padding-bottom: 2em;
-}
-main.home .promo.site .row > div {
+main.home .promo .row.first > div {
     border-radius: 80px 0 80px 0;
 }
-main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:nth-child(4) {
+main.home .promo .row.first > div:nth-child(1), main.home .promo .row.first > div:nth-child(4) {
     border-radius: 0 80px 0 80px;
 }
 
 
-/* Item Promo */
+/* Item Promo 
 .promo.item {
     margin-top: 3em;
 }
@@ -636,41 +624,80 @@ main.home .promo.site .row > div:nth-child(1), main.home .promo.site .row > div:
 
 
 /* Promo Colors */
-.promo .row > div:first-child, .promo .row > div:nth-child(4) {
+.promo .row.first > div:first-child, .promo .row.first > div:nth-child(4) {
     background: white;
 `}
-.promo .row > div:nth-child(2), .promo .row > div:nth-child(3) {
+.promo .row.first > div:nth-child(2), .promo .row.first > div:nth-child(3) {
     background-color: #00b0eb;
 }
-.promo .row > div:nth-child(2) .cta a, .promo .row > div:nth-child(3) .cta a {
-    border: 1px solid rgba(255, 255, 255, 0.5);
+.promo .row.first > div:nth-child(2) .cta a, .promo .row.first > div:nth-child(3) .cta a {
+    border: 1px solid rgba(255, 255, 255, 1);
     color: white;
 }
-.promo .row > div:nth-child(2) .cta a:hover, .promo .row > div:nth-child(3) .cta a:hover {
+.promo .row.first > div:nth-child(2) .cta a:hover, .promo .row.first > div:nth-child(3) .cta a:hover {
     border: 1px solid White;
     color: white;
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, 1);
 }
 
 /* .promo text color inversion for darker background */
-.promo .row > div:first-child, .promo .row > div:first-child p, .promo .row > div:first-child h3,
-main.menu .promo.site .row > div:nth-child(2), main.menu .promo.site .row > div:nth-child(2) p, main.menu .promo.site .row > div:nth-child(2) h3, main.menu .promo.site .row > div:nth-child(2) .cta a, main.menu .promo.site .row > div:nth-child(2) a,
-.promo .row > div:nth-child(4), .promo .row > div:nth-child(4) p, .promo .row > div:nth-child(4) h3, .promo .row > div:nth-child(4) .cta a, .promo .row > div:nth-child(4) a
+.promo .row.first > div:first-child, .promo .row.first > div:first-child p, .promo .row.first > div:first-child h3,
+.promo .row.first > div:nth-child(4), .promo .row.first > div:nth-child(4) p, .promo .row.first > div:nth-child(4) h3, .promo .row.first > div:nth-child(4) .cta a, .promo .row.first > div:nth-child(4) a
 {
     color: #777;
 }
 
 
 /* Site Promo  (keyword ***) */
-main.menu .promo.site .row > div {
+main.menu .promo .row.first > div {
     border-radius: 3px;
-    border-width: 3px 0 0;
+    border: 0;
 }
-.promo .row {
-    margin-bottom: 4em;
+main.menu .promo .row.first > div:first-child {
+    border-top: 3px solid #fa0053;
+    border-bottom: 3px solid #fa0053;
+}
+main.menu .promo .row.first > div:last-child {
+    border-top: 3px solid white;
+    border-bottom: 3px solid white;
 }
 
-
+/* ROUTE INFO */
+ul.promoBox {
+    padding: 0 0 .75em;
+    border-radius: 3px;
+    display: inline-block;
+    margin: 2em auto 1em;
+    border: 1px solid white;
+}
+ul.promoBox ul, ul.promoBox li {
+    text-align: center;
+}
+ul.promoBox > li {
+    padding: .5em 1em 0;
+    display: block;
+}
+ul.promoBox span {
+    color: #333;
+    padding-left: .5em;
+    font-family: monospace;
+}
+ul.promoBox.host {
+    background: transparent;
+    border: 0;
+    max-width: 85%;
+}
+ul.promoBox .promoBox-header {
+    padding: .25em 1em;
+    border-radius: 4px 4px 0 0;
+    text-align: center;
+    display: block;
+    background: white;
+    color: #00b0eb;
+    border: 1px solid white;
+}
+ul.promoBox.host .promoBox-header {
+}
 
 form {
 }
@@ -716,7 +743,7 @@ textarea.form-control, .form-control {
                                                 margin-left: 10%;
                                                 margin-right: 10%;
                                             }
-                                            .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
+                                            .promo .row.first > div:first-child h3, main.home .promo .row.first > div:first-child h3, .promo .row.first > div:last-child h3.promo .row.first > div:last-child h3 {
                                                 font-size: 2.5em;    
                                                 color: #00bbff;
                                             }
@@ -724,10 +751,17 @@ textarea.form-control, .form-control {
                                             .placard .summary {
                                                 padding-right: 0;
                                             }
-                                            .placard .summary ul {
-                                                margin-bottom: 1.5em;
+                                            .placard .summary ul:last-child {
+                                                margin-bottom: 2em;
                                                 padding-bottom: 1.5em;
                                                 border-bottom: 3px solid #eee;
+                                            }
+                                            .promo .promoBox > span {
+                                                text-align: left;
+                                            }
+                                            .promo .promoBox span span {
+                                                display: block;
+                                                text-align: right;
                                             }
                                         }
 
@@ -770,11 +804,21 @@ textarea.form-control, .form-control {
                                                 margin-left: 0;
                                             }
 
+                                            .itemList li.header h3 a span {
+                                                background-size: 100%
+                                            }
+
+                                            .row .placard.screenshots {
+                                                margin-top: 0;
+                                            }
+                                            .promo .col-lg-6 .gutter > p {
+                                                padding-left: 5%;
+                                                padding-right: 5%;
+                                            } 
 
 
-
-                                            footer {
-                                                background: #f8f8f8;
+                                            footer h4 {
+                                                color: #fff;
                                             }
                                             footer .d-flex {
                                                 display: block !important;
@@ -792,11 +836,11 @@ textarea.form-control, .form-control {
                                                 margin-bottom: 1em;
                                                 border-bottom: 1px solid #ccc;
                                             }
-                                            .promo .row, .couple .row {
+                                            .promo .row.first {
                                                 padding-right: 10px;
                                                 padding-left: 10px;
                                             }
-                                            .promo .row > div, .couple .row > div {
+                                            .promo .row.first > div {
                                                 border-width: 5px;
                                                 border-radius: 0;
                                             }
@@ -809,64 +853,64 @@ textarea.form-control, .form-control {
                                         }
 
 
-
-
-
-
-
                                         /* === col-xs-6 braking point ======================================== */
                                         @media only screen and (max-width : 575px) {
-
+                                            
+                                            /* TO PUSH MENU BELOW LOGO
                                             nav > ul > li {
                                                 clear: left;
+                                            }
+                                            */
+                                            .gutter {
+                                                padding: 2em 0 !important;
                                             }
                                             nav li a {
                                                 word-spacing: 2px;
                                             }
-                                            .itemList .hoverbox .overflow {
-                                                width: 12em;
-                                                font-size: 0.8em
-                                            } 
-                                            /* _placard and _banner --------------------- */
 
-                                            .banner > .row .placard:first-child {
-                                                background: rgba(255, 255, 255, 0.5);
-                                                border-radius: 3px;
-                                            }
-                                            .banner > .row .placard:last-child {
-                                                background: white;
-                                                border-radius: 0;
-                                            }
+                                            /* _placard and _banner --------------------- */
                                             .banner .row .placard {
                                                 padding-top: .5rem;
                                                 padding-bottom: .5rem;
                                             }
-                                            .placard .col-xs-6 {
+                                            .banner > .row .placard:first-child {
+                                                background: rgba(255, 255, 255, 0.5);
+                                                border-radius: 3px;
+                                            }
+                                             .placard .col-xs-6 {
                                                 width: 50%;
                                             }
-
+                                            
+                                            /* --- FONT SIZE --- */
                                             .placard h2 {
-                                                color: Black;
-                                                text-shadow: none;
-                                                font-weight: 500;
-                                                line-height: 1;
+                                                font-size: 2em;
                                             }
-                                            /*
-                                            .menu .banner {
-                                                background-size: auto 100%;
-                                                background-position: center top;
-                                                background-repeat: no-repeat;
-                                                padding-top: 10em;
-                                                padding-bottom: 0;
+                                            main.menu .placard h3 {
+                                                font-size: 1.1em;
                                             }
-                                            */
-                                            .promo ul {
-                                                text-align: left;
-                                                margin: 0 10%;
+                                            .external span {
+                                                background-size: 10px;
                                             }
+                                            .external:hover span {
+                                                padding: 8px 9px;
+                                            }
+
+
                                             h1.brand a {
                                                 margin-bottom: .5em;
                                                 margin-left: -3px;
+                                            }
+
+                                            /* Promo */
+                                            .promo .row.first {
+                                                padding: 0;
+                                            }
+                                            .promo .promoBox.host {
+                                                max-width: none;
+                                                max-width: auto;
+                                            }
+                                            .promo ul {
+                                                text-align: left;
                                             }
                                             /* Home Site Promo */
                                             main.home .promo.site .row > div {
@@ -893,6 +937,9 @@ textarea.form-control, .form-control {
 
                                         /* === Retina ========================================= */
                                         @media only screen and (max-width : 320px) {
+                                            body {
+                                                font-size: 0.86em;
+                                            }
                                             c, cc {
                                                 word-brake: normal;
                                             }
@@ -908,7 +955,7 @@ textarea.form-control, .form-control {
                                                 text-align: left;
                                             }
                                             /* row block */
-                                            .promo .row {
+                                            .promo .row.first {
                                                 display: block;
                                             }
                                             div[class*='col-'] {
@@ -916,18 +963,18 @@ textarea.form-control, .form-control {
                                                 max-width: none;
                                                 float: none;
                                             }
-                                            .cta a:after, .cta a:hover:after {
-                                                display: none;
+                                            .cta a, .cta a:hover, .cta a:after, .cta a:hover:after, ul.promoBox {
+                                                font-size: 0.8em;
                                             }
                                             .promo .cta a, .promo .cta a:hover {
-                                                padding: 0.125em 0.5em;
+                                                padding: 0.25em 0.5em;
                                                 margin: 0;
                                                 text-indent: 0;
-                                                border: 1px solid white;
                                             }
-                                            .promo .row > div:first-child .cta a, .promo .row > div:nth-child(4) .cta a,
-                                            .promo .row > div:first-child .cta a:hover, .promo .row > div:nth-child(4) .cta a:hover {
-                                                border: 1px solid black;
+                                            .promo .row.first > div:first-child .cta a, .promo .row.first > div:nth-child(4) .cta a,
+                                            .promo .row.first > div:first-child .cta a:hover, .promo .row.first > div:nth-child(4) .cta a:hover {
+                                            }
+                                            ul.promoBox {
                                             }
                                         }
 
@@ -1032,14 +1079,16 @@ textarea.form-control, .form-control {
         top: 0;
         z-index: 5;
     }
-
+    .itemList li.header h3 a span {
+        min-height: 12em;
+    }
     /* -----  mainList ------------ MEDIUM or larger ---  */
     .promo h3 {
         font-size: 2.4em;
         margin-left: 10%;
         margin-right: 10%;
     }
-    .promo .row > div:first-child h3, .promo .row > div:last-child h3 {
+    .promo .row.first > div:first-child h3, main.home .promo .row.first > div:last-child h3 {
         font-size: 3em;
         color: #00bbff;
     }
@@ -1135,14 +1184,12 @@ textarea.form-control, .form-control {
                 font-size: 0.9em;
                 line-height: 0.75;
             }
-
         }
 
         /* _MEDIUM only  */
         @media only screen and (min-width: 769px) and (max-width : 992px) {
             .promo ul {
                 text-align: left;
-                margin: 0 10%;
             }
             h3 {
                 font-size: 1.4em;
@@ -1155,6 +1202,9 @@ textarea.form-control, .form-control {
             }
             .itemList li.header h3 a {
                 min-height: 200px;
+            }
+            .placard .summary > div {
+                padding-right: 30px;
             }
 
         }

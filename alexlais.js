@@ -26,18 +26,25 @@
         // mediterranean turkish greek asian chineese thai indian japanese soups subs
         // seafood grill diner breakfast deli bagels coffee tea smoothies juices dessert
         // healthy vegetarian vegan gluten free
-        $scope.keywords = 'AngularJS,No jQuery,jQuery,HTML5,CSS3,Bootstrap 4,Media Queries,HTML5 Mode,HTML5 Storage,AJAX & JSON,GitHub hosted,Bootstrap 3,Responsive';
+        $scope.keywords = 'AngularJS,No jQuery,jQuery,HTML5,CSS3,Bootstrap 4,Media Queries,HTML5 Mode,HTML5 Storage,AJAX & JSON,GitHub hosting,Bootstrap 3,Responsive,Google Maps';
 
         $scope.food = [
         {
             name:'7DayEat.com',
             url: 'http://7DayEat.com',
             employer: 'Freelance Project',
-            description: 'Food delivery service. Currently with placeholder content',
+            description: [
+                '<p>Website design and development for an international law firm.</p>'],
+            descriptionList: [
+                'AngularJS 1.6 Single Page Application (Ng-route, ng-repeat, ng-include and own directives)',
+                'Github Hosting using HTML5 Mode',
+                'CSS3, HTML5, Bootstrap 4, Google Maps'],
+
+            description: 'Online food delivery project, in progress (menu section is under development)',
             imageL: ['7DayEat2.png'],
             icon: '7DayEat1.png',
             technologies: [
-                'AngularJS', 'No jQuery', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript', 'HTML5 Mode', 'GitHub hosted', 'Responsive Design', 'Media Queries', 'AJAX & JSON', 'Photoshop'],
+                'AngularJS', 'No jQuery', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript', 'HTML5 Mode', 'GitHub hosting', 'Responsive Design', 'Media Queries', 'AJAX & JSON', 'Photoshop'],
             address: {
                 street: '',
                 cityState: 'New York, NY'},
@@ -173,8 +180,15 @@
             url: 'https://jobs.boeing.com/',
             employer: 'TMP Worldwide',
             description: [
-                "<p>TMP Worldwide is the largest independent firm with focus on recruitment advertising and communications.</p>",
-                "<ul class='native'><li><p><stgrong>More Work Samples:</strong> <br><a target='_blank' href='https://jobs.nike.com/'>jobs.nike.com</a> <br><a target='_blank' href='https://jobs.citi.com/'>jobs.citi.com</a> <br><a target='_blank' href='https://jobs.scotiabank.com/'>jobs.scotiabank.com</a></p></li> <li><p>At TMP I worked with an integrated product suite called <a target='_blank' href='https://www.tmp.com/talentbrew/'>TalentBrew</a>, a platform that has effectively positioned TMP as pioneers where recruitment strategies and digital media converge.</p></li> <li><p>Semantic and search engine optimized UI development for large corporate clients. I programmed approx. 100 job listing web sites per year.</p>"],
+                "<p>TMP Worldwide is the largest independent firm with focus on recruitment advertising and communications.</p>"],
+            descriptionList: [
+                "<p><strong>More Work Samples:</strong> <br><a target='_blank' href='https://jobs.nike.com/'>jobs.nike.com</a> <br><a target='_blank' href='https://jobs.citi.com/'>jobs.citi.com</a> <br><a target='_blank' href='https://jobs.scotiabank.com/'>jobs.scotiabank.com</a></p>",
+                "<p>At TMP I worked with an integrated product suite called <a target='_blank' href='https://www.tmp.com/talentbrew/'>TalentBrew</a>, a platform that has effectively positioned TMP as pioneers where recruitment strategies and digital media converge.</p>",
+                "<p>Semantic and search engine optimized UI development for Job listings websites for large corporate clients</p>",
+                "<p>Programming approximatedly 100 projects per year</p>",
+                "<p>Utilizing the latest in SEO knowledge for the markup code ensuring maximum ranking on searche result pages</p>",
+                "<p>Working with .NET Back-end team for improvements and new implementaions</p>",
+                "<p>In conjunction with Back-end team I worked in the implementation of the first JSON feed application, used for the website search</p>"],
             image: ['tmp1.jpg','tmp2.jpg','tmp3.jpg'],
             icon: 'tmp1.jpg',
             technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop', 'SEO', 'AJAX & JSON'],

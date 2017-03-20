@@ -8,7 +8,7 @@
                 </div>
                 <div class="col-sm-8 offset-sm-1 placard info">
                     <h3>Portfolio - Selected Work (2006-2017)</h3>
-                    <p>Please click any icon below to enlarge.</p>
+                    <p>Please click any icon below to enlarge, or click any keyword to filter by technology. Any other keyword can also be searched.</p>
                 </div>
             </div>
         </div>
@@ -34,7 +34,7 @@
         <div class="row" monitor-style="height" update-variable="height">
             <!-- barely explained https://plnkr.co/edit/?p=preview -->
             <div
-                class="col-12 col-sm-6 col-md-4 col-xl-3"
+                class="col-12 col-md-6 col-lg-4  col-xl-3"
                 ng-repeat="each in food | filter: currentItem"
                 ng-class="{ 'even': $even, 'odd': $odd }" >
 
@@ -48,7 +48,7 @@
                         </h3>
                     </li>
                     <li class="details">
-                        <p><span ng-repeat="each in each.technologies">{{ each }}, </span> </p>
+                        <p><span ng-repeat="each in each.technologies"><c>{{ each }}</c>, </span> </p>
                     </li>
                 </ul>
             </div>
@@ -57,39 +57,53 @@
 </section>
 
 <section class="site promo">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-6 col-12">
+    <div class="container-fluid">
+        <div class="row first">
+            <div class="col-lg-6 col-12">
                 <div class="gutter text-center">
                     <h3>About This Website</h3>
-                    <p>Alexlais.com is an AngularJS single page application using ngRoute with HTML5 Mode enabled and loads data thru a ng-Repeat with a routeParams filter based on current URL.</p>
-                    <p><strong>Hosted by GitHub:</strong> <br>The production repository url is <br><a href="https://github.com/alexlais/dotcom">github.com/alexlais/dotcom</a></p>
+                    <p>Alexlais.com is an AngularJS single page application using ngRoute with HTML5 Mode enabled and loads data thru a ngRepeat with a routeParams filter based on the current URL.</p>
+                      
+                    <img class="icon" src="assets/-icons/githubBlue.png" width="30px" height="auto">                  
+                    <p><strong>Hosted by GitHub</strong>
+                        <br>This Angular application is currently <c>hosted by GitHub</c>. The production repository is <a href="https://github.com/alexlais/dotcom"><c>github.com/alexlais/dotcom</c></a>.
+                    </p>
                     <span class="cta"><a target="_blank" href="https://github.com/alexlais/dotcom">GitHub Repository</a></span>
-                </div>
-            </div>
-            <div class="col-sm-6 col-12">
-                <div class="gutter text-center">
-                    <h3>AngularJS Route Template</h3>
-                    <p>The template used for the development of this website can be found at the AngularJS API $route page</p>
-                    <span class="cta"><a target="_blank" href="https://docs.angularjs.org/api/ngRoute/service/$route">AngularJS API $route</a></span>
                </div>
             </div>
-            <div class="col-sm-6 col-12">
+            <div class="col-lg-6 col-12">
+                <div class="gutter text-center">
+                    <h3>AngularJS Route Template</h3>
+                    <p>The template used for the development of this website can be found at the AngularJS <c>API $route page</c></p>                    
+                    
+                    <span class="cta"><a target="_blank" href="https://docs.angularjs.org/api/ngRoute/service/$route">AngularJS API $route</a></span>
+                    
+                    <ul class="promoBox flat">
+                        <li class="promoBox-header"><strong>Current Route Info:</strong></li>
+                        <li>Current item filter: <span>{{currentItem}}</span></li>
+                        <li>$location.path(): <span>{{$location.path()}}</span></li>
+                        <li>$route.current.templateUrl: <span>{{$route.current.templateUrl}}</span></li>
+                        <li>$route.current.params: <span>{{$route.current.params}}</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 col-12 hidden-xs-down">
                 <div class="gutter text-center">
                     <h3>Utilities Migration to BS4</h3>
                     <p>The .hidden and .show classes have been removed</p>
                     <p>replaced by .hidden-xs-up .hidden-xs-down .hidden-sm-up .hidden-sm-down .hidden-md-up .hidden-md-down .hidden-lg-up .hidden-lg-down.</p>
-                    <span class="cta"><a target="_blank" href="https://v4-alpha.getbootstrap.com/migration/">Getbootstrap Migration</a></span>
+                    <p>The classes col-xs-* have been removed. Use col-12, col-6, col-4, and so on for xs.</p>
+                    <span class="cta"><a target="_blank" href="https://v4-alpha.getbootstrap.com/migration/">Bootstrap Migration</a></span>
                 </div>
             </div>
-            <div class="col-sm-6 col-12">
+            <div class="col-md-6 col-12 hidden-xs-down">
                 <div class="gutter text-center">
                     <h3>Better CTA Options</h3>
                     <ul class="native">
                         <li><p>Get My... Why My...?</p></li>
                         <li><p>Give Me More, Show Me More, Tell Me More, I Want This</p></li>
                         <li><p>Find Out More, Explore, Discover, Get it</p></li>
-                        <li><p>The Advantages, The Benefits</p></li>
+                        <li><p>See The Advantages, Explore The Benefits</p></li>
                     </ul>
                 </div>
             </div>
