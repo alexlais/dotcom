@@ -396,9 +396,6 @@ footer .copyright {
 footer, footer a, footer a:hover, footer p, footer div {
     color: #fff;
 }
-footer .popup, footer .popup p, footer .popup h4, footer .popup a {
-    color: black;
-}
 footer .copyright div:last-child {
     cursor: pointer;
     text-decoration: underline;
@@ -610,6 +607,10 @@ main.home .promo .row.first > div:nth-child(1), main.home .promo .row.first > di
     border-radius: 0 80px 0 80px;
 }
 
+    .promo .row.first > div:first-child h3, main.home .promo .row.first > div:last-child h3 {
+        font-size: 3em;
+        color: #00bbff;
+    }
 
 /* Item Promo 
 .promo.item {
@@ -856,11 +857,9 @@ textarea.form-control, .form-control {
                                         /* === col-xs-6 braking point ======================================== */
                                         @media only screen and (max-width : 575px) {
                                             
-                                            /* TO PUSH MENU BELOW LOGO
                                             nav > ul > li {
                                                 clear: left;
                                             }
-                                            */
                                             .gutter {
                                                 padding: 2em 0 !important;
                                             }
@@ -1088,10 +1087,6 @@ textarea.form-control, .form-control {
         margin-left: 10%;
         margin-right: 10%;
     }
-    .promo .row.first > div:first-child h3, main.home .promo .row.first > div:last-child h3 {
-        font-size: 3em;
-        color: #00bbff;
-    }
 
     .itemList {
         padding: 0 10px;
@@ -1133,9 +1128,6 @@ textarea.form-control, .form-control {
     }
     .popup .header {
         background: #f3fae1;
-        background: #cc0052;
-        background: white;
-        background: #f3fae1;
         padding: 1em 2%;
         cursor: pointer;
         border-radius: 3px 3px 0 0;
@@ -1144,11 +1136,7 @@ textarea.form-control, .form-control {
             margin: 0;
             font-size: 18px;
             font-weight: 400;
-            color: #444;
             text-transform: uppercase;
-        }
-        .popup h4 {
-            color: #444;
         }
         .popup h3 span {
             float: right;
@@ -1162,7 +1150,6 @@ textarea.form-control, .form-control {
         background: #fff;
         padding: 15px 2%;
         border-radius: 0 0 0 3px;
-
     }
     .credits-content {
         float: right;
@@ -1175,6 +1162,12 @@ textarea.form-control, .form-control {
     }
     .popup.open {
         display: block;
+    }
+    footer .popup, footer .popup p, footer .popup h4, footer .popup a {
+        color: #777;
+    }
+    footer .popup a:hover, footer .popup h3 {
+        color: #000;
     }
 }
 
