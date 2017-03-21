@@ -43,12 +43,11 @@
             description: 'Online food delivery project, in progress (menu section is under development)',
             imageL: ['7DayEat2.png'],
             icon: '7DayEat1.png',
-            technologies: [
-                'AngularJS', 'No jQuery', 'Bootstrap 4', 'HTML5', 'CSS3', 'JavaScript', 'HTML5 Mode', 'GitHub hosting', 'Responsive Design', 'Media Queries', 'AJAX & JSON', 'Photoshop'],
+            technologies: ['AngularJS', 'HTML5 Mode', 'GitHub hosting', 'No jQuery', 'Bootstrap 4', 'ngBootstrap', 'ngAnimate', 'ngRepeat', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
                 street: '',
                 cityState: 'New York, NY'},
-            duration: { 
+            duration: {
                 applicable: "notApply",
                 date: "2017"}
         },
@@ -64,11 +63,11 @@
                 'CSS3, HTML5, Bootstrap 3, Google Maps'],
             image: ['lex1.png','lex2.png','lex4.png'],
             icon: 'lex1.png',
-            technologies: ['AngularJS', 'jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'HTML5 Mode', 'Responsive Design', 'Media Queries', 'Photoshop'],
+            technologies: ['AngularJS', 'HTML5 Mode', 'GitHub hosting', 'jQuery', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
                 street: '',
                 cityState: 'Miami, Fl'},
-            duration: { 
+            duration: {
                 applicable: "notApply",
                 date: "2017"}
         },
@@ -79,11 +78,11 @@
             description: 'Is a South Florida law firm specialized in a wide range of investment issues and property protection matters',
             image: ['gurian2.png', 'gurian3.png'],
             icon: 'gurian1.png',
-            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop', 'SEO', 'Microdata Schema.org'],
+            technologies: ['jQuery', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop', 'SEO', 'Microdata Schema.org'],
             address: {
                 street: '',
                 cityState: 'Miami, Fl'},
-            duration: { 
+            duration: {
                 applicable: "notApply",
                 date: "2016"}
         },
@@ -100,11 +99,11 @@
                 "Creating and testing a template to be used for all future projects and improve development time and QA"],
             icon: 'medscape.png',
             image: {
-                image: 'notApply'},            
+                image: 'notApply'},
             technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
             address: {
                 street: '825 8th Ave',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2014',
                 to: '2015',
@@ -126,7 +125,7 @@
             technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop'],
             address: {
                 street: '101 Avenue of the Americas',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2013',
                 to: '2013',
@@ -148,7 +147,7 @@
             technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop'],
             address: {
                 street: '101 Avenue of the Americas',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2013',
                 to: '2013',
@@ -166,10 +165,10 @@
                 "Also launched the microsites for the office locations of <a target='_blank' href='http://www.mckinsey.com/global-locations/asia/japan/en'>Japan</a>, <a target='_blank' href='http://www.mckinsey.com/global-locations/europe-and-middleeast/russia/en'>Russia</a>, <a target='_blank' href='www.mckinsey.com/south-africa/overview'>South Africa</a>, Angola, <a target='_blank' href='http://www.mckinsey.com/nigeria/overview'>Nigeria</a>, Switzerland, <a target='_blank' href='http://www.mckinsey.com/global-locations/europe-and-middleeast/france/en'>France</a> and Spain, and implemented a global solution for foreign languages requirements"],
             image: ['mckinsey2.png','mckinsey1.png'],
             icon: 'mckinsey1.png',
-            technologies: ['jQuery', 'jQuery Mobile', 'Bootstrap 3', 'HTML5', 'CSS3', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
+            technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop'],
             address: {
                 street: '825 8th Ave',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2012',
                 to: '2013',
@@ -194,7 +193,7 @@
             technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop', 'SEO', 'AJAX & JSON'],
             address: {
                 street: '125 Broad St',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2009',
                 to: '2012',
@@ -209,13 +208,13 @@
             descriptionList: [
                 "Semantic and search engine optimized careers website for Walgreens",
                 "Implementation of markup and styles (HTML/CSS) on an .NET Backend MVC environment",
-                "Using jQuery for implementation of all dinamic functionality"],            
-            imageL: ['walgreens.jpg'],
-            icon: 'walgreensS.jpg',
+                "Using jQuery for implementation of all dinamic functionality"],
+            image: ['walgreens1.png', 'walgreens2.png'],
+            icon: 'walgreens1.png',
             technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'Photoshop', 'SEO'],
             address: {
                 street: '125 Broad St',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2009',
                 to: '2012',
@@ -231,7 +230,7 @@
             technologies: ['jQuery', 'HTML5', 'CSS3', 'JavaScript', 'AJAX & JSON', 'Photoshop'],
             address: {
                 street: '825 8th Ave',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2009',
                 to: '2009',
@@ -246,12 +245,12 @@
             descriptionList: [
                 "Worked at the Interactive 3 team with a Project Manager, Art Director, a back-end Developer and Editors/Legal department",
                 "Front-end development for the new generation of Golden Living web sites: GoldenLiving.com, GoldenLivingCenters.com, AegisTherapies.com, 360HealthCareStaffing.com and AseraCare.com",
-                "Front-end development for the CMS .NET environment"],            
+                "Front-end development for the CMS .NET environment"],
             image: ['gl.jpg', 'glcms.jpg'],
             icon: 'glS.jpg',
             technologies: ['jQuery', 'HTML', 'CSS3', 'JavaScript', 'Photoshop'],
             address: {
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2008',
                 to: '2009',
@@ -266,52 +265,54 @@
             descriptionList: [
                 "HTML and CSS re-factoring and implementation of a global style sheet for all sites under BravoTV.com which improved development and consistency",
                 "Fix of several Internet Explorer rendering bugs in production",
-                "Used PHP and XML for dart tags, photo galleries and many other applications",            
+                "Used PHP and XML for dart tags, photo galleries and many other applications",
                 "Development of over 15 micro-sites: Project Runway Season 5, Flipping Out Season 2, Shear Genius Season 2, Kathy Griffin Season 4, Top Design Season 2, The Rachel Zoe Project Season 1, Inside the Actors Studio Season 2, Date My Ex Season 1, Tabatha’s Salon Takeover Season 1, Million Dollar Listing Season 2, Tim Gunn, and other promotional micro sites like Bravo For Foodies, Mamma Mia – The Movie, Olympics, Back to School, and Influential’s"],
             image: ['bravo1.jpg', 'bravo2.jpg'],
             icon: 'bravoS.jpg',
             technologies: ['jQuery', 'HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop'],
             address: {
                 street: '30 Rockefeller Plaza',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
                 from: '2008',
                 to: '2008',
                 date: 'notApply'}
         },
         {
-            name: 'StylishWindows',
+            name: 'Stylish Windows',
             url: 'http://www.StylishWindows.com',
             employer: 'Freelance',
             description: [
                 "<p>This is a 12 year old web design and development that is still up without changes.</p>"],
             descriptionList: [
                 "PHP codebase for structure includes and emailer form",
-                "Front-end development using HTML 1.0 Strict, CSS2, SEO and JavaScript libraries like lightbox"],            
+                "Front-end development using HTML 1.0 Strict, CSS2, SEO and JavaScript libraries like lightbox"],
             imageL: ['stylishwindows.png'],
             icon: 'stylishwindowsS.png',
             technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop', 'Flash'],
             address: {
-                cityState: 'New York, NY'},            
-            duration: { 
+                cityState: 'New York, NY'},
+            duration: {
                 applicable: "notApply",
                 date: "2004"}
         },
         {
-            name:'Terry Lyons',
-            employer: 'Freelance Project',
-            description: 'Food delivery service. Currently with placeholder content',
-            name:'TerryLyons.com',
-            image: 'Juliette_Breakfast.jpg',
-            image2: 'Juliette_Breakfast.jpg',
+            name: 'Terry Lyons',
+            url: 'http://www.TerryLyons.com',
+            employer: 'Freelance',
+            description: [
+                "<p>This is a 12 year old web design and development that is still up without changes.</p>"],
+            descriptionList: [
+                "PHP codebase for structure includes and emailer form",
+                "Front-end development using HTML 1.0 Strict, CSS2, SEO and JavaScript libraries like lightbox"],
+            image: ['terrylyons1.png', 'terrylyons2.png', 'terrylyons3.png'],
+            icon: 'terrylyons1.png',
             technologies: ['HTML', 'CSS', 'JavaScript', 'PHP', 'Photoshop'],
             address: {
-                street: '825 8th Ave',
-                cityState: 'New York, NY'},            
+                cityState: 'New York, NY'},
             duration: {
-                from: 'April 2014',
-                to: 'April 2015',
-                date: 'notApply'}
+                applicable: "notApply",
+                date: "2004"}
         }];
 
         // TODAY
