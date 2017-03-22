@@ -23,7 +23,7 @@
             </div>
             <h3>Filter by keyword:</h3>
             <ul class="flat">
-                <li ng-repeat="each in keywords.split(',')"><a ng-href="home/{{each}}" class="{{each}}">{{each}}</a> </li>
+                <li ng-repeat="each in keywords.split(',')"><a ng-href="portfolio/{{each}}" class="{{each}}">{{each}}</a> </li>
             </ul>
         </div>
     </div>
@@ -41,7 +41,7 @@
                 <ul class="itemList flat">
                     <li class="header">
                         <h3>
-                            <a href="menu/{{ each.name }}">
+                            <a href="portfolio/item/{{ each.name }}">
                                 <span class="image" style="background-image: url('assets/-images/{{each.icon}}');"></span>
                                 <strong>{{ each.name }}</strong>
                             </a>
@@ -60,32 +60,10 @@
     <div class="container-fluid">
         <div class="row first">
             <div class="col-lg-6 col-12">
-                <div class="gutter text-center">
-                    <h3>About This Website</h3>
-                    <p>Alexlais.com is an AngularJS single page application using ngRoute with HTML5 Mode enabled and loads data thru a ngRepeat with a routeParams filter based on the current URL.</p>
-                      
-                    <img class="icon" src="assets/-icons/githubBlue.png" width="30px" height="auto">                  
-                    <p><strong>Hosted by GitHub</strong>
-                        <br>This Angular application is currently <c>hosted by GitHub</c>. The production repository is <a href="https://github.com/alexlais/dotcom"><c>github.com/alexlais/dotcom</c></a>.
-                    </p>
-                    <span class="cta"><a target="_blank" href="https://github.com/alexlais/dotcom">GitHub Repository</a></span>
-               </div>
+                <ng-include src="'includes/promo1.html'"></ng-include>
             </div>
             <div class="col-lg-6 col-12">
-                <div class="gutter text-center">
-                    <h3>AngularJS Route Template</h3>
-                    <p>The template used for the development of this website can be found at the AngularJS <c>API $route page</c></p>                    
-                    
-                    <span class="cta"><a target="_blank" href="https://docs.angularjs.org/api/ngRoute/service/$route">AngularJS API $route</a></span>
-                    
-                    <ul class="promoBox flat">
-                        <li class="promoBox-header"><strong>Current Route Info:</strong></li>
-                        <li>Current item filter: <span>{{currentItem}}</span></li>
-                        <li>$location.path(): <span>{{$location.path()}}</span></li>
-                        <li>$route.current.templateUrl: <span>{{$route.current.templateUrl}}</span></li>
-                        <li>$route.current.params: <span>{{$route.current.params}}</span></li>
-                    </ul>
-                </div>
+                <ng-include src="'includes/promo2.html'"></ng-include>
             </div>
             <div class="col-md-6 col-12 hidden-xs-down">
                 <div class="gutter text-center">

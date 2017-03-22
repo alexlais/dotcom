@@ -400,15 +400,19 @@
     .config(function($routeProvider, $locationProvider) {
         $routeProvider
         .when('/', {
-            templateUrl: 'home.html',
+            templateUrl: 'portfolio.html',
             controller: 'firstCtrl'
         })
-        .when('/home/:itemID', {
-            templateUrl: 'home.html',
+        .when('/portfolio', {
+            templateUrl: 'portfolio.html',
+            controller: 'firstCtrl'
+        })
+        .when('/portfolio/:itemID', {
+            templateUrl: 'portfolio.html',
             controller: 'firstCtrl',
         })
-        .when('/menu/:itemID', {
-            templateUrl: 'menu.html',
+        .when('/portfolio/item/:itemID', {
+            templateUrl: 'item.html',
             controller: 'firstCtrl',
             resolve: {
                 // delay: function($q, $timeout) {
