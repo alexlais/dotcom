@@ -641,7 +641,7 @@ main.portfolio .promo .row.first > div:nth-child(1), main.portfolio .promo .row.
 }
 
 /* .promo text color inversion for darker background */
-.promo .row.first > div:first-child, .promo .row.first > div:first-child p, .promo .row.first > div:first-child h3,
+.promo .row.first > div:first-child, .promo .row.first > div:first-child p,
 .promo .row.first > div:nth-child(4), .promo .row.first > div:nth-child(4) p, .promo .row.first > div:nth-child(4) h3, .promo .row.first > div:nth-child(4) .cta a, .promo .row.first > div:nth-child(4) a
 {
     color: #777;
@@ -1084,7 +1084,7 @@ textarea.form-control, .form-control {
         z-index: 5;
     }
     .itemList li.header h3 a span {
-        min-height: 12em;
+        min-height: 10em;
     }
     /* -----  mainList ------------ MEDIUM or larger ---  */
     .promo h3 {
