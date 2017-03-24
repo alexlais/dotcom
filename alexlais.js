@@ -33,14 +33,11 @@
             name:'7DayEat.com',
             url: 'http://7DayEat.com',
             employer: 'Freelance Project',
-            description: [
-                '<p>Website design and development for an international law firm.</p>'],
+            description: ["<p>Online food delivery project, in progress (menu section is under development).</p>"],
             descriptionList: [
-                'AngularJS 1.6 Single Page Application (Ng-route, ng-repeat, ng-include and own directives)',
-                'Github Hosting using HTML5 Mode',
-                'CSS3, HTML5, Bootstrap 4, Google Maps'],
-
-            description: 'Online food delivery project, in progress (menu section is under development)',
+                'AngularJS 1.6 Single Page Application (ngRoute, ngRepeat, ngInclude and own directives)',
+                "HTML5 Mode enabled and <a target='_blank' href='https://github.com/7dayeat/dotcom'>Github Hosting<a>",
+                'No jQuery, CSS3, HTML5, Bootstrap 4, Google Maps'],
             imageL: ['7DayEat2.png'],
             icon: '7DayEat1.png',
             technologies: ['AngularJS', 'HTML5 Mode', 'GitHub hosting', 'No jQuery', 'Bootstrap 4', 'ngBootstrap', 'ngAnimate', 'ngRepeat', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
@@ -49,7 +46,7 @@
                 cityState: 'New York, NY'},
             duration: {
                 applicable: "notApply",
-                date: "2017"}
+                date: "Feburary 2017"}
         },
         {
             name: 'LEX International',
@@ -58,9 +55,9 @@
             description: [
                 '<p>Website design and development for an international law firm.</p>'],
             descriptionList: [
-                'AngularJS 1.6 Single Page Application (Ng-route, ng-repeat, ng-include and own directives)',
-                'Github Hosting using HTML5Mode',
-                'CSS3, HTML5, Bootstrap 3, Google Maps'],
+                "AngularJS 1.6 Single Page Application (Ng-route, ng-repeat, ng-include and own directives)",
+                "HTML5 Mode enabled and <a target='_blank' href='https://github.com/alexlais/LEX'>Github Hosting<a>",
+                "CSS3, HTML5, Bootstrap 3, <a target='_blank' href='https://alexlais.github.io/LEX/contact'>Google Maps</a>"],
             image: ['lex1.png','lex2.png','lex4.png'],
             icon: 'lex1.png',
             technologies: ['AngularJS', 'HTML5 Mode', 'GitHub hosting', 'jQuery', 'Bootstrap 3', 'HTML5', 'CSS3', 'HTML5 Storage', 'JavaScript', 'Responsive Design', 'Media Queries', 'Photoshop'],
