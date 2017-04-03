@@ -3,19 +3,26 @@
     <div class="banner">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-sm-8 offset-sm-1 placard">
+                <div class="col-sm-10 offset-sm-1 placard">
                     <h2>Front-end Development</h2>
                 </div>
-                <div class="col-sm-8 offset-sm-1 placard info">
+                <div class="col-sm-10 offset-sm-1 placard info">
                     <h3>Portfolio - Selected Work (2006-2017)</h3>
                     <p>Please click any icon below to enlarge, or click any keyword to filter by technology. Any other keyword can also be searched.</p>
+                    <div class="filter">
+                        <label class="search"><h3>Search:</h3> <input ng-model="currentItem" type="text" title="Search" class="form-control" aria-label="Search" ></label>
+                        <h3>Filter by keyword:</h3>
+                        <ul class="flat keywords">
+                            <li ng-repeat="each in keywords.split(',')"><a ng-href="portfolio/{{each}}" class="{{each}}">{{each}}</a> </li>
+                        </ul>                    
+                    </div>                    
                 </div>
             </div>
         </div>
     </div>
 </header>
 
-<section class="filter container-fluid">
+<!-- section class="filter container-fluid">
     <div class="row">
         <div class="col-sm keywords">
             <div class="search">
@@ -27,7 +34,7 @@
             </ul>
         </div>
     </div>
-</section>
+</section -->
 
 <section class="mainlist">
     <div class="container-fluid">

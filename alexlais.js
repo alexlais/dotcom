@@ -66,11 +66,11 @@
                 cityState: 'Miami, Fl'},
             duration: {
                 applicable: "notApply",
-                date: "2017"}
+                date: "January 2017"}
         },
         {
             name: 'Gurian Law',
-            url: 'https//GurianLaw.com',
+            url: 'http://GurianLaw.com',
             employer: 'Freelance Project',
             description: 'Is a South Florida law firm specialized in a wide range of investment issues and property protection matters',
             image: ['gurian2.png', 'gurian3.png'],
@@ -81,7 +81,7 @@
                 cityState: 'Miami, Fl'},
             duration: {
                 applicable: "notApply",
-                date: "2016"}
+                date: "November 2016"}
         },
         {
             name: 'Medscape.com',
@@ -123,14 +123,13 @@
             address: {
                 street: '101 Avenue of the Americas',
                 cityState: 'New York, NY'},
-            duration: {
-                from: '2013',
-                to: '2013',
-                date: 'notApply'}
+            duration: {                
+                applicable: "notApply",
+                date: '2013'}
         },
         {
             name: 'Botox Medical',
-            url: 'http://BotoxMedical.com',
+            url: 'http://hcp.BotoxMedical.com',
             employer: 'Evoke Health',
             descriptionList: [
                 "<p>Evoke Health is a full-service health and wellness digital agency with a heritage of innovation.</p>"],
@@ -317,6 +316,27 @@
 
         $scope.params = $routeParams;
         $scope.currentItem = $routeParams.itemID;
+
+
+
+        $scope.triggerTitle = 'Select Event';
+        $scope.triggerEvent = 'x';
+        $scope.triggerPeriod = 'Select Period';
+        $scope.events = [
+            {
+                action:'compare', 
+                name:'Makes a policy comparison'
+            }, 
+            {
+                action:'purchase', 
+                name:'Makes a purchase'
+            },
+            {
+                action:'addToCart', 
+                name:'Added a product to the cart'
+            }
+        ]
+
     }])
 
         // URL Related Classes

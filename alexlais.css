@@ -150,6 +150,8 @@ p {
     line-height: 1.35;
     margin: 0 0 1em;
 }
+address {
+}
 ul.native {
     padding-left: 20px;
     list-style: url("assets/images/thumbs/plus.svg");
@@ -180,7 +182,7 @@ hr {
 c {
     white-space: nowrap;
 }
-c.block {
+.location c {
     display: block;
 }
 cc {
@@ -240,9 +242,6 @@ img.icon {
     color: white;
     font-size: 1.8em;
 }
-main.portfolio .placard h2 {
-    color: white;
-}
 .placard h4.border {
     margin-top: 1em;
     padding-top: 1.5em;
@@ -278,16 +277,16 @@ main.portfolio .placard h2 {
 }
 
 /* KEYWORD SIZES */
-.technologies .AngularJS, .keywords .AngularJS {
+.technologies .AngularJS {
     font-size: 1.7em;
 }
-.technologies .Bootstrap, .keywords .Bootstrap, .technologies .Media, .keywords .Media {
+.technologies .Bootstrap, .technologies .Media {
     font-size: 1.2em;
 }
-.technologies .No.jQuery, .keywords .No.jQuery, .technologies .GitHub, .keywords .GitHub {
+.technologies .No.jQuery, .technologies .GitHub {
     font-size: 1.5em;
 }
-.technologies .Responsive, .keywords .Responsive {
+.technologies .Responsive {
     font-size: 1.2em;
 }
 
@@ -297,6 +296,10 @@ main.portfolio .placard h2 {
     padding-top: 5Vw;
     padding-bottom: 10Vw;
 }
+.portfolio .banner {
+    padding-bottom: 3Vw;
+}
+/*
 main.portfolio .banner {
     background-image: url('assets/-images/internet.png');
     background-size: 80% auto;
@@ -304,6 +307,12 @@ main.portfolio .banner {
     background-attachment: fixed;
     border-bottom: 3px solid #00bbff;
 }
+
+main.portfolio .placard h2 {
+    color: white;
+}
+
+*/
 
 /* _CTA --------------------- */
 
@@ -475,30 +484,20 @@ h1.brand {
         border-bottom: 17px solid #fff;
     }
 
-/* --------------  filter ---------------  */
+
+.placard .row > div {
+    float: left;
+}
+
 .filter {
     padding-top: 1em;
-    padding-bottom: 1em;
-    background: white;
-    overflow: auto;
 }
-.filter .row > div, .placard .row > div {
-    float: left;
-}
-.filter h3 {
-    font-weight: 500;
-}
-.filter .row > div {
-    float: left;
-} 
 /* - _KEYWORDS ----------------- */
-.filter .keywords {
-}
-.keywords ul {
+.flat.keywords {
     margin-left: -.9em;
     margin-left: -.9Vw;
 }
-.keywords ul li {
+.keywords li {
     display: inline;
 }
 .keywords a {
@@ -508,7 +507,7 @@ h1.brand {
 
 /* --- SERCH --- --- --- */
 
-.filter .search {
+.search {
     width: 40%;
     float: right;
     background: DeepSkyBlue;
@@ -516,10 +515,10 @@ h1.brand {
     padding: .75em 1em;
     margin: 0 0 1em 2em;
 }
-.filter .search h3 {
+.search h3 {
     color: white;    
 }
-.filter .search input {
+.search input {
     display: block;
     width: 100%;
     height: 40px;
@@ -527,10 +526,6 @@ h1.brand {
     border: 0;
     background: white;
     color: black;
-}
-.filter .search label {
-    margin: 0;
-    display: block;
 }
 
 /* --------------  mainList ---------------  */
@@ -560,7 +555,7 @@ font-size: .9em;
     transition-property: background-size;
     transition-duration: 5s;
     transition-timing-function: easy-in;    
-    border: 3px dashed #fa0053; 
+    border: 3px solid #fa0053; 
     border-radius: 6px;
 }
 .itemList li.header h3 a:hover span {
@@ -800,11 +795,12 @@ textarea.form-control, .form-control {
                                                 margin-right: 0;
                                             }
 
-                                            .filter .search {
+                                            .search {
                                                 float: none;
                                                 overflow: auto;
                                                 width: auto;
                                                 margin-left: 0;
+                                                display: block;
                                             }
 
                                             .itemList li.header h3 a span {
@@ -1165,8 +1161,6 @@ textarea.form-control, .form-control {
         padding: 15px 2%;
     }
     .popup p {
-        font-size: 16px;
-        margin-bottom: 10px;
     }
     .popup.open {
         display: block;
