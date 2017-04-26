@@ -1131,6 +1131,7 @@ textarea.form-control, .form-control {
     }
     .popup .header {
         background: #00bbff;
+        background: Black;
         padding: 1em 2%;
         cursor: pointer;
         border-radius: 3px 3px 0 0;
