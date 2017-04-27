@@ -84,10 +84,10 @@ footer a, .promo h2 a, .promo h4 a, .promo p a {
     transition-duration: .5s;
     transition-timing-function: easy-in;
     vertical-align: middle;
-    margin-top: -7px;
+    margin-top: -3px;
 }
 .external:hover span { 
-    padding: 15px 17px;
+    padding: 15px;
     transition-property: padding;
     transition-duration: .5s;
     transition-timing-function: easy-out;
@@ -311,8 +311,6 @@ main.portfolio .banner {
 main.portfolio .placard h2 {
     color: white;
 }
-
-*/
 
 /* _CTA --------------------- */
 
