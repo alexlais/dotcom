@@ -85,7 +85,7 @@
         },
         {
             name: 'Medscape.com',
-            url: 'http://Medscape.com`',
+            url: 'http://Medscape.com',
             employer: 'WebMD',
             description: [
                 "<p><em>Medscape.com</em> is the top medical resource and reference for physicians today.</p>"],
