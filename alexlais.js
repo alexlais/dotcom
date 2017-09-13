@@ -103,7 +103,7 @@
                 cityState: 'New York, NY'},
             duration: {
                 from: '2014',
-                to: '2017’,
+                to: '2017',
                 date: 'notApply'}
         },
         {
