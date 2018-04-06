@@ -28,8 +28,12 @@
         // healthy vegetarian vegan gluten free
         $scope.keywords = 'AngularJS,No jQuery,jQuery,HTML5,CSS3,Bootstrap 4,Media Queries,HTML5 Mode,HTML5 Storage,AJAX & JSON,GitHub hosting,Bootstrap 3,Responsive,Google Maps';
 
-        $scope.worksamples = [
+        $http.get('worksamples.json').then(function(response){
+            $scope.worksamples = response.data;
+        });
+
         /*
+        $scope.worksamples = [
         {
             name:'7DayEat.com',
             url: 'http://7DayEat.com',
@@ -49,7 +53,6 @@
                 applicable: "notApply",
                 date: "Feburary 2017"}
         },
-        */
         {
             name: 'LEX International',
             url: 'https://alexlais.github.io/LEX/',
@@ -312,6 +315,7 @@
                 applicable: "notApply",
                 date: "2004"}
         }];
+        */
 
         // TODAY
         $scope.CurrentDate = new Date();
