@@ -14,7 +14,7 @@
     // First level
     // .controller('MainCtrl', ['$scope', '$route', '$location', function($scope, $route, $location) {
 
-    .controller('firstCtrl', ['$scope', '$routeParams', '$location', function($scope, $routeParams, $location) {
+    .controller('firstCtrl', ['$scope', '$http', '$routeParams', '$location', function($scope, $http, $routeParams, $location) {
 
         // alexlais.com CONTENT
         $scope.siteInfo = {
