@@ -10,6 +10,7 @@
     "descriptionList": [],
     "image": {
         "image": "notApply"},
+    "icon": "code_samples.jpg",
     "technologies": ["React", "Redux", "Jest", "Enzyme", "Node", "HTML5", "CSS3", "SASS", "JavaScript", "ES6", "JSX", "Responsive Design", "Media Queries"],
     "address": {
         "street": "",
