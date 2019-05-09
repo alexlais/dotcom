@@ -8,9 +8,9 @@
         "<p><strong>Chase re-factored UI using very responsive CSS:</strong> <br><a target='_blank' href='https://codepen.io/alexlais/pen/bQxwyR'>https://codepen.io/alexlais/pen/bQxwyR<a> <br>Description: This uses very responsive CSS and no image text, all text is HTML. Please resize the browser windows to view mobile layout</p>",
         "<p><strong>Flexbox - The tableless table:</strong> <br><a target='_blank' href='https://codepen.io/alexlais/full/eojwqa'>https://codepen.io/alexlais/full/eojwqa<a> <br>Description: This solves a very old problem of how to present table layouts on small devices - A tableless table that swaps to vertical layout. Please resize browser window to view mobile layout.</p>"],
     "descriptionList": [],
-    "image": ["lex1.png","lex2.png","lex4.png"],
-    "icon": "lex1.png",
-    "technologies": ["React", "HTML5", "CSS3", "SASS", "JavaScript", "ES6", "JSX", "Responsive Design", "Media Queries"],
+    "image": {
+        "image": "notApply"},
+    "technologies": ["React", "Redux", "Jest", "Enzyme", "Node", "HTML5", "CSS3", "SASS", "JavaScript", "ES6", "JSX", "Responsive Design", "Media Queries"],
     "address": {
         "street": "",
         "cityState": ""},
