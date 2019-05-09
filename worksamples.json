@@ -13,7 +13,7 @@
     "technologies": ["React", "Redux", "Jest", "Enzyme", "Node", "HTML5", "CSS3", "SASS", "JavaScript", "ES6", "JSX", "Responsive Design", "Media Queries"],
     "address": {
         "street": "",
-        "cityState": "Chicago, IL - New York, NY - Washington, D.C."},
+        "cityState": "Chicago, IL <br />New York, NY <br />Washington, D.C."},
     "duration": {  
         "applicable": "notApply",
         "date": "April 2019"}
