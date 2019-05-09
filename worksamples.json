@@ -8,10 +8,13 @@
     "descriptionList": [
         "React Redux and SCSS Carousel:",
         "<a target='_blank' href='https://stackblitz.com/edit/reactezcarousel-redux'>https://stackblitz.com/edit/reactezcarousel-redux<a>",
-        "Working with editors making meticulous content changes and updates",
-        "Creating and testing a template to be used for all future projects and improve development time and QA"],
+        "Description: Very intuitive CSS code to make most of the carousel functionality. Content is populated via Redux from testdata.js and JSX. Rotation stops once user clicks a page. (Please be patient as it loads slow on the sandbox.)",
+        "Chase re-factored UI using very responsive CSS:"],
+    
     
 
+    
+    
     
     
     "image": ["lex1.png","lex2.png","lex4.png"],
