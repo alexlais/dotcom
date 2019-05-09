@@ -7,9 +7,13 @@
     
     "descriptionList": [
         "React Redux and SCSS Carousel:",
-        "Constantly working with designers to arrange requirements for mobile versions of table contents and other issues that can occur with sensitive content in a narrow layout",
+        "<a target='_blank' href='https://stackblitz.com/edit/reactezcarousel-redux'>https://stackblitz.com/edit/reactezcarousel-redux<a>",
         "Working with editors making meticulous content changes and updates",
         "Creating and testing a template to be used for all future projects and improve development time and QA"],
+    
+
+    
+    
     "image": ["lex1.png","lex2.png","lex4.png"],
     "icon": "lex1.png",
     "technologies": ["React", "HTML5", "CSS3", "SASS", "JavaScript", "ES6", "JSX", "Responsive Design", "Media Queries"],
