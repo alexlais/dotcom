@@ -3,7 +3,7 @@
     "url": "https://alexlais.github.io/LEX/",
     "employer": "",
     "description": [
-        "<p>React, Redux, SCSS, Flexbox Code Samples</p>"
+        "<p>React, Redux, SCSS, Flexbox Code Samples</p>",
         "<p>React Redux and SCSS Carousel:<br>",
         "<a target='_blank' href='https://stackblitz.com/edit/reactezcarousel-redux'>https://stackblitz.com/edit/reactezcarousel-redux<a><br>",
         "Description: Very intuitive CSS code to make most of the carousel functionality. Content is populated via Redux from testdata.js and JSX. Rotation stops once user clicks a page. (Please be patient as it loads slow on the sandbox.)</p>",
